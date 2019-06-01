@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Spielwiese"
-run/main_scene="res://Scene/Test.tscn"
+run/main_scene="res://asset/Szene/Test02.tscn"
 config/icon="res://icon.png"
 
 [display]

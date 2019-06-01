@@ -6,10 +6,10 @@
 [ext_resource path="res://mat/Wand_base.material" type="Material" id=4]
 [ext_resource path="res://mat/Wand_border.material" type="Material" id=5]
 
-[node name="Scene Root" instance=ExtResource( 1 )]
+[node name="Scene Root" index="0" instance=ExtResource( 1 )]
 
 [node name="Plane002" parent="." index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.78354, 6.85453e-007, 16.75 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 9.75, 0, 16.75 )
 use_in_baked_light = true
 material/0 = ExtResource( 2 )
 material/1 = ExtResource( 3 )
@@ -17,7 +17,7 @@ material/2 = ExtResource( 4 )
 material/3 = ExtResource( 5 )
 
 [node name="Plane001" parent="." index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24.0335, 0, 31 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 24, 0, 31 )
 use_in_baked_light = true
 material/0 = ExtResource( 2 )
 material/1 = ExtResource( 3 )
