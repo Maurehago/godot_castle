@@ -32,7 +32,6 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0.
 shape = SubResource( 1 )
 
 [node name="Kopf" type="Spatial" parent="."]
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0 )
 
 [node name="Camera" type="Camera" parent="Kopf"]
@@ -49,12 +48,12 @@ cast_to = Vector3( 0, 1, 0 )
 collide_with_areas = true
 
 [node name="rayStair" type="RayCast" parent="Kopf"]
-transform = Transform( 1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0, -0.5, -0.052 )
+transform = Transform( 1, 0, 0, 0, 0.866025, -0.5, 0, 0.5, 0.866025, 0, -0.604425, -0.052 )
 enabled = true
 cast_to = Vector3( 0, -0.8, 0 )
 
 [node name="rayStair2" type="RayCast" parent="Kopf"]
-transform = Transform( -0.985245, -0.110393, -0.130787, -0.0306015, 0.865485, -0.5, 0.16839, -0.48862, -0.856093, -0.099, -0.5, 0.068 )
+transform = Transform( -0.985245, -0.110393, -0.130787, -0.0306015, 0.865485, -0.5, 0.16839, -0.48862, -0.856093, -0.099, -0.604425, 0.068 )
 enabled = true
 cast_to = Vector3( 0, -0.8, 0 )
 
@@ -81,4 +80,3 @@ material/0 = SubResource( 3 )
 transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 1.40564, -0.0780338 )
 mesh = SubResource( 4 )
 material/0 = SubResource( 5 )
-
