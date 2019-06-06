@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://mat/Checker_grau.material" type="Material" id=1]
+
+[sub_resource type="ArrayMesh" id=1]
+resource_name = "Plane.017"
+lightmap_size_hint = Vector2( 1028, 172 )
+surfaces/0 = {
+"aabb": AABB( 0, 0, 0, 52, 8.50001, 1e-005 ),
+"array_data": PoolByteArray( 0, 0, 0, 0, 0, 0, 8, 65, 0, 0, 0, 128, 0, 0, 129, 0, 130, 0, 0, 127, 128, 82, 0, 56, 249, 59, 245, 25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 128, 0, 0, 129, 0, 129, 0, 0, 127, 128, 82, 128, 72, 249, 59, 214, 59, 0, 0, 80, 66, 0, 0, 0, 0, 0, 0, 0, 128, 0, 0, 129, 0, 130, 0, 0, 127, 0, 0, 128, 72, 248, 15, 214, 59, 0, 0, 80, 66, 0, 0, 8, 65, 0, 0, 0, 128, 0, 0, 129, 0, 129, 0, 0, 127, 0, 0, 0, 56, 248, 15, 244, 25 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 0, 0, 2, 0, 3, 0 ),
+"blend_shape_data": [  ],
+"format": 97591,
+"index_count": 6,
+"material": ExtResource( 1 ),
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 4
+}
+
+[sub_resource type="ConcavePolygonShape" id=2]
+data = PoolVector3Array( 0, 8.5, 0, 0, 0, 0, 52, 0, 0, 0, 8.5, 0, 52, 0, 0, 52, 8.5, 0 )
+
+[node name="Halle_innen_Wand4" type="MeshInstance"]
+use_in_baked_light = true
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+shape = SubResource( 2 )
