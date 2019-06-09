@@ -19,6 +19,10 @@ export var allowChangeFlying = false
 export var fly_speed = 10.0
 export var fly_accel = 4.0
 
+export var LOD0_Size = 15.0
+export var LOD1_Size = 30.0
+
+
 # Kamera Ausrichtung (für Einschränkung der Neigung, damt nicht im Kreis nach oben und unten gedreht werden kann)
 var camera_angle = 0.0
 
@@ -34,6 +38,7 @@ var isBackward = false
 # Iteraktion
 var isInteract = false
 var interactMethod = ""
+var collisionPoint = Vector3(0.0, 0.0, 0.0) # Punkt wo die Kollision stattfindet
 
 # Node Elemente
 var Player = self
@@ -45,12 +50,24 @@ var rayStair
 var rayStairBack
 var rayInteract
 var labelAction
+var Hand
 
 # Bewegung Richtung
 var direction = Vector3()
 
 # Bewegung stärke
 var velocity = Vector3()
+
+# Inventar
+var inv = {}
+
+# Objekt in den Händen
+var holdObject = null
+var isHolding = false
+var holdStartTransform
+
+# LOD Init
+var LOD_init = true
 
 
 # Wenn die Szene geladen ist
@@ -65,7 +82,12 @@ func _ready():
 	rayStair = $Kopf/rayStair
 	rayStairBack = $Kopf/rayStair2
 	rayInteract = $Kopf/Camera/rayInteract
+	Hand = $Kopf/Camera/Hand
 	labelAction = $lblAction
+	
+	#Einstellungen LOD
+	$Kopf/LOD_mid/CollisionShape.shape.radius = LOD1_Size
+	$Kopf/LOD_high/CollisionShape.shape.radius = LOD0_Size
 	
 	# Bewegung starten
 	start_move()
@@ -78,12 +100,13 @@ func checkInteract():
 		#print(Target)
 		if Target.has_method("player_interact"):
 			# position lesen
-			var pos = rayInteract.get_collision_point()
+			collisionPoint = rayInteract.get_collision_point()
 			
 			# fremd Methode aufrufen und Auslesen
-			interactMethod = Target.player_interact(pos, Player)
+			interactMethod = Target.player_interact(Player)
 			isInteract = true
-			labelAction.text = interactMethod
+			if interactMethod:
+				labelAction.text = interactMethod
 		else:
 			isInteract = false
 			labelAction.text = ""
@@ -92,6 +115,44 @@ func checkInteract():
 		isInteract = false
 		labelAction.text = ""
 	
+
+# LOD Startwerte
+func check_LOD_start():
+	# Alle LOD Areas suchen
+	var listMid = $Kopf/LOD_mid.get_overlapping_areas()
+	var listHigh = $Kopf/LOD_high.get_overlapping_areas()
+
+	print(listMid)
+	print(listHigh)
+
+	# alle Mid Areas durchgehen
+	for a in listMid:
+		# zurücksetzen so das nicht neu geprüft wird
+		LOD_init = false
+		if a.has_node("LOD1"):
+			print("LOD 1")
+			a.get_node("LOD1").visible = true
+			if a.has_node("LOD0"):
+				a.get_node("LOD0").visible = false
+			if a.has_node("LOD2"):
+				a.get_node("LOD2").visible = false
+
+
+	# alle High Areas durchgehen
+	for a in listHigh:
+		# zurücksetzen so das nicht neu geprüft wird
+		LOD_init = false
+		if a.has_node("LOD0"):
+			print("LOD 0")
+			
+			a.get_node("LOD0").visible = true
+			if a.has_node("LOD1"):
+				a.get_node("LOD1").visible = false
+			if a.has_node("LOD2"):
+				a.get_node("LOD2").visible = false
+			
+
+
 
 # Eingaben prüfen
 func _input(event):
@@ -110,10 +171,23 @@ func _input(event):
 	# Wenn Bewegung eingeschaltet
 	if isMove:
 		# Interaktion
-		if isInteract and Input.is_action_just_pressed("interact"):
-			if Target.has_method("do_action"):
-				Target.do_action(Player)
-				print("test")
+		if Input.is_action_just_pressed("interact"):
+			if isInteract:
+				if Target.has_method("do_action"):
+					# position lesen
+					collisionPoint = rayInteract.get_collision_point()
+					
+					if !isHolding:
+						# Hand Position setzen
+						Hand.global_transform.origin = Target.global_transform.origin
+						# Hand.global_transform.basis.y = Vector3(0,1,0)
+						
+					Target.do_action(Player)
+					# print("test")
+			
+			elif isHolding and holdObject:
+				if holdObject.has_method("do_action"):
+					holdObject.do_action(Player)
 		
 		# Wenn Maus Bewegung (Umschauen)
 		if event is InputEventMouseMotion:
@@ -174,6 +248,9 @@ func _process(delta):
 
 # Physic Process
 func _physics_process(delta):
+	if LOD_init:
+		check_LOD_start()
+		
 	# nur Wenn Bewegung erlaubt
 	if isMove:
 		# Kopf bewegen
@@ -186,6 +263,11 @@ func _physics_process(delta):
 		else:
 			# gehen
 			walk(delta)
+
+		# Wenn gegenstand in der Hand
+		if isHolding and holdObject:
+			# Bewege das Objekt in der Hand
+			holdObject.global_transform = Hand.global_transform
 
 
 #Bewegung aktivieren
@@ -317,3 +399,106 @@ func walk(delta):
 	if is_on_floor() and Input.is_action_just_pressed("move_jump"):
 		# Sprunghöhe eingeben
 		velocity.y = jump_height
+
+
+#-------------------
+# Hand
+
+# Nimmt Objekt in die Hand
+func pickup_object(newObject):
+	if isHolding or !newObject:
+		return false
+		
+	#Objekt merken
+	holdStartTransform = newObject.global_transform
+	holdObject = newObject
+	isHolding = true
+	return true
+
+# Entfern Objekt vom der Hand
+func release_object():
+	holdObject = null
+	isHolding = false
+
+
+#----------------------
+# Inventar
+
+# Objekt dem Inventar hinzufügen
+func set_inv(group, newName, newObject):
+	if !group:
+		return false
+	if !newName:
+		return false
+	if !newObject:
+		return false
+		
+	# Wenn Gruppe noch nicht vorhanden
+	if !inv.has(group):
+		# anlegen
+		inv[group] = {}
+	
+	# Objekt dem Inventar hinzufügen
+	inv[group][newName] = newObject
+	return true
+
+
+# Objekt aus dem Inventar entfernen
+func remove_inv(group, oldName):
+	if !group:
+		return false
+	if !oldName:
+		inv[group] = null
+		return true
+	
+	# Objekt entfernen
+	inv[group][oldName] = null
+	return true
+
+# Prüfen ob Objekt im Inventar
+func has_inv(group, objName):
+	if !group:
+		return false
+	if !inv.has(group):
+		return false
+	if !objName:
+		return false
+	
+	return inv[group].has(objName)
+
+
+
+#------------------
+# LOD
+
+# Enter high
+func _on_area_entered_high(area):
+	if area and area.has_node("LOD0"):
+		area.get_node("LOD0").visible = true
+		if area.has_node("LOD1"):
+			area.get_node("LOD1").visible = false
+		if area.has_node("LOD2"):
+			area.get_node("LOD2").visible = false
+
+# Enter mid
+func _on_area_entered_mid(area):
+	if area and area.has_node("LOD1"):
+		area.get_node("LOD1").visible = true
+		if area.has_node("LOD0"):
+			area.get_node("LOD0").visible = false
+		if area.has_node("LOD2"):
+			area.get_node("LOD2").visible = false
+
+# Exit high
+func _on_area_exit_high(area):
+	_on_area_entered_mid(area)
+	
+# Exit mid
+func _on_area_exit_mid(area):
+	if area and area.has_node("LOD2"):
+		area.get_node("LOD2").visible = true
+		if area.has_node("LOD0"):
+			area.get_node("LOD0").visible = false
+		if area.has_node("LOD1"):
+			area.get_node("LOD1").visible = false
+

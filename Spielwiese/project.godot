@@ -25,6 +25,8 @@ settings/stdout/print_fps=true
 
 [display]
 
+window/size/width=1600
+window/size/height=900
 window/size/fullscreen=true
 
 [editor_plugins]
