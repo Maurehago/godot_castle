@@ -1,4 +1,4 @@
-# godot_castle
+# godot_castle Test 1
 Godot Community Projekt
 
 Bei diesem Vorhaben geht es darum zu zeigen was
@@ -21,3 +21,10 @@ Da es sich um ein lang angelegtes Projekt handelt, vielleicht wird es nie fertig
 besteht auch kein Zeitdruck.
 
 Wir laden Dich herzlich ein an diesem Projekt mitzuwirken.
+<<<<<<< .mine
+
+Test
+||||||| .r12
+
+Test=======
+>>>>>>> .r16
