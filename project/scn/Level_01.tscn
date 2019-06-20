@@ -1,0 +1,74 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://asset/mesh/terrain/Terrain.tscn" type="PackedScene" id=1]
+[ext_resource path="res://asset/mesh/aussen/Garten.tscn" type="PackedScene" id=2]
+[ext_resource path="res://asset/mesh/aussen_wand/Aussenwand.tscn" type="PackedScene" id=3]
+[ext_resource path="res://asset/mesh/aussen/Turm.tscn" type="PackedScene" id=4]
+[ext_resource path="res://asset/mesh/aussen/Dach_Turm.tscn" type="PackedScene" id=5]
+[ext_resource path="res://asset/mesh/aussen/Bibliothek.tscn" type="PackedScene" id=6]
+[ext_resource path="res://asset/mesh/aussen/Dach_Bibliothek.tscn" type="PackedScene" id=7]
+[ext_resource path="res://asset/mesh/aussen/Kapelle.tscn" type="PackedScene" id=8]
+[ext_resource path="res://asset/mesh/aussen/Grosse_Halle.tscn" type="PackedScene" id=9]
+[ext_resource path="res://asset/mesh/aussen/Dach_grosse_Halle.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scn/blocks/Erdgeschoss.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scn/blocks/Stock_01.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scn/blocks/Turm_innen.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scn/blocks/Halle_innen.tscn" type="PackedScene" id=14]
+[ext_resource path="res://addons/Player3D_FP/Player.tscn" type="PackedScene" id=15]
+
+[node name="Level_01" type="Spatial"]
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.819152, 0.496732, 0.286788, 0.0996005, -0.615591, 0.781746, 0.564863, -0.611805, -0.553737, 0, 27.75, 0 )
+
+[node name="Terrain" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.75, 0 )
+
+[node name="Garten" parent="." instance=ExtResource( 2 )]
+editor/display_folded = false
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -157.5, 14, -32.5 )
+
+[node name="Gebaeude" type="Spatial" parent="."]
+
+[node name="Aussenwand" parent="Gebaeude" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -113, 12, -75.75 )
+
+[node name="Turm" parent="Gebaeude" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -157.5, 13.75, -32.5 )
+
+[node name="Dach_Turm" parent="Gebaeude/Turm" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20.25, 0 )
+
+[node name="Bibliothek" parent="Gebaeude" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -165, 14, -51.25 )
+
+[node name="Dach_Bibliothek" parent="Gebaeude/Bibliothek" instance=ExtResource( 7 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.5, 0 )
+
+[node name="Kapelle" parent="Gebaeude" instance=ExtResource( 8 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, -158.25, 14, -14.75 )
+
+[node name="Grosse_Halle" parent="Gebaeude" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -141.25, 14, -20.5 )
+
+[node name="Dach_grosse_Halle" parent="Gebaeude/Grosse_Halle" instance=ExtResource( 10 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.25, 0 )
+
+[node name="Raeume" type="Spatial" parent="."]
+editor/display_folded = true
+
+[node name="Erdgeschoss" parent="Raeume" instance=ExtResource( 11 )]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -140.25, 14, -45.75 )
+
+[node name="Stock_01" parent="Raeume" instance=ExtResource( 12 )]
+transform = Transform( -4.37114e-008, 0, -1, 0, 1, 0, 1, 0, -4.37114e-008, -140.25, 18.25, -45.75 )
+
+[node name="Turm_innen" parent="Raeume" instance=ExtResource( 13 )]
+transform = Transform( 1, 0, -1.06581e-014, 0, 1, 0, 1.06581e-014, 0, 1, -157, 14, -33 )
+
+[node name="Halle_innen" parent="Raeume" instance=ExtResource( 14 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -140.25, 14, -21 )
+
+[node name="Player" parent="." instance=ExtResource( 15 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -149.5, 13, -23.25 )
+allowChangeFlying = true

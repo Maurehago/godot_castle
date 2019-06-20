@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://raum_base/Raum_base_07.tscn" type="PackedScene" id=1]
+
+[node name="Raum_12" type="Spatial"]
+
+[node name="Raum_base_07" parent="." instance=ExtResource( 1 )]
