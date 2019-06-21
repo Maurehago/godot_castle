@@ -29,6 +29,7 @@ editor/display_folded = false
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -157.5, 14, -32.5 )
 
 [node name="Gebaeude" type="Spatial" parent="."]
+editor/display_folded = true
 
 [node name="Aussenwand" parent="Gebaeude" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -113, 12, -75.75 )

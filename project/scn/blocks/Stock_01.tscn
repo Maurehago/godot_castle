@@ -1,13 +1,13 @@
 [gd_scene load_steps=13 format=2]
 
-[ext_resource path="res://01/Raum_11.tscn" type="PackedScene" id=1]
-[ext_resource path="res://01/Raum_12.tscn" type="PackedScene" id=2]
-[ext_resource path="res://01/Raum_13.tscn" type="PackedScene" id=3]
-[ext_resource path="res://01/Raum_14.tscn" type="PackedScene" id=4]
-[ext_resource path="res://01/Raum_15.tscn" type="PackedScene" id=5]
-[ext_resource path="res://01/Raum_16.tscn" type="PackedScene" id=6]
-[ext_resource path="res://01/Raum_17.tscn" type="PackedScene" id=7]
-[ext_resource path="res://01/Raum_18.tscn" type="PackedScene" id=8]
+[ext_resource path="res://01/Raum_11/Raum_11.tscn" type="PackedScene" id=1]
+[ext_resource path="res://01/Raum_12/Raum_12.tscn" type="PackedScene" id=2]
+[ext_resource path="res://01/Raum_13/Raum_13.tscn" type="PackedScene" id=3]
+[ext_resource path="res://01/Raum_14/Raum_14.tscn" type="PackedScene" id=4]
+[ext_resource path="res://01/Raum_15/Raum_15.tscn" type="PackedScene" id=5]
+[ext_resource path="res://01/Raum_16/Raum_16.tscn" type="PackedScene" id=6]
+[ext_resource path="res://01/Raum_17/Raum_17.tscn" type="PackedScene" id=7]
+[ext_resource path="res://01/Raum_18/Raum_18.tscn" type="PackedScene" id=8]
 [ext_resource path="res://asset/mesh/fenster/Fenster.tscn" type="PackedScene" id=9]
 [ext_resource path="res://asset/mesh/raum/Tuerrahmen01.tscn" type="PackedScene" id=10]
 
@@ -43,7 +43,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.5, 2, -9.5 )
 shape = SubResource( 1 )
 
 [node name="LOD0" type="Spatial" parent="S1_12"]
-editor/display_folded = true
 
 [node name="Raum_12" parent="S1_12/LOD0" instance=ExtResource( 2 )]
 
@@ -59,7 +58,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.5, 2, 6.5 )
 shape = SubResource( 2 )
 
 [node name="LOD0" type="Spatial" parent="S1_13"]
-editor/display_folded = true
 
 [node name="Raum_13" parent="S1_13/LOD0" instance=ExtResource( 3 )]
 
@@ -77,6 +75,7 @@ shape = SubResource( 2 )
 [node name="LOD0" type="Spatial" parent="S1_14"]
 
 [node name="Raum_14" parent="S1_14/LOD0" instance=ExtResource( 4 )]
+transform = Transform( -1, 0, -2.62268e-007, 0, 1, 0, 2.62268e-007, 0, -1, 0, 0, 0 )
 
 [node name="LOD1" type="Spatial" parent="S1_14"]
 
@@ -129,7 +128,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 13 )
 [node name="LOD1" type="Spatial" parent="S1_17"]
 
 [node name="S1_18" type="Area" parent="."]
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.5, 0, -13 )
 monitoring = false
 
@@ -145,6 +143,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 0, 13 )
 [node name="LOD1" type="Spatial" parent="S1_18"]
 
 [node name="Fenster" type="Spatial" parent="."]
+editor/display_folded = true
 
 [node name="Aussen" type="Spatial" parent="Fenster"]
 
@@ -286,6 +285,7 @@ transform = Transform( 6.90396e-008, 0, -1, 0, 1, 0, 1, 0, 6.90396e-008, -13, 1,
 transform = Transform( 6.90396e-008, 0, -1, 0, 1, 0, 1, 0, 6.90396e-008, -13, 1, -27.5 )
 
 [node name="Tueren" type="Spatial" parent="."]
+editor/display_folded = true
 
 [node name="Tuerrahmen_01" parent="Tueren" instance=ExtResource( 10 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0.5 )
