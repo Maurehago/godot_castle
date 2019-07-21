@@ -20,4 +20,4 @@ Inwieweit wir hier das bestehende Wiki mit einfließen lassen, ist noch nicht ge
 Da es sich um ein lang angelegtes Projekt handelt, vielleicht wird es nie fertig,
 besteht auch kein Zeitdruck.
 
-Wir laden Dich herzlich ein an diesem Projekt mitzuwirken.
+Wir laden Dich herzlich ein, an diesem Projekt mitzuwirken.
