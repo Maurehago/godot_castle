@@ -16,13 +16,11 @@ _global_script_class_icons={
 [application]
 
 config/name="Godot Castle"
-run/main_scene="res://scn/Level_01.tscn"
+run/main_scene="res://szene/Burg1.tscn"
 config/icon="res://icon.png"
 
 [display]
 
-window/size/width=1960
-window/size/height=1024
 window/size/fullscreen=true
 
 [editor_plugins]
