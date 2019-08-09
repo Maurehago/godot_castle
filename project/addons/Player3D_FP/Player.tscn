@@ -6,19 +6,19 @@
 radius = 0.2
 height = 1.2
 
-[sub_resource type="SphereShape" id=8]
+[sub_resource type="SphereShape" id=2]
 radius = 30.0
 
-[sub_resource type="SphereShape" id=9]
+[sub_resource type="SphereShape" id=3]
 radius = 15.0
 
-[sub_resource type="CapsuleMesh" id=10]
+[sub_resource type="CapsuleMesh" id=4]
 radius = 0.22
 mid_height = 0.8
 radial_segments = 10
 rings = 3
 
-[sub_resource type="SpatialMaterial" id=11]
+[sub_resource type="SpatialMaterial" id=5]
 albedo_color = Color( 0, 1, 0, 1 )
 
 [sub_resource type="SphereMesh" id=6]
@@ -72,14 +72,14 @@ editor/display_folded = true
 input_ray_pickable = false
 
 [node name="CollisionShape" type="CollisionShape" parent="Kopf/LOD_mid"]
-shape = SubResource( 8 )
+shape = SubResource( 2 )
 
 [node name="LOD_high" type="Area" parent="Kopf"]
 editor/display_folded = true
 input_ray_pickable = false
 
 [node name="CollisionShape" type="CollisionShape" parent="Kopf/LOD_high"]
-shape = SubResource( 9 )
+shape = SubResource( 3 )
 
 [node name="lblAction" type="Label" parent="."]
 anchor_left = 0.5
@@ -97,8 +97,8 @@ align = 1
 
 [node name="Body" type="MeshInstance" parent="Visible"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 0.671966, 0 )
-mesh = SubResource( 10 )
-material/0 = SubResource( 11 )
+mesh = SubResource( 4 )
+material/0 = SubResource( 5 )
 
 [node name="Head" type="MeshInstance" parent="Visible"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-008, -1, 0, 1, -4.37114e-008, 0, 1.40564, -0.0780338 )

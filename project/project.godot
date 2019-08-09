@@ -21,7 +21,9 @@ config/icon="res://icon.png"
 
 [display]
 
-window/size/fullscreen=true
+window/size/width=1600
+window/size/height=900
+window/size/borderless=true
 
 [editor_plugins]
 
@@ -77,4 +79,6 @@ interact={
 
 [rendering]
 
+threads/thread_model=2
+quality/filters/msaa=2
 environment/default_environment="res://default_env.tres"
