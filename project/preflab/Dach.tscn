@@ -4,12 +4,259 @@
 [ext_resource path="res://asset/burg/ZinnePlace.tscn" type="PackedScene" id=2]
 [ext_resource path="res://asset/burg/Zinne1.tscn" type="PackedScene" id=3]
 
-[node name="Dach" index="0" instance=ExtResource( 1 )]
+[node name="Dach" instance=ExtResource( 1 )]
 
 [node name="Zinnen" type="Spatial" parent="." index="1"]
 
-[node name="ZinnePlace" parent="Zinnen" index="0" instance=ExtResource( 2 )]
+[node name="Ecken" type="Spatial" parent="Zinnen" index="0"]
+
+[node name="ZinnePlace" parent="Zinnen/Ecken" index="0" instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.7192, 16, 3.08867 )
 
-[node name="Zinne1" parent="Zinnen" index="1" instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 16, 0 )
+[node name="ZinnePlace2" parent="Zinnen/Ecken" index="1" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.78358, 16, 3.08867 )
+
+[node name="ZinnePlace29" parent="Zinnen/Ecken" index="2" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.78358, 16, -4.99333 )
+
+[node name="ZinnePlace30" parent="Zinnen/Ecken" index="3" instance=ExtResource( 2 )]
+transform = Transform( -1, 0, -1.50996e-007, 0, 1, 0, 1.50996e-007, 0, -1, -4.75146, 16, -4.99333 )
+
+[node name="ZinnePlace3" parent="Zinnen/Ecken" index="4" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.78358, 16, -14.477 )
+
+[node name="ZinnePlace16" parent="Zinnen/Ecken" index="5" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.79052, 16, -14.5317 )
+
+[node name="ZinnePlace17" parent="Zinnen/Ecken" index="6" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.7376, 16, -14.4972 )
+
+[node name="ZinnePlace19" parent="Zinnen/Ecken" index="7" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.5306, 16, -21.5993 )
+
+[node name="ZinnePlace20" parent="Zinnen/Ecken" index="8" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.27338, 16, -21.5993 )
+
+[node name="ZinnePlace18" parent="Zinnen/Ecken" index="9" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -11.4616, 16, -14.1007 )
+
+[node name="ZinnePlace21" parent="Zinnen/Ecken" index="10" instance=ExtResource( 2 )]
+transform = Transform( 0.749748, 0, -0.661723, 0, 1, 0, 0.661723, 0, 0.749748, -25.1495, 16, -15.0579 )
+
+[node name="ZinnePlace22" parent="Zinnen/Ecken" index="11" instance=ExtResource( 2 )]
+transform = Transform( 0.749748, 0, -0.661723, 0, 1, 0, 0.661723, 0, 0.749748, -19.5398, 16, -10.0112 )
+
+[node name="ZinnePlace23" parent="Zinnen/Ecken" index="12" instance=ExtResource( 2 )]
+transform = Transform( 0.728575, 0, -0.684966, 0, 1, 0, 0.684966, 0, 0.728575, -24.687, 16, -4.86397 )
+
+[node name="ZinnePlace24" parent="Zinnen/Ecken" index="13" instance=ExtResource( 2 )]
+transform = Transform( 0.728575, 0, -0.684966, 0, 1, 0, 0.684966, 0, 0.728575, -29.9348, 16, -9.62919 )
+
+[node name="ZinnePlace25" parent="Zinnen/Ecken" index="14" instance=ExtResource( 2 )]
+transform = Transform( 0.728575, 0, -0.684966, 0, 1, 0, 0.684966, 0, 0.728575, -24.5733, 16, -0.629532 )
+
+[node name="ZinnePlace26" parent="Zinnen/Ecken" index="15" instance=ExtResource( 2 )]
+transform = Transform( 0.754525, 0, -0.656272, 0, 1, 0, 0.656272, 0, 0.754525, -19.4307, 16, 3.88398 )
+
+[node name="ZinnePlace27" parent="Zinnen/Ecken" index="16" instance=ExtResource( 2 )]
+transform = Transform( 0.754525, 0, -0.656272, 0, 1, 0, 0.656272, 0, 0.754525, -23.8895, 16, 8.97193 )
+
+[node name="ZinnePlace28" parent="Zinnen/Ecken" index="17" instance=ExtResource( 2 )]
+transform = Transform( 0.754525, 0, -0.656272, 0, 1, 0, 0.656272, 0, 0.754525, -29.1142, 16, 4.43107 )
+
+[node name="ZinnePlace4" parent="Zinnen/Ecken" index="18" instance=ExtResource( 2 )]
+transform = Transform( 0.999906, 0, -0.0137037, 0, 1, 0, 0.0137037, 0, 0.999906, 11.0512, 15.905, -14.3179 )
+
+[node name="ZinnePlace5" parent="Zinnen/Ecken" index="19" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5378, 16.0349, -13.961 )
+
+[node name="ZinnePlace6" parent="Zinnen/Ecken" index="20" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5612, 16, -21.6064 )
+
+[node name="ZinnePlace7" parent="Zinnen/Ecken" index="21" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4.29106, 16, -21.577 )
+
+[node name="ZinnePlace8" parent="Zinnen/Ecken" index="22" instance=ExtResource( 2 )]
+transform = Transform( 0.662913, 0, -0.748697, 0, 1, 0, 0.748697, 0, 0.662913, 25.1166, 16, -14.9226 )
+
+[node name="ZinnePlace9" parent="Zinnen/Ecken" index="23" instance=ExtResource( 2 )]
+transform = Transform( 0.662913, 0, -0.748697, 0, 1, 0, 0.748697, 0, 0.662913, 30.065, 16, -9.45822 )
+
+[node name="ZinnePlace10" parent="Zinnen/Ecken" index="24" instance=ExtResource( 2 )]
+transform = Transform( 0.71928, 0, -0.69472, 0, 1, 0, 0.69472, 0, 0.71928, 24.7179, 16, -4.58018 )
+
+[node name="ZinnePlace11" parent="Zinnen/Ecken" index="25" instance=ExtResource( 2 )]
+transform = Transform( 0.671454, 0, -0.741046, 0, 1, 0, 0.741046, 0, 0.671454, 19.5584, 16, -9.85691 )
+
+[node name="ZinnePlace12" parent="Zinnen/Ecken" index="26" instance=ExtResource( 2 )]
+transform = Transform( 0.64019, 0, -0.768216, 0, 1, 0, 0.768216, 0, 0.64019, 19.0746, 16, 3.31742 )
+
+[node name="ZinnePlace13" parent="Zinnen/Ecken" index="27" instance=ExtResource( 2 )]
+transform = Transform( 0.650891, 0, -0.759171, 0, 1, 0, 0.759171, 0, 0.650891, 24.322, 16, -0.776299 )
+
+[node name="ZinnePlace14" parent="Zinnen/Ecken" index="28" instance=ExtResource( 2 )]
+transform = Transform( 0.650891, 0, -0.759171, 0, 1, 0, 0.759171, 0, 0.650891, 29.1314, 16, 4.51578 )
+
+[node name="ZinnePlace15" parent="Zinnen/Ecken" index="29" instance=ExtResource( 2 )]
+transform = Transform( 0.650891, 0, -0.759171, 0, 1, 0, 0.759171, 0, 0.650891, 23.9773, 16, 9.13557 )
+
+[node name="Bibliothek" type="Spatial" parent="Zinnen" index="1"]
+editor/display_folded = true
+
+[node name="Zinne1" parent="Zinnen/Bibliothek" index="0" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.70445, 16, 3.0742 )
+
+[node name="Zinne29" parent="Zinnen/Bibliothek" index="1" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -1.50996e-007, 0, 1, 0, 1.50996e-007, 0, -1, -3.70445, 16, -15.0407 )
+
+[node name="Zinne2" parent="Zinnen/Bibliothek" index="2" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.20443, 16, 3.0742 )
+
+[node name="Zinne34" parent="Zinnen/Bibliothek" index="3" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -1.50996e-007, 0, 1, 0, 1.50996e-007, 0, -1, -2.20443, 16, -15.0407 )
+
+[node name="Zinne3" parent="Zinnen/Bibliothek" index="4" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.705207, 16, 3.0742 )
+
+[node name="Zinne32" parent="Zinnen/Bibliothek" index="5" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -1.50996e-007, 0, 1, 0, 1.50996e-007, 0, -1, -0.705207, 16, -15.0407 )
+
+[node name="Zinne4" parent="Zinnen/Bibliothek" index="6" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.794013, 16, 3.0742 )
+
+[node name="Zinne30" parent="Zinnen/Bibliothek" index="7" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -1.50996e-007, 0, 1, 0, 1.50996e-007, 0, -1, 0.794013, 16, -15.0407 )
+
+[node name="Zinne5" parent="Zinnen/Bibliothek" index="8" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.29388, 16, 3.0742 )
+
+[node name="Zinne31" parent="Zinnen/Bibliothek" index="9" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -1.50996e-007, 0, 1, 0, 1.50996e-007, 0, -1, 2.29388, 16, -15.0407 )
+
+[node name="Zinne6" parent="Zinnen/Bibliothek" index="10" instance=ExtResource( 3 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.79077, 16, 3.0742 )
+
+[node name="Zinne33" parent="Zinnen/Bibliothek" index="11" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -1.50996e-007, 0, 1, 0, 1.50996e-007, 0, -1, 3.79077, 16, -15.0407 )
+
+[node name="Zinne7" parent="Zinnen/Bibliothek" index="12" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 4.77416, 16, 2.03408 )
+
+[node name="Zinne18" parent="Zinnen/Bibliothek" index="13" instance=ExtResource( 3 )]
+transform = Transform( 7.54979e-008, 0, -1, 0, 1, 0, 1, 0, 7.54979e-008, -4.76087, 16, 2.03408 )
+
+[node name="Zinne8" parent="Zinnen/Bibliothek" index="14" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 4.77416, 16, 0.537297 )
+
+[node name="Zinne28" parent="Zinnen/Bibliothek" index="15" instance=ExtResource( 3 )]
+transform = Transform( 7.54979e-008, 0, -1, 0, 1, 0, 1, 0, 7.54979e-008, -4.76087, 16, 0.537297 )
+
+[node name="Zinne9" parent="Zinnen/Bibliothek" index="16" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 4.77416, 16, -0.959594 )
+
+[node name="Zinne27" parent="Zinnen/Bibliothek" index="17" instance=ExtResource( 3 )]
+transform = Transform( 7.54979e-008, 0, -1, 0, 1, 0, 1, 0, 7.54979e-008, -4.76087, 16, -0.959594 )
+
+[node name="Zinne10" parent="Zinnen/Bibliothek" index="18" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 4.77416, 16, -2.45959 )
+
+[node name="Zinne21" parent="Zinnen/Bibliothek" index="19" instance=ExtResource( 3 )]
+transform = Transform( 7.54979e-008, 0, -1, 0, 1, 0, 1, 0, 7.54979e-008, -4.76087, 16, -2.45959 )
+
+[node name="Zinne11" parent="Zinnen/Bibliothek" index="20" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 4.77416, 16, -3.95959 )
+
+[node name="Zinne22" parent="Zinnen/Bibliothek" index="21" instance=ExtResource( 3 )]
+transform = Transform( 7.54979e-008, 0, -1, 0, 1, 0, 1, 0, 7.54979e-008, -4.76087, 16, -3.95959 )
+
+[node name="Zinne12" parent="Zinnen/Bibliothek" index="22" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 4.77416, 16, -6.01495 )
+
+[node name="Zinne23" parent="Zinnen/Bibliothek" index="23" instance=ExtResource( 3 )]
+transform = Transform( 7.54979e-008, 0, -1, 0, 1, 0, 1, 0, 7.54979e-008, -4.76087, 16, -6.01495 )
+
+[node name="Zinne13" parent="Zinnen/Bibliothek" index="24" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 4.77416, 16, -7.51495 )
+
+[node name="Zinne24" parent="Zinnen/Bibliothek" index="25" instance=ExtResource( 3 )]
+transform = Transform( 7.54979e-008, 0, -1, 0, 1, 0, 1, 0, 7.54979e-008, -4.76087, 16, -7.51495 )
+
+[node name="Zinne14" parent="Zinnen/Bibliothek" index="26" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 4.77416, 16, -9.01495 )
+
+[node name="Zinne20" parent="Zinnen/Bibliothek" index="27" instance=ExtResource( 3 )]
+transform = Transform( 7.54979e-008, 0, -1, 0, 1, 0, 1, 0, 7.54979e-008, -4.76087, 16, -9.01495 )
+
+[node name="Zinne15" parent="Zinnen/Bibliothek" index="28" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 4.77416, 16, -10.515 )
+
+[node name="Zinne19" parent="Zinnen/Bibliothek" index="29" instance=ExtResource( 3 )]
+transform = Transform( 7.54979e-008, 0, -1, 0, 1, 0, 1, 0, 7.54979e-008, -4.76087, 16, -10.515 )
+
+[node name="Zinne16" parent="Zinnen/Bibliothek" index="30" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 4.77416, 16, -12.015 )
+
+[node name="Zinne25" parent="Zinnen/Bibliothek" index="31" instance=ExtResource( 3 )]
+transform = Transform( 7.54979e-008, 0, -1, 0, 1, 0, 1, 0, 7.54979e-008, -4.76087, 16, -12.015 )
+
+[node name="Zinne17" parent="Zinnen/Bibliothek" index="32" instance=ExtResource( 3 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 4.77416, 16, -13.515 )
+
+[node name="Zinne26" parent="Zinnen/Bibliothek" index="33" instance=ExtResource( 3 )]
+transform = Transform( 7.54979e-008, 0, -1, 0, 1, 0, 1, 0, 7.54979e-008, -4.76087, 16, -13.515 )
+
+[node name="Turm5" type="Spatial" parent="Zinnen" index="2"]
+
+[node name="Zinne35" parent="Zinnen/Turm5" index="0" instance=ExtResource( 3 )]
+transform = Transform( 0.999677, 0, -0.0254278, 0, 1, 0, 0.0254278, 0, 0.999677, 5.68032, 16, -14.5235 )
+
+[node name="Zinne39" parent="Zinnen/Turm5" index="1" instance=ExtResource( 3 )]
+transform = Transform( 5.06202e-005, 0, -1, 0, 1, 0, 1, 0, 5.06202e-005, 4.283, 16, -16.0395 )
+
+[node name="Zinne40" parent="Zinnen/Turm5" index="2" instance=ExtResource( 3 )]
+transform = Transform( 5.06202e-005, 0, -1, 0, 1, 0, 1, 0, 5.06202e-005, 4.28293, 16, -17.5395 )
+
+[node name="Zinne41" parent="Zinnen/Turm5" index="3" instance=ExtResource( 3 )]
+transform = Transform( 5.06202e-005, 0, -1, 0, 1, 0, 1, 0, 5.06202e-005, 4.28285, 16, -19.0395 )
+
+[node name="Zinne42" parent="Zinnen/Turm5" index="4" instance=ExtResource( 3 )]
+transform = Transform( 5.06202e-005, 0, -1, 0, 1, 0, 1, 0, 5.06202e-005, 4.28277, 16, -20.5395 )
+
+[node name="Zinne43" parent="Zinnen/Turm5" index="5" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, 0.000473889, 0, 1, 0, -0.000473889, 0, -1, 4.88303, 16, -21.5786 )
+
+[node name="Zinne44" parent="Zinnen/Turm5" index="6" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, 0.000473889, 0, 1, 0, -0.000473889, 0, -1, 7.88303, 16, -21.5772 )
+
+[node name="Zinne47" parent="Zinnen/Turm5" index="7" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, 0.000473889, 0, 1, 0, -0.000473889, 0, -1, 6.38303, 16, -21.5779 )
+
+[node name="Zinne45" parent="Zinnen/Turm5" index="8" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, 0.000473889, 0, 1, 0, -0.000473889, 0, -1, 9.38303, 16, -21.5764 )
+
+[node name="Zinne46" parent="Zinnen/Turm5" index="9" instance=ExtResource( 3 )]
+transform = Transform( -1, 0, 0.000473889, 0, 1, 0, -0.000473889, 0, -1, 10.883, 16, -21.5757 )
+
+[node name="Zinne48" parent="Zinnen/Turm5" index="10" instance=ExtResource( 3 )]
+transform = Transform( -0.000875874, 0, 0.999999, 0, 1, 0, -0.999999, 0, -0.000875874, 11.5509, 16, -20.8136 )
+
+[node name="Zinne49" parent="Zinnen/Turm5" index="11" instance=ExtResource( 3 )]
+transform = Transform( -0.000875874, 0, 0.999999, 0, 1, 0, -0.999999, 0, -0.000875874, 11.5522, 16, -19.3136 )
+
+[node name="Zinne50" parent="Zinnen/Turm5" index="12" instance=ExtResource( 3 )]
+transform = Transform( -0.000875874, 0, 0.999999, 0, 1, 0, -0.999999, 0, -0.000875874, 11.5535, 16, -17.8136 )
+
+[node name="Zinne51" parent="Zinnen/Turm5" index="13" instance=ExtResource( 3 )]
+transform = Transform( -0.000875874, 0, 0.999999, 0, 1, 0, -0.999999, 0, -0.000875874, 11.5548, 16, -16.3136 )
+
+[node name="Zinne52" parent="Zinnen/Turm5" index="14" instance=ExtResource( 3 )]
+transform = Transform( -0.000875874, 0, 0.999999, 0, 1, 0, -0.999999, 0, -0.000875874, 11.5561, 16, -14.8136 )
+
+[node name="Zinne36" parent="Zinnen/Turm5" index="15" instance=ExtResource( 3 )]
+transform = Transform( 0.999677, 0, -0.0254278, 0, 1, 0, 0.0254278, 0, 0.999677, 7.18209, 16, -14.4853 )
+
+[node name="Zinne37" parent="Zinnen/Turm5" index="16" instance=ExtResource( 3 )]
+transform = Transform( 0.999677, 0, -0.0254278, 0, 1, 0, 0.0254278, 0, 0.999677, 8.68136, 16, -14.4472 )
+
+[node name="Zinne38" parent="Zinnen/Turm5" index="17" instance=ExtResource( 3 )]
+transform = Transform( 0.999677, 0, -0.0254278, 0, 1, 0, 0.0254278, 0, 0.999677, 10.181, 16, -14.409 )
