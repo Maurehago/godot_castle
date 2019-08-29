@@ -192,7 +192,7 @@ func _input(event):
 		# Wenn Maus Bewegung (Umschauen)
 		if event is InputEventMouseMotion:
 			# relative Mausbewegung merken
-			mouse_relative = event.relative
+			mouse_relative = mouse_relative.linear_interpolate(event.relative, 0.25) * mouse_sensivity
 		
 		# Wenn Flugmodus umschaltbar
 		if allowChangeFlying and Input.is_action_just_pressed("change_fly"):
@@ -253,9 +253,6 @@ func _physics_process(delta):
 		
 	# nur Wenn Bewegung erlaubt
 	if isMove:
-		# Kopf bewegen
-		move_head(delta)
-	
 		# Wenn im Flugmodus
 		if isFlying:
 			# fliegen
@@ -263,6 +260,9 @@ func _physics_process(delta):
 		else:
 			# gehen
 			walk(delta)
+
+		# Kopf bewegen
+		move_head(delta)
 
 		# Wenn gegenstand in der Hand
 		if isHolding and holdObject:
@@ -290,12 +290,9 @@ func stop_move():
 func move_head(delta):
 	# nur wenn eine MausBewegung
 	if mouse_relative.length() > 0 :
-		# Mit Maus Sensibilität multiplizieren
-		mouse_relative =  mouse_relative * mouse_sensivity
-		# mouse_relative = mouse_relative.linear_interpolate(mouse_relative * mouse_sensivity, delta)
-		
 		# Kopf (horizontal) um die Mausbeweg (von Grad in Radians umwandeln)
-		Kopf.rotate_y(deg2rad(-mouse_relative.x))
+		var rotation = deg2rad(-mouse_relative.x)
+		Kopf.rotate_y(rotation)
 
 		# Maus (Vertical) empfindlichkeit für Kamera umkehren
 		var change = -mouse_relative.y
