@@ -1,6 +1,9 @@
 # godot_castle
 Godot Community Projekt
 
+![Burg](wiki/Burg_2019-08-31_smal.jpg)
+
+## Einleitung
 Bei diesem Vorhaben geht es darum zu zeigen was
 mit Godot möglich ist.
 
@@ -21,3 +24,14 @@ Da es sich um ein lang angelegtes Projekt handelt, vielleicht wird es nie fertig
 besteht auch kein Zeitdruck.
 
 Wir laden Dich herzlich ein, an diesem Projekt mitzuwirken.
+
+## Mitmachen
+Wie könnt ihr euch am Projekt beteiligen?
+
+Zuerst einmal wenn ihr Ideen und Vorschäge einbringt, was ihr gerne in der Burg sehen möchtet, was ausgestellt werden soll.  
+Das sollte wenn möglich, mit dem Thema Godot-Engine zu tun haben.
+
+Eine weitere möglichkeit besteht darin, wenn ihr ein wenig kreativ seid, das ihr Modelle, Skripte, Materialien, Texturen usw... beisteuert.
+
+Noch besser ist, wenn ihr selber ganze Räume ausstatten möchtet.
+Eine genau Beschreibung wie ihr das machen könnt, folgt noch.
