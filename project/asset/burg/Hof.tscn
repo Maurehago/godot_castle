@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://mat/burg/Grass.material" type="Material" id=1]
 [ext_resource path="res://mat/burg/Decke.material" type="Material" id=2]
@@ -49,9 +49,6 @@ data = PoolVector3Array( -14.6476, 4, 8.0761, -4.7357, 4, 0.1069, -4.7357, 4, 3.
 
 [sub_resource type="SphereMesh" id=3]
 
-[sub_resource type="CubeMesh" id=4]
-material = ExtResource( 3 )
-
 [node name="Hof" type="MeshInstance"]
 use_in_baked_light = true
 mesh = SubResource( 1 )
@@ -67,9 +64,4 @@ shape = SubResource( 2 )
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 9.22527 )
 mesh = SubResource( 3 )
-material/0 = null
-
-[node name="MeshInstance2" type="MeshInstance" parent="."]
-transform = Transform( 0.851457, 0, -0.524424, 0, 1, 0, 0.524424, 0, 0.851457, -4.1413, 5.09237, 8.86163 )
-mesh = SubResource( 4 )
 material/0 = null
