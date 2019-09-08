@@ -46,4 +46,4 @@
 
 [node name="K13" parent="." instance=ExtResource( 14 )]
 
-[node name="K14" parent="." instance=ExtResource( 15 )]
+[node name="Treppenhaus" parent="." instance=ExtResource( 15 )]
