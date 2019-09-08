@@ -89,8 +89,18 @@ func _ready():
 	$Kopf/LOD_mid/CollisionShape.shape.radius = LOD1_Size
 	$Kopf/LOD_high/CollisionShape.shape.radius = LOD0_Size
 	
+	# Sofern eine AutoLoad.my_pos gespeichert ist
+	if get_node("/root/AutoLoad").my_pos.length() > 0:
+		translation = get_node("/root/AutoLoad").my_pos
+		$Kopf.rotation = get_node("/root/AutoLoad").my_richtung
+	
 	# Bewegung starten
 	start_move()
+
+func _exit_tree():
+	# beim verlassen die Positon speichern
+	get_node("/root/AutoLoad").my_pos = translation
+	get_node("/root/AutoLoad").my_richtung = $Kopf.rotation
 
 #Interaktion prüfen
 func checkInteract():
