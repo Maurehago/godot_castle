@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Burg/Keller/K09/K09.gd" type="Script" id=1]
+[ext_resource path="res://asset/burg/Kellermauer.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Burg/Keller/Keller.png" type="Texture" id=3]
+
+[node name="K09" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="Mauern" parent="." instance=ExtResource( 2 )]
+
+[node name="Karte" type="Sprite3D" parent="."]
+transform = Transform( 3.83477, 0, 0, 0, -1.67623e-007, 3.83477, 0, -3.83477, -1.67623e-007, 0, 4.01, 0 )
+modulate = Color( 1, 1, 1, 0.113725 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
