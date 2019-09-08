@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Brunnen.obj-0e92362fc690b0949386dfcb18bf9803.mesh"
+
+[deps]
+
+files=[ "res://.import/Brunnen.obj-0e92362fc690b0949386dfcb18bf9803.mesh" ]
+
+source_file="res://Burg/Hof/Brunnen.obj"
+dest_files=[ "res://.import/Brunnen.obj-0e92362fc690b0949386dfcb18bf9803.mesh", "res://.import/Brunnen.obj-0e92362fc690b0949386dfcb18bf9803.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

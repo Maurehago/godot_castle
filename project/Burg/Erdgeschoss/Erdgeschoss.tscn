@@ -11,10 +11,10 @@ data = PoolVector3Array( -6.2347, 4, -19.6781, -11.0148, 4, -19.6912, -6.2301, 4
 [node name="Erdgeschoss" instance=ExtResource( 1 )]
 mesh = ExtResource( 2 )
 
-[node name="StaticBody" type="StaticBody" parent="." index="0"]
+[node name="StaticBody" parent="." index="0"]
 editor/display_folded = true
 
-[node name="CollisionShape" type="CollisionShape" parent="StaticBody" index="0"]
+[node name="CollisionShape" parent="StaticBody" index="0"]
 shape = SubResource( 1 )
 
 [node name="Treppen" type="Spatial" parent="." index="1"]
