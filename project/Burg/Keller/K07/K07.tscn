@@ -20,5 +20,6 @@ __meta__ = {
 
 [node name="Vitrine" parent="." instance=ExtResource( 4 )]
 transform = Transform( 0.317395, 0, 0.948293, 0, 1, 0, -0.948293, 0, 0.317395, 12.8767, 0.222951, 16.2016 )
-Szene_01 = "res://Burg/Keller/K07/Szene02.tscn"
+Szene_01 = "res://Burg/Keller/K07/Szene01.tscn"
+Szene_02 = "res://Burg/Keller/K07/Szene02.tscn"
 Bild = "res://Burg/Keller/K07/Vitrine_abm.png"

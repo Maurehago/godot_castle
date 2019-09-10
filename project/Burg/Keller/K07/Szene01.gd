@@ -99,6 +99,14 @@ func _process(delta):
 		#############################################
 	# mit der folgenden Methode könnenn wir die Position des Mauszeigers ermitteln
 	$Label11.text = str(get_viewport().get_mouse_position())
+	################ Aufruf des SzeneReader ########
+	################################################
+	if Input.is_action_pressed("SzeneReader"):
+		get_node("/root/AutoLoad").zu_SzeneReader()
+	if Input.is_action_pressed("Hauptlevel"):
+		get_node("/root/AutoLoad").zu_hauptszene()
+	###############################################
+	###############################################
 
 func _exit_tree():
 	# aktion wieder entfernen

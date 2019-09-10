@@ -1,4 +1,4 @@
-﻿[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://Burg/Keller/K07/Szene01.gd" type="Script" id=1]
 
@@ -11,7 +11,10 @@ margin_top = 38.0573
 margin_right = 895.095
 margin_bottom = 120.057
 text = "Diese Szene ist nicht sonderlich Spannend. 
-
+Das Augenmerk liegt hier bei dem Skript, welches Du über den SzeneReader einsehen kannst.
+Drücke die Tasten [Q] [W] [E] [R] [T] , bewege die Maus oder drücke dessen Tasten und
+ benutze einmal einen Joystick.
+."
 clip_text = true
 
 [node name="Label2" type="Label" parent="."]
