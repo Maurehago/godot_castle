@@ -13,6 +13,7 @@ func _ready():
 
 func _process(delta):
 	if Input.is_action_pressed("vitrine_1"):
+		print(Szene_01)
 		get_node("/root/AutoLoad").zu_nebenszene(Szene_01)
 		set_process(false)
 	if Input.is_action_pressed("vitrine_2"):

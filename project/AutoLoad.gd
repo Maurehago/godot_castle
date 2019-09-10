@@ -2,7 +2,7 @@ extends Node
 
 var NebenSzene : String
 var HauptSzene : String  = "res://szene/Burg1.tscn"
-var SzeneReader : String = "res://preflab/SzenenReader.tscn"
+var SzeneReader : String = "res://preflab/SzeneReader/SzeneReader.tscn"
 var my_pos : Vector3
 var my_richtung : Vector3
 var zeit : int
@@ -23,6 +23,7 @@ func zu_hauptszene():
 func zu_SzeneReader():
 	if directory.file_exists(SzeneReader) and OS.get_system_time_msecs() - zeit > 500:
 		zeit = OS.get_system_time_msecs()
+		print("xxxx reader")
 		get_tree().change_scene(SzeneReader)
 		
 func back_nebenszene():
