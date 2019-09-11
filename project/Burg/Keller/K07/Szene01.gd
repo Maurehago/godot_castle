@@ -14,6 +14,7 @@ var stick = [0,0,0,0]
 func _ready():
 	set_process(true)
 	set_process_input(true)
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	# liste der aktionen um dummi_aktion erweitern
 	InputMap.add_action("dummi_aktion")
 	i_e_k.scancode = aktionen["aktion_T"]	#  = KEY_T = 84
@@ -27,11 +28,11 @@ func _input(event):
 		var dummi_text : String = ""
 		# wenn eine Taste den Event auslöst
 		# !!! Dies geschieht nur ein mal pro drücken einer Taste
-		if event.pressed and event.scancode == KEY_Q:
+		if event.pressed and event.scancode == KEY_A:
 			# wenn eine Taste gedrückt und scancode gleich
 			# get_tree().set_input_as_handled()
 			# hiermit gilt das Ereignis als behandelt _unhandled_input erhält somit kein event
-			dummi_text = "event Taste Q"
+			dummi_text = "event Taste A"
 			if event.shift:
 				# Tastenkombinationen mit shift, alt, control
 				dummi_text += " shift "
@@ -39,12 +40,12 @@ func _input(event):
 				dummi_text += " alt "
 			if event.control:
 				dummi_text += " control "
-			$Label2.text = dummi_text
+			$Label1.text = dummi_text
 		elif event.pressed and event.scancode == KEY_W:
-			$Label2.text = "event Taste W"
+			$Label1.text = "event Taste W"
 		else:
 			# Taste wurde losgelassen oder ScanCode ist nicht gleich
-			$Label2.text = ""
+			$Label1.text = ""
 	############################## Aktion ###############################
 	if event.is_action_pressed("dummi_aktion"):
 		# wenn die Aktion "dummi_aktion" ausgelöst wurde
