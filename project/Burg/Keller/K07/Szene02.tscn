@@ -19,7 +19,8 @@ position = Vector2( 527.648, 235.86 )
 curve = SubResource( 1 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2( 406.86, 68.7549 )
+position = Vector2( 405.616, 68.5653 )
+rotation = -0.030292
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="Path2D/PathFollow2D"]
