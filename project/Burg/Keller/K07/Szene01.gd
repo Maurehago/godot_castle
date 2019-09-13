@@ -6,19 +6,18 @@ extends Node2D
 # -Maus
 # -Joystick
 
-var aktionen = {"aktion_T" : KEY_T}
-var i_e_k = InputEventKey.new()
+var iek = InputEventKey.new()
 var maus_rad : int = 0
 var stick = [0,0,0,0]
 
 func _ready():
 	set_process(true)
 	set_process_input(true)
-	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	# liste der aktionen um dummi_aktion erweitern
-	InputMap.add_action("dummi_aktion")
-	i_e_k.scancode = aktionen["aktion_T"]	#  = KEY_T = 84
-	InputMap.action_add_event("dummi_aktion", i_e_k) 
+	if !InputMap.has_action("dummi_aktion"):
+		iek.scancode = KEY_T
+		InputMap.add_action("dummi_aktion")
+		InputMap.action_add_event("dummi_aktion", iek)
 
 func _input(event):
 	# diese Funktion wird bei einem Ereignis VOR der GUI aufgerufen
@@ -28,11 +27,11 @@ func _input(event):
 		var dummi_text : String = ""
 		# wenn eine Taste den Event auslöst
 		# !!! Dies geschieht nur ein mal pro drücken einer Taste
-		if event.pressed and event.scancode == KEY_A:
+		if event.pressed and event.scancode == KEY_Q:
 			# wenn eine Taste gedrückt und scancode gleich
 			# get_tree().set_input_as_handled()
 			# hiermit gilt das Ereignis als behandelt _unhandled_input erhält somit kein event
-			dummi_text = "event Taste A"
+			dummi_text = "event Taste Q"
 			if event.shift:
 				# Tastenkombinationen mit shift, alt, control
 				dummi_text += " shift "
@@ -40,12 +39,12 @@ func _input(event):
 				dummi_text += " alt "
 			if event.control:
 				dummi_text += " control "
-			$Label1.text = dummi_text
+			$Label2.text = dummi_text
 		elif event.pressed and event.scancode == KEY_W:
-			$Label1.text = "event Taste W"
+			$Label2.text = "event Taste W"
 		else:
 			# Taste wurde losgelassen oder ScanCode ist nicht gleich
-			$Label1.text = ""
+			$Label2.text = ""
 	############################## Aktion ###############################
 	if event.is_action_pressed("dummi_aktion"):
 		# wenn die Aktion "dummi_aktion" ausgelöst wurde
@@ -111,4 +110,6 @@ func _process(delta):
 
 func _exit_tree():
 	# aktion wieder entfernen
-	InputMap.action_erase_event("dummi_aktion", i_e_k)
+	if InputMap.has_action("dummi_aktion"):
+		InputMap.action_erase_event("dummi_aktion",iek)
+		InputMap.erase_action("dummi_aktion")
