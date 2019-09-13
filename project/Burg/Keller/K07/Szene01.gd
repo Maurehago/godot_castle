@@ -6,8 +6,7 @@ extends Node2D
 # -Maus
 # -Joystick
 
-var aktionen = {"aktion_T" : KEY_T}
-var i_e_k = InputEventKey.new()
+var iek = InputEventKey.new()
 var maus_rad : int = 0
 var stick = [0,0,0,0]
 
@@ -15,9 +14,10 @@ func _ready():
 	set_process(true)
 	set_process_input(true)
 	# liste der aktionen um dummi_aktion erweitern
-	InputMap.add_action("dummi_aktion")
-	i_e_k.scancode = aktionen["aktion_T"]	#  = KEY_T = 84
-	InputMap.action_add_event("dummi_aktion", i_e_k) 
+	if !InputMap.has_action("dummi_aktion"):
+		iek.scancode = KEY_T
+		InputMap.add_action("dummi_aktion")
+		InputMap.action_add_event("dummi_aktion", iek)
 
 func _input(event):
 	# diese Funktion wird bei einem Ereignis VOR der GUI aufgerufen
@@ -110,4 +110,6 @@ func _process(delta):
 
 func _exit_tree():
 	# aktion wieder entfernen
-	InputMap.action_erase_event("dummi_aktion", i_e_k)
+	if InputMap.has_action("dummi_aktion"):
+		InputMap.action_erase_event("dummi_aktion",iek)
+		InputMap.erase_action("dummi_aktion")
