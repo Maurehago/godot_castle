@@ -6,6 +6,7 @@ export var Szene_03 = ""
 export var Bild = ""
 
 func _ready():
+	
 	$vitrine/Sprite3D.texture = load(Bild)
 	set_process(false)
 	pass

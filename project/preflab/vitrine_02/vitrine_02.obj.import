@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/vitrine_02.obj-6ff5e10e611c46e417a015f1c6d4c0be.mesh"
+
+[deps]
+
+files=[ "res://.import/vitrine_02.obj-6ff5e10e611c46e417a015f1c6d4c0be.mesh" ]
+
+source_file="res://preflab/vitrine_02/vitrine_02.obj"
+dest_files=[ "res://.import/vitrine_02.obj-6ff5e10e611c46e417a015f1c6d4c0be.mesh", "res://.import/vitrine_02.obj-6ff5e10e611c46e417a015f1c6d4c0be.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
