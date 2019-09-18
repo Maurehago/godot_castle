@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Burg/Keller/K07/K07.gd" type="Script" id=1]
 [ext_resource path="res://asset/burg/Kellermauer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Burg/Keller/Keller.png" type="Texture" id=3]
 [ext_resource path="res://preflab/vitrine_01/Vitrine.tscn" type="PackedScene" id=4]
+[ext_resource path="res://preflab/vitrine_02/Vitrine.tscn" type="PackedScene" id=5]
 
 [node name="K07" type="Spatial"]
 script = ExtResource( 1 )
@@ -23,3 +24,8 @@ transform = Transform( 0.317395, 0, 0.948293, 0, 1, 0, -0.948293, 0, 0.317395, 1
 Szene_01 = "res://Burg/Keller/K07/Szene01.tscn"
 Szene_02 = "res://Burg/Keller/K07/Szene02.tscn"
 Bild = "res://Burg/Keller/K07/Vitrine_abm.png"
+
+[node name="Vitrine2" parent="." instance=ExtResource( 5 )]
+transform = Transform( -0.772522, 0, -0.634988, 0, 1, 0, 0.634988, 0, -0.772522, 15.882, 1.44258, 13.9 )
+Szene_01 = "res://Burg/Keller/K07/Szene01.tscn"
+Bild = "res://Burg/Keller/K07/vitrine 136x119.png"
