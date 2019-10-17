@@ -1,0 +1,86 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Burg/Keller/K07/S06/Szene.gd" type="Script" id=1]
+[ext_resource path="res://Burg/Keller/K07/S06/KinematicBody2D.gd" type="Script" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://Burg/Keller/K07/S06/wand.png" type="Texture" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32.7939, 32.4456 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 115.245, 11.0049 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 812.997, 411.505 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D"]
+texture = ExtResource( 3 )
+
+[node name="RayCast2D" type="RayCast2D" parent="KinematicBody2D"]
+enabled = true
+cast_to = Vector2( 0, 300 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 636.499, 546.231 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( 1012.25, 542.569 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D2"]
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2( 815.005, 700.706 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D3"]
+texture = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 479.464
+margin_top = 113.727
+margin_right = 1377.46
+margin_bottom = 178.727
+text = "Godot können wir mit [W][A][S][D] steuern.
+In Sichtrichtung sendet er zusätzlich einen RayCast aus,
+ welcher hier durch die grüne Linie sichtbar gemacht wird.
+Trifft der RayCast auf ein physikalisches Objekt,
+können wir Typ und Ort ermitteln.
+Dargestellt durch den gelben Punkt."
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 795.819
+margin_top = 295.201
+margin_right = 835.819
+margin_bottom = 309.201

@@ -5,44 +5,112 @@
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="Tree" type="Tree" parent="."]
-margin_left = 18.0
-margin_top = 100.0
-margin_right = 224.0
-margin_bottom = 580.0
-
-[node name="TextEdit" type="TextEdit" parent="."]
-margin_left = 241.0
-margin_top = 100.0
-margin_right = 716.0
-margin_bottom = 580.0
-syntax_highlighting = true
-
-[node name="ItemList" type="ItemList" parent="."]
-margin_left = 733.027
-margin_top = 100.0
-margin_right = 1004.03
-margin_bottom = 580.0
-max_columns = 2
-same_column_width = true
-fixed_column_width = 120
+[node name="ItemText" type="Label" parent="."]
+margin_left = 2322.97
+margin_top = 901.489
+margin_right = 2362.97
+margin_bottom = 915.489
 
 [node name="SzenenName" type="Label" parent="."]
-margin_left = 18.0
-margin_top = 20.0
-margin_right = 66.2549
-margin_bottom = 35.8675
-
-[node name="ItemText" type="Label" parent="."]
-margin_left = 735.97
-margin_top = 73.489
-margin_right = 775.97
-margin_bottom = 87.489
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1605.0
+margin_top = 848.0
+margin_right = 1605.0
+margin_bottom = 862.0
 
 [node name="Metadaten" type="Label" parent="."]
-margin_left = 249.0
-margin_top = 68.0
-margin_right = 289.0
-margin_bottom = 82.0
-[connection signal="cell_selected" from="Tree" to="." method="_on_Tree_cell_selected"]
-[connection signal="item_selected" from="ItemList" to="." method="_on_ItemList_item_selected"]
+margin_left = 1836.0
+margin_top = 896.0
+margin_right = 1876.0
+margin_bottom = 910.0
+
+[node name="HSplitContainer" type="HSplitContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1600.0
+margin_bottom = 893.0
+split_offset = 300
+
+[node name="Tree" type="Tree" parent="HSplitContainer"]
+margin_right = 301.0
+margin_bottom = 893.0
+
+[node name="HSplitContainer" type="HSplitContainer" parent="HSplitContainer"]
+margin_left = 313.0
+margin_right = 1600.0
+margin_bottom = 893.0
+split_offset = 600
+
+[node name="TabContainer" type="TabContainer" parent="HSplitContainer/HSplitContainer"]
+margin_right = 608.0
+margin_bottom = 893.0
+tab_align = 0
+
+[node name="Skript" type="Tabs" parent="HSplitContainer/HSplitContainer/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+tab_align = 0
+
+[node name="TextEdit" type="TextEdit" parent="HSplitContainer/HSplitContainer/TabContainer/Skript"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 30.0
+syntax_highlighting = true
+context_menu_enabled = false
+
+[node name="Label" type="Label" parent="HSplitContainer/HSplitContainer/TabContainer/Skript"]
+margin_top = 5.0
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="Tabs2" type="Tabs" parent="HSplitContainer/HSplitContainer/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="TabContainer2" type="TabContainer" parent="HSplitContainer/HSplitContainer"]
+margin_left = 620.0
+margin_right = 1287.0
+margin_bottom = 893.0
+tab_align = 0
+
+[node name="Inspektor" type="Tabs" parent="HSplitContainer/HSplitContainer/TabContainer2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="ItemList" type="ItemList" parent="HSplitContainer/HSplitContainer/TabContainer2/Inspektor"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+max_columns = 2
+same_column_width = true
+
+[node name="Signale" type="Tabs" parent="HSplitContainer/HSplitContainer/TabContainer2"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 32.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="ItemList" type="ItemList" parent="HSplitContainer/HSplitContainer/TabContainer2/Signale"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+max_columns = 2
+same_column_width = true
+[connection signal="cell_selected" from="HSplitContainer/Tree" to="." method="_on_Tree_cell_selected"]

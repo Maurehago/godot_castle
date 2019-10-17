@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Burg/Keller/K07/S07/hintergrund_berge2.jpg" type="Texture" id=1]
+[ext_resource path="res://Burg/Keller/K07/S07/Baumreihe.png" type="Texture" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://Burg/Keller/K07/S07/Sprite.gd" type="Script" id=4]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 1916.9, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 1612.77, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+scale = Vector2( 1.39383, 1 )
+texture = ExtResource( 2 )
+centered = false
+offset = Vector2( 0, 196.78 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 797.444, 797.444 )
+texture = ExtResource( 3 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="Sprite"]
+position = Vector2( 9.27271, -355.45 )
+current = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 999.602
+margin_top = 804.442
+margin_right = 1188.6
+margin_bottom = 835.442
+text = "Parallaxe Effekt
+Godot mit [A] und [D] steuern"
