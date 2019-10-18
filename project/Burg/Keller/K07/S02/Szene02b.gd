@@ -10,4 +10,4 @@ func _process(delta):
 	# PathFollow2D ist ein Punkt auf diesem Weg
 	# offset ist die zurückgelegte Strecke in Pixel
 	offset += 50*delta
-	
+

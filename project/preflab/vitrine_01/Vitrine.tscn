@@ -30,6 +30,6 @@ transform = Transform( 11.0935, 0, 0, 0, 2.74091, 0, 0, 0, 19.9205, 0, 13.5439, 
 shape = SubResource( 2 )
 
 [node name="Sprite3D" type="Sprite3D" parent="vitrine"]
-transform = Transform( -4.37114e-008, -0.604738, 0.796425, 0, 0.796425, 0.604738, -1, 2.64339e-008, -3.48128e-008, 0.548916, 1.39105, 0 )
+transform = Transform( -4.37114e-008, -0.604738, 0.796425, 0, 0.796425, 0.604738, -1, 2.64339e-008, -3.48128e-008, 0.532254, 1.40245, 0.010865 )
 [connection signal="body_entered" from="vitrine/Area" to="." method="_on_Area_body_entered"]
 [connection signal="body_exited" from="vitrine/Area" to="." method="_on_Area_body_exited"]

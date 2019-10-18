@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Burg.png-d25ce1b0c9451c431a969aa0943dece1.stex"
+path="res://.import/wand_grau.png-1c517fc3a1388f130ad40d729564185a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Burg/Keller/K07/Burg.png"
-dest_files=[ "res://.import/Burg.png-d25ce1b0c9451c431a969aa0943dece1.stex" ]
+source_file="res://Burg/Keller/K07/S08/wand_grau.png"
+dest_files=[ "res://.import/wand_grau.png-1c517fc3a1388f130ad40d729564185a.stex" ]
 
 [params]
 

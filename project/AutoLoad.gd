@@ -5,28 +5,27 @@ var HauptSzene : String  = "res://szene/Burg1.tscn"
 var SzeneReader : String = "res://preflab/SzeneReader/SzeneReader.tscn"
 var my_pos : Vector3
 var my_richtung : Vector3
-var zeit : int
-var directory = Directory.new();
+var DummiFile =File.new();
+var SzeneReaderAktiv : bool = true
+
+func _ready():
+	set_process_input(false)
 
 func zu_nebenszene(weg):
-	if !weg.empty():
-		NebenSzene = weg
-	if directory.file_exists(NebenSzene) and OS.get_system_time_msecs() - zeit > 500:
-		zeit = OS.get_system_time_msecs()
+	NebenSzene = weg
+	if DummiFile.file_exists(NebenSzene):
+		set_process_input(true)
 		get_tree().change_scene(NebenSzene)
 
-func zu_hauptszene():
-	if directory.file_exists(HauptSzene) and OS.get_system_time_msecs() - zeit > 500:
-		zeit = OS.get_system_time_msecs()
+func _input(event):
+	if event.is_action_pressed("ui_focus_next"):
+		print(SzeneReaderAktiv)
+		if SzeneReaderAktiv:
+			SzeneReaderAktiv = false
+			get_tree().change_scene(SzeneReader)
+		else:
+			SzeneReaderAktiv = true
+			get_tree().change_scene(NebenSzene)
+	if event.is_action_pressed("ui_end"):
+		set_process_input(false)
 		get_tree().change_scene(HauptSzene)
-
-func zu_SzeneReader():
-	if directory.file_exists(SzeneReader) and OS.get_system_time_msecs() - zeit > 500:
-		zeit = OS.get_system_time_msecs()
-		print("xxxx reader")
-		get_tree().change_scene(SzeneReader)
-		
-func back_nebenszene():
-	if directory.file_exists(NebenSzene) and OS.get_system_time_msecs() - zeit > 500:
-		zeit = OS.get_system_time_msecs()
-		get_tree().change_scene(NebenSzene)

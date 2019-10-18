@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Szene01.png-92392632e46b781a333a8326b705b0dc.stex"
+path="res://.import/rennbahn.png-d7a0056b335fc620d4d3eaa3df734999.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Burg/Keller/K07/Szene01.png"
-dest_files=[ "res://.import/Szene01.png-92392632e46b781a333a8326b705b0dc.stex" ]
+source_file="res://Burg/Keller/K07/S12/rennbahn.png"
+dest_files=[ "res://.import/rennbahn.png-d7a0056b335fc620d4d3eaa3df734999.stex" ]
 
 [params]
 

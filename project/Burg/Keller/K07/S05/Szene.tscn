@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Burg/Keller/K07/S05/RigidBody2D.gd" type="Script" id=1]
+[ext_resource path="res://Burg/Keller/K07/S11/ball.png" type="Texture" id=2]
+[ext_resource path="res://Burg/Keller/K07/S05/mauer.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 36.2383
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 194.824, 29.6252 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 178.41, 10 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2( 608.421, -53.2204 )
+mass = 3.79
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D"]
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 888.056, 382.304 )
+rotation = -0.340339
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+scale = Vector2( 1.29333, 0.375796 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="."]
+position = Vector2( 724.82, 638.349 )
+rotation = 0.424115
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D3"]
+scale = Vector2( 1.29333, 0.375796 )
+texture = ExtResource( 3 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+position = Vector2( 751.406, 143.416 )
+rotation = 0.254818
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="StaticBody2D2"]
+scale = Vector2( 1.29333, 0.375796 )
+texture = ExtResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 1057.58, 1016.88 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource( 3 )
+[connection signal="body_entered" from="Area2D" to="RigidBody2D" method="_on_Area2D_body_entered"]

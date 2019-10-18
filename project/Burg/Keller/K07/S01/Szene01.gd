@@ -11,8 +11,8 @@ var maus_rad : int = 0
 var stick = [0,0,0,0]
 
 func _ready():
-	set_process(true)
-	set_process_input(true)
+	# Mauszeiger sichtbar machen
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	# liste der aktionen um dummi_aktion erweitern
 	if !InputMap.has_action("dummi_aktion"):
 		iek.scancode = KEY_T
@@ -20,18 +20,17 @@ func _ready():
 		InputMap.action_add_event("dummi_aktion", iek)
 
 func _input(event):
-	# diese Funktion wird bei einem Ereignis VOR der GUI aufgerufen
-	# wollen wir das Ereignis NACH der GUI auswerten müssen wir die func _unhandled_input(event): verwenden
+	# diese Funktion wird bei einem Ereignis aufgerufen
 	############################ Taste #################################
 	if event is InputEventKey:
 		var dummi_text : String = ""
 		# wenn eine Taste den Event auslöst
 		# !!! Dies geschieht nur ein mal pro drücken einer Taste
-		if event.pressed and event.scancode == KEY_Q:
+		if event.pressed and event.scancode == KEY_A:
 			# wenn eine Taste gedrückt und scancode gleich
 			# get_tree().set_input_as_handled()
 			# hiermit gilt das Ereignis als behandelt _unhandled_input erhält somit kein event
-			dummi_text = "event Taste Q"
+			dummi_text = "Taste A"
 			if event.shift:
 				# Tastenkombinationen mit shift, alt, control
 				dummi_text += " shift "
@@ -39,16 +38,16 @@ func _input(event):
 				dummi_text += " alt "
 			if event.control:
 				dummi_text += " control "
-			$Label2.text = dummi_text
-		elif event.pressed and event.scancode == KEY_W:
-			$Label2.text = "event Taste W"
+			$Label1.text = dummi_text
 		else:
 			# Taste wurde losgelassen oder ScanCode ist nicht gleich
-			$Label2.text = ""
+			$Label1.text = ""
 	############################## Aktion ###############################
 	if event.is_action_pressed("dummi_aktion"):
 		# wenn die Aktion "dummi_aktion" ausgelöst wurde
 		$Label2.text = "Aktion Taste T"
+	else:
+		$Label2.text = ""
 	############################### Maustasten ##############################
 	if event is InputEventMouseButton:
 		if event.pressed and event.button_index == BUTTON_LEFT:
@@ -96,17 +95,9 @@ func _process(delta):
 		$Label10.text = "Input Taste R"
 	else:
 		$Label10.text = ""
-		#############################################
+	#############################################
 	# mit der folgenden Methode könnenn wir die Position des Mauszeigers ermitteln
 	$Label11.text = str(get_viewport().get_mouse_position())
-	################ Aufruf des SzeneReader ########
-	################################################
-	if Input.is_action_pressed("SzeneReader"):
-		get_node("/root/AutoLoad").zu_SzeneReader()
-	if Input.is_action_pressed("Hauptlevel"):
-		get_node("/root/AutoLoad").zu_hauptszene()
-	###############################################
-	###############################################
 
 func _exit_tree():
 	# aktion wieder entfernen

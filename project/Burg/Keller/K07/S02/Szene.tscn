@@ -1,10 +1,10 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Burg/Keller/K07/Szene02.gd" type="Script" id=1]
-[ext_resource path="res://Burg/Keller/K07/Szene02b.gd" type="Script" id=2]
+[ext_resource path="res://Burg/Keller/K07/S02/Szene02.gd" type="Script" id=1]
+[ext_resource path="res://Burg/Keller/K07/S02/Szene02b.gd" type="Script" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
-[ext_resource path="res://Burg/Keller/K07/Szene02a.gd" type="Script" id=4]
-[ext_resource path="res://Burg/Keller/K07/Burg.png" type="Texture" id=5]
+[ext_resource path="res://Burg/Keller/K07/S02/Szene02a.gd" type="Script" id=4]
+[ext_resource path="res://Burg/Keller/K07/S02/Burg.png" type="Texture" id=5]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -42,30 +42,36 @@ position = Vector2( 609.186, 505.399 )
 rotation = 3.14159
 texture = ExtResource( 3 )
 
-[node name="Panel" type="Panel" parent="."]
-pause_mode = 2
-visible = false
-margin_left = 748.621
-margin_top = 350.449
-margin_right = 954.621
-margin_bottom = 531.449
-
-[node name="Label" type="Label" parent="Panel"]
-margin_left = 68.5896
-margin_top = 40.6122
-margin_right = 108.59
-margin_bottom = 54.6122
-text = "Pause"
-
-[node name="Button" type="Button" parent="Panel"]
-margin_left = 49.6372
-margin_top = 92.9569
-margin_right = 145.637
-margin_bottom = 112.957
-text = "... und weiter"
-
 [node name="Sprite" type="Sprite" parent="."]
 z_index = -2
 texture = ExtResource( 5 )
 centered = false
-[connection signal="pressed" from="Panel/Button" to="." method="_on_Button_pressed"]
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+pause_mode = 2
+margin_left = 725.011
+margin_top = 426.477
+margin_right = 833.011
+margin_bottom = 484.477
+window_title = "Pause"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 212.0
+margin_top = 116.0
+margin_right = 545.0
+margin_bottom = 164.0
+text = "Mit der Taste[P] startest Du hier den Pausemodus
+und mit [R] Resetesen wir die Szene.
+Im Skript kannst Du noch zusätzlich sehen,
+ wie man eine Anwendung beendet.
+"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 322.544
+margin_top = 395.85
+margin_right = 735.544
+margin_bottom = 443.85
+text = "Diese beiden Godotköpfe wandern hin und her
+ und tauschen dabei den Z-Index aus.
+ Hierdurch sind sie immer abwechseld vor dem jeweils anderen."
+[connection signal="confirmed" from="AcceptDialog" to="." method="_on_AcceptDialog_confirmed"]

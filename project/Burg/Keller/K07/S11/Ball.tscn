@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Burg/Keller/K07/S11/ball.png" type="Texture" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 18.733
+
+[node name="RigidBody2D" type="RigidBody2D"]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 1 )
