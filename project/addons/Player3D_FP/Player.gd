@@ -231,20 +231,20 @@ func _input(event):
 		var camTransform = Kamera.get_global_transform().basis
 		
 		# Wenn nach vorne 'move_forward'
-		if Input.is_action_pressed("move_forward"):
+		if Input.is_action_pressed("ui_up"):
 			direction -= camTransform.z
 			isForeward = true
 
 		# Wenn nach hinten 'move_backward'
-		if Input.is_action_pressed("move_backward"):
+		if Input.is_action_pressed("ui_down"):
 			direction += camTransform.z
 			isBackward = true
 			
 		# Wenn nach links 'move_left'
-		if Input.is_action_pressed("move_left"):
+		if Input.is_action_pressed("ui_left"):
 			direction -= camTransform.x
 		# Wenn nach rechts 'move_right'
-		if Input.is_action_pressed("move_right"):
+		if Input.is_action_pressed("ui_right"):
 			direction += camTransform.x
 		
 		# Richtung Normalisieren

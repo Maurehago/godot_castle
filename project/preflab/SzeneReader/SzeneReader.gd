@@ -3,6 +3,7 @@ extends Node2D
 var Baum = []
 var szene_namen
 var zeit :int
+var skript_icon = load("res://preflab/SzeneReader/skript.png")
 
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
@@ -78,10 +79,10 @@ func _ready():
 		else:
 			# Schreife abbrechen es gibt kein endtag
 			tex_start = -1
-	skript = skript.replace("( ", "(")
+	skript = skript.replace("( ", "(")	# Freizeichen innerhalb von Klammern entfernen
 	skript = skript.replace(" )", ")")
-	skript = skript.replace(", ", ",")
-	skript = skript.replace("\n", " ")
+	skript = skript.replace(", ", ",")	# Freizeichen bei Aufzählungen entfernen
+	skript = skript.replace("\n", " ")	# Return zum Freizeichen
 	skript = skript.replace("]", "")
 	skript = skript.replace(" = ", "=")
 	obj_feld = skript.split("[")
@@ -127,12 +128,14 @@ func _ready():
 	daten_zum_baum()
 
 func daten_zum_baum():
-	# diese Funktion liest das Baum-Array aus und überträgt die entsprechenden Daten in die Tree-Ansicht
+	# diese Funktion liest das Baum-Array aus und überträgt die entsprechenden Daten in die Baum-Ansicht
 	var vater : String
 	var sohn : String
 	var baum_zeiger = {}
 	var resourcen = []
+	var baum_pfade = []
 	var kleinste_id : int = 9999999
+	var root_name : String
 	var root_skript : String
 	for x in Baum:
 		if x[0] == "node":
@@ -148,14 +151,28 @@ func daten_zum_baum():
 				else:
 					vater = "root/" + weg
 					sohn = vater + "/" + namen
-				baum_zeiger[sohn] = $Tree.create_item(baum_zeiger[vater])
+				baum_zeiger[sohn] = $HSplitContainer/Tree.create_item(baum_zeiger[vater])
 				baum_zeiger[sohn].set_text(0,namen)
+				# tausche root gegen root_name
+				baum_pfade.append(root_name + sohn.substr(4,sohn.length()-5))
+				if paara.has("script"):
+					baum_zeiger[sohn].set_icon (0,skript_icon)
 			else:
-				baum_zeiger.root = $Tree.create_item()
+				baum_zeiger.root = $HSplitContainer/Tree.create_item()
 				baum_zeiger.root.set_text(0,namen)
+				baum_pfade.append(namen)
+				root_name = name
+				if paara.has("script"):
+					baum_zeiger.root.set_icon (0,skript_icon)
 		# und die resourcen
 		elif x[0] == "ext_resource":
 			resourcen.append(x[1])
+		# und die Signale
+		elif x[0] == "connection":
+			
+			pass
+			#print(x[1])
+			#########################################################################################print(x)
 	# suche das Skript mit der niedrigsten ID
 	for x in resourcen:
 		if x.type == '"'+"Script"+'"':
@@ -165,8 +182,11 @@ func daten_zum_baum():
 	# und lade es in den TextEdit
 	var file = File.new()
 	file.open(root_skript, file.READ)
-	$TextEdit.text = file.get_as_text()
+	$HSplitContainer/HSplitContainer/TabContainer/Skript/Label.text = root_skript
+	$HSplitContainer/HSplitContainer/TabContainer/Skript/TextEdit.text = file.get_as_text()
 	file.close()
+#	for x in baum_pfade:
+#		print(x)
 
 func daten_aus_feld(objekttyp,weg):
 	# diese Funktion sucht im Baum-Array nach objekttyp und weg und speichert diesen zweig in datensatz
@@ -189,9 +209,9 @@ func daten_aus_feld(objekttyp,weg):
 					break
 	# als nächstes alle Schlüssel und dessen Werte in die ItemList
 	var schluessel_liste = datensatz[1].keys()
-	$ItemList.clear()
+	$HSplitContainer/HSplitContainer/TabContainer2/Inspektor/ItemList.clear()
 	for x in schluessel_liste:
-		$ItemList.add_item(x)
+		$HSplitContainer/HSplitContainer/TabContainer2/Inspektor/ItemList.add_item(x)
 		var text = datensatz[1][x]
 		# wenn der Wert ein ExtResource ist, tausche gegen path
 		if text.findn("ExtResource") > -1:
@@ -207,7 +227,8 @@ func daten_aus_feld(objekttyp,weg):
 							text = text.substr(1,text.length() -2)
 							var file = File.new()
 							file.open(text, file.READ)
-							$TextEdit.text = file.get_as_text()
+							$HSplitContainer/HSplitContainer/TabContainer/Skript/Label.text = text
+							$HSplitContainer/HSplitContainer/TabContainer/Skript/TextEdit.text = file.get_as_text()
 							file.close()
 						break
 		# wenn der Wert ein sub_resource ist, tausche gegen type
@@ -220,7 +241,7 @@ func daten_aus_feld(objekttyp,weg):
 					if y[1].id == id:
 						text = y[1].type
 						break
-		$ItemList.add_item(text)
+		$HSplitContainer/HSplitContainer/TabContainer2/Inspektor/ItemList.add_item(text)
 	# wenn Metadaten vorhanden
 	if datensatz.size() == 3:
 		var meta = datensatz[2].keys()
@@ -231,10 +252,22 @@ func daten_aus_feld(objekttyp,weg):
 func _on_Tree_cell_selected():
 	# diese Funktion wird aufgerufen wenn auf eine Zeile in der Baumansicht geklickt wird.
 	# zunächst bauen wir die Pfadangabe wieder zusammen um über diese und dem objekttyp im Baum-Array die entsprechende Zeile zu finden.
-	var zweig = $Tree.get_selected()
+	var zweig = $HSplitContainer/Tree.get_selected()
 	var weg = []
 	var vater = zweig.get_parent()
 	var objekttyp = zweig.get_text(0)
+	$HSplitContainer/HSplitContainer/TabContainer2/Signale/ItemList.clear()
+	for x in Baum:
+		if x[0] == "connection":
+			if x[1].from == '"'+objekttyp+'"':
+				$HSplitContainer/HSplitContainer/TabContainer2/Signale/ItemList.add_item("An")
+				$HSplitContainer/HSplitContainer/TabContainer2/Signale/ItemList.add_item(x[1].to)
+				$HSplitContainer/HSplitContainer/TabContainer2/Signale/ItemList.add_item("Signal")
+				$HSplitContainer/HSplitContainer/TabContainer2/Signale/ItemList.add_item(x[1].signal)
+				$HSplitContainer/HSplitContainer/TabContainer2/Signale/ItemList.add_item("Funktion")
+				$HSplitContainer/HSplitContainer/TabContainer2/Signale/ItemList.add_item(x[1].method)
+				$HSplitContainer/HSplitContainer/TabContainer2/Signale/ItemList.add_item("---")
+				$HSplitContainer/HSplitContainer/TabContainer2/Signale/ItemList.add_item("---")
 	while vater:
 		weg.append(vater.get_text(0))
 		vater = vater.get_parent()
@@ -254,14 +287,8 @@ func _on_Tree_cell_selected():
 		var dummi_a = dummi.substr(0,dummi.length()-1)
 		daten_aus_feld(objekttyp,dummi_a)
 
-func _on_ItemList_item_selected(index):
-	# wenn auf das SchlüsselItem geklickt wurde dann +1
-	if index%2 == 0:
-		index += 1
-	# zeige get_Item_Text in Label.text an
-	$ItemText.text = $ItemList.get_item_text(index)
 
-func _process(delta):
+func _process(_delta):
 	# damit ständiges umherspringen vermieden wird, muss die Szene mindest 1 sec aktiv sein
 	if Input.is_action_pressed("SzeneReader"):
 		get_node("/root/AutoLoad").back_nebenszene()

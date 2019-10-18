@@ -1,0 +1,105 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Burg/Keller/K07/S08/wand_grau.png" type="Texture" id=1]
+[ext_resource path="res://Burg/Keller/K07/S08/Lichtkegel.png" type="Texture" id=2]
+[ext_resource path="res://Burg/Keller/K07/S08/Light2D.gd" type="Script" id=3]
+[ext_resource path="res://Burg/Keller/K07/S08/Säule.png" type="Texture" id=4]
+[ext_resource path="res://Burg/Keller/K07/S08/Säule4.gd" type="Script" id=5]
+
+[sub_resource type="OccluderPolygon2D" id=1]
+polygon = PoolVector2Array( 0.198883, 76.3332, 38.1255, 66.5457, 62.5944, 45.1355, 75.2366, 18.2198, 75.8483, -17.4639, 62.3905, -45.3992, 40.1646, -65.5859, 14.8802, -75.7813, -15.9098, -75.9852, -42.0098, -65.1781, -62.4005, -46.6226, -73.8193, -23.5811, -77.0818, 0.0720673, -73.2076, 24.1331, -65.663, 41.0573, -52.0013, 57.3699, -30.9988, 70.4199 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 2.63718, 3.29864 )
+texture = ExtResource( 1 )
+centered = false
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Light2D" type="Light2D" parent="."]
+position = Vector2( 894.038, 225.56 )
+scale = Vector2( 1.72, 2.52 )
+texture = ExtResource( 2 )
+offset = Vector2( -4.88, 141.76 )
+shadow_enabled = true
+script = ExtResource( 3 )
+
+[node name="Light2DRot" type="Light2D" parent="."]
+position = Vector2( 29.2717, 380.016 )
+rotation = 4.71239
+scale = Vector2( 1, 1.5 )
+texture = ExtResource( 2 )
+offset = Vector2( -4.88, 141.76 )
+color = Color( 0.941176, 0.0352941, 0.0352941, 1 )
+energy = 1.45
+shadow_enabled = true
+
+[node name="Light2DBlau" type="Light2D" parent="."]
+position = Vector2( 35.1121, 546.702 )
+rotation = 4.71239
+scale = Vector2( 1, 1.5 )
+texture = ExtResource( 2 )
+offset = Vector2( -4.88, 141.76 )
+color = Color( 0.0352941, 0.133333, 0.941176, 1 )
+energy = 1.45
+shadow_enabled = true
+
+[node name="Light2DGleb" type="Light2D" parent="."]
+position = Vector2( 37.1149, 221.869 )
+rotation = 4.71239
+scale = Vector2( 1, 1.5 )
+texture = ExtResource( 2 )
+offset = Vector2( -4.88, 141.76 )
+color = Color( 0.941176, 0.92549, 0.0352941, 1 )
+energy = 1.45
+shadow_enabled = true
+
+[node name="Säule" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 922.387, 719.939 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Säule"]
+occluder = SubResource( 1 )
+
+[node name="Säule2" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 813.584, 455.288 )
+scale = Vector2( 0.728251, 0.668016 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Säule2"]
+occluder = SubResource( 1 )
+
+[node name="Säule4" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 277.879, 227.37 )
+scale = Vector2( 0.728251, 0.668016 )
+texture = ExtResource( 4 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Säule4"]
+occluder = SubResource( 1 )
+
+[node name="Säule3" type="Sprite" parent="."]
+editor/display_folded = true
+position = Vector2( 1289.43, 637.917 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Säule3"]
+occluder = SubResource( 1 )

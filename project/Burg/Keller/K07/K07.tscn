@@ -20,12 +20,33 @@ __meta__ = {
 }
 
 [node name="Vitrine" parent="." instance=ExtResource( 4 )]
-transform = Transform( 0.317395, 0, 0.948293, 0, 1, 0, -0.948293, 0, 0.317395, 12.8767, 0.222951, 16.2016 )
-Szene_01 = "res://Burg/Keller/K07/Szene01.tscn"
-Szene_02 = "res://Burg/Keller/K07/Szene02.tscn"
-Bild = "res://Burg/Keller/K07/Vitrine_abm.png"
+transform = Transform( -0.679367, 0, 0.733799, 0, 1, 0, -0.733799, 0, -0.679367, 16.2242, 0.255122, 14.3316 )
+Szene_1 = "res://Burg/Keller/K07/S04/Szene.tscn"
+Szene_2 = "res://Burg/Keller/K07/S05/Szene.tscn"
+Szene_3 = "res://Burg/Keller/K07/S06/Szene.tscn"
+Bild = "res://Burg/Keller/K07/vitrine2.png"
+Skalierungsfaktor = 0.333
+
+[node name="Vitrine4" parent="." instance=ExtResource( 4 )]
+transform = Transform( -0.679367, 0, 0.733799, 0, 1, 0, -0.733799, 0, -0.679367, 19.6004, 0.255122, 11.2945 )
+Szene_1 = "res://Burg/Keller/K07/S10/Szene.tscn"
+Szene_2 = "res://Burg/Keller/K07/S11/Szene.tscn"
+Szene_3 = "res://Burg/Keller/K07/S12/Szene.tscn"
+Bild = "res://Burg/Keller/K07/vitrine4.png"
+Skalierungsfaktor = 0.25
 
 [node name="Vitrine2" parent="." instance=ExtResource( 5 )]
-transform = Transform( -0.772522, 0, -0.634988, 0, 1, 0, 0.634988, 0, -0.772522, 15.882, 1.44258, 13.9 )
-Szene_01 = "res://Burg/Keller/K07/Szene01.tscn"
-Bild = "res://Burg/Keller/K07/vitrine 136x119.png"
+transform = Transform( -0.973552, 0, 0.228464, 0, 1, 0, -0.228464, 0, -0.973552, 12.8655, 1.43765, 16.2376 )
+Szene_1 = "res://Burg/Keller/K07/S01/Szene.tscn"
+Szene_2 = "res://Burg/Keller/K07/S02/Szene.tscn"
+Szene_3 = "res://Burg/Keller/K07/S03/Szene.tscn"
+Bild = "res://Burg/Keller/K07/vitrine1.png"
+Skalierungsfaktor = 0.5
+
+[node name="Vitrine3" parent="." instance=ExtResource( 5 )]
+transform = Transform( -0.712533, 0, -0.701638, 0, 1, 0, 0.701638, 0, -0.712533, 17.7746, 1.43765, 12.349 )
+Szene_1 = "res://Burg/Keller/K07/S07/Szene.tscn"
+Szene_2 = "res://Burg/Keller/K07/S08/Szene.tscn"
+Szene_3 = "res://Burg/Keller/K07/S09/Szene.tscn"
+Bild = "res://Burg/Keller/K07/vitrine3.png"
+Skalierungsfaktor = 0.25
