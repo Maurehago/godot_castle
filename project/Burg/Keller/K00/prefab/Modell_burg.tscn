@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Burg/Keller/K00/mesh/modell_vitrine.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://Burg/Keller/K00/mesh/modell_felsen.mesh" type="ArrayMesh" id=2]
+[ext_resource path="res://Burg/Keller/K00/mesh/modell_burg.mesh" type="ArrayMesh" id=3]
+[ext_resource path="res://Burg/Keller/K00/mesh/modell_glas.mesh" type="ArrayMesh" id=4]
+[ext_resource path="res://Burg/Keller/K00/mat/Glas.material" type="Material" id=5]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.410222, 0.410377, 0.415047 )
+
+[node name="Modell_burg" type="Spatial"]
+
+[node name="Vitrine" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="Felsen" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.55619, 0 )
+use_in_baked_light = true
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="Burg" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21849, 0.599629, -0.0788051 )
+use_in_baked_light = true
+mesh = ExtResource( 3 )
+material/0 = null
+material/1 = null
+material/2 = null
+
+[node name="Glashaube" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 4 )
+material/0 = ExtResource( 5 )
+
+[node name="StaticBody" type="StaticBody" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.405818, 0 )
+shape = SubResource( 1 )

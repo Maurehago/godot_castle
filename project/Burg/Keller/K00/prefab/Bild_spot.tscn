@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Burg/Keller/K00/mesh/Bild_spot.mesh" type="ArrayMesh" id=1]
+
+[node name="Bild_spot" type="MeshInstance"]
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = null

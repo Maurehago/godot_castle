@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Burg/Keller/K00/mesh/lampenschirm.mesh" type="ArrayMesh" id=1]
+
+[node name="Lampenschirm" type="Spatial"]
+
+[node name="Lampe" type="MeshInstance" parent="."]
+mesh = ExtResource( 1 )
+material/0 = null
+material/1 = null
+material/2 = null

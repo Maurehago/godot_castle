@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Burg/Keller/K00/mesh/bilderrahmen1.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://Burg/Keller/K00/mat/Holzrahmen.material" type="Material" id=2]
+[ext_resource path="res://Burg/Keller/K00/mat/Bild1.material" type="Material" id=3]
+
+[node name="Bild1" type="Spatial"]
+
+[node name="Bild1" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 1 )
+material/0 = ExtResource( 2 )
+material/1 = ExtResource( 3 )
