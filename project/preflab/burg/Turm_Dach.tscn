@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://asset/burg/turm/TurmZinnen.scn" type="PackedScene" id=1]
+[ext_resource path="res://asset/burg/turm/Turm_Dach.scn" type="PackedScene" id=2]
+
+[node name="Turm_Dach" type="Spatial"]
+
+[node name="TurmZinnen" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.240551, 0 )
+
+[node name="TurmZinnen2" parent="." instance=ExtResource( 1 )]
+transform = Transform( -4.37114e-008, 0, 1, 0, 1, 0, -1, 0, -4.37114e-008, 7.79438, 0.240551, 0 )
+
+[node name="TurmZinnen3" parent="." instance=ExtResource( 1 )]
+transform = Transform( -1, 0, -8.74228e-008, 0, 1, 0, 8.74228e-008, 0, -1, 7.79438, 0.240551, -7.79615 )
+
+[node name="TurmZinnen4" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1.31134e-007, 0, -1, 0, 1, 0, 1, 0, 1.31134e-007, 0.00125694, 0.240551, -7.80023 )
+
+[node name="Turm_Dach" parent="." instance=ExtResource( 2 )]

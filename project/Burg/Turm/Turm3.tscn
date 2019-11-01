@@ -1,0 +1,66 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://asset/burg/turm/Turm3.scn" type="PackedScene" id=1]
+[ext_resource path="res://preflab/burg/Turm_Dach.tscn" type="PackedScene" id=2]
+[ext_resource path="res://asset/burg/turm/Turm_Boden.scn" type="PackedScene" id=3]
+[ext_resource path="res://asset/burg/turm/Turm_Boden_ausschnitt.scn" type="PackedScene" id=4]
+[ext_resource path="res://asset/burg/turm/Turm_Decke_ausschnitt.scn" type="PackedScene" id=5]
+[ext_resource path="res://asset/burg/treppen/Treppe1.scn" type="PackedScene" id=6]
+
+[node name="Turm3" type="Spatial"]
+
+[node name="Mauern" type="Spatial" parent="."]
+
+[node name="Turm3" parent="Mauern" instance=ExtResource( 1 )]
+
+[node name="Turm4" parent="Mauern" instance=ExtResource( 1 )]
+transform = Transform( 0.77165, 0, 0.636047, 0, 1, 0, -0.636047, 0, 0.77165, -24.75, 4.25, -4.25 )
+
+[node name="Turm5" parent="Mauern" instance=ExtResource( 1 )]
+transform = Transform( 0.77165, 0, 0.636047, 0, 1, 0, -0.636047, 0, 0.77165, -24.75, 8.5, -4.25 )
+
+[node name="Turm6" parent="Mauern" instance=ExtResource( 1 )]
+transform = Transform( 0.77165, 0, 0.636047, 0, 1, 0, -0.636047, 0, 0.77165, -24.75, 12.75, -4.25 )
+
+[node name="Turm_Dach" parent="Mauern" instance=ExtResource( 2 )]
+transform = Transform( -0.636624, 0, -0.771174, 0, 1, 0, 0.771174, 0, -0.636624, -25.7341, 17, -15.2538 )
+
+[node name="Boden_Decke" type="Spatial" parent="."]
+
+[node name="Turm_Boden" parent="Boden_Decke" instance=ExtResource( 3 )]
+transform = Transform( 0.636432, 0, 0.771333, 0, 1, 0, -0.771333, 0, 0.636432, -24.7483, 0, -4.98195 )
+
+[node name="Turm_Boden_ausschnitt" parent="Boden_Decke" instance=ExtResource( 4 )]
+transform = Transform( -0.635469, 0, -0.772127, 0, 1, 0, 0.772127, 0, -0.635469, -20.4227, 4.25, -10.228 )
+
+[node name="Turm_Boden_ausschnitt2" parent="Boden_Decke" instance=ExtResource( 4 )]
+transform = Transform( -0.635469, 0, -0.772127, 0, 1, 0, 0.772127, 0, -0.635469, -20.4227, 8.5, -10.228 )
+
+[node name="Turm_Boden_ausschnitt3" parent="Boden_Decke" instance=ExtResource( 4 )]
+transform = Transform( -0.635469, 0, -0.772127, 0, 1, 0, 0.772127, 0, -0.635469, -20.4227, 12.75, -10.228 )
+
+[node name="Turm_Decke_ausschnitt" parent="Boden_Decke" instance=ExtResource( 5 )]
+transform = Transform( -0.636077, 0, -0.771626, 0, 1, 0, 0.771626, 0, -0.636077, -20.4237, 4, -10.2275 )
+
+[node name="Turm_Decke_ausschnitt2" parent="Boden_Decke" instance=ExtResource( 5 )]
+transform = Transform( -0.636077, 0, -0.771626, 0, 1, 0, 0.771626, 0, -0.636077, -20.4237, 8.25, -10.2275 )
+
+[node name="Turm_Decke_ausschnitt3" parent="Boden_Decke" instance=ExtResource( 5 )]
+transform = Transform( -0.636077, 0, -0.771626, 0, 1, 0, 0.771626, 0, -0.636077, -20.4237, 12.5, -10.2275 )
+
+[node name="Turm_Decke_ausschnitt4" parent="Boden_Decke" instance=ExtResource( 5 )]
+transform = Transform( -0.636077, 0, -0.771626, 0, 1, 0, 0.771626, 0, -0.636077, -20.4237, 16.75, -10.2275 )
+
+[node name="Treppen" type="Spatial" parent="."]
+
+[node name="Treppe1" parent="Treppen" instance=ExtResource( 6 )]
+transform = Transform( -0.637967, 0, -0.770064, 0, 1, 0, 0.770064, 0, -0.637967, -27.6938, 0, -7.39538 )
+
+[node name="Treppe2" parent="Treppen" instance=ExtResource( 6 )]
+transform = Transform( -0.637967, 0, -0.770064, 0, 1, 0, 0.770064, 0, -0.637967, -27.6938, 4.5, -7.39538 )
+
+[node name="Treppe3" parent="Treppen" instance=ExtResource( 6 )]
+transform = Transform( -0.637967, 0, -0.770064, 0, 1, 0, 0.770064, 0, -0.637967, -27.6938, 8.75, -7.39538 )
+
+[node name="Treppe4" parent="Treppen" instance=ExtResource( 6 )]
+transform = Transform( -0.637967, 0, -0.770064, 0, 1, 0, 0.770064, 0, -0.637967, -27.6938, 13, -7.39538 )

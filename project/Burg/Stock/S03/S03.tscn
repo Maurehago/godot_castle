@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://asset/burg/erdgeschoss/E03/E03.scn" type="PackedScene" id=1]
+
+[node name="S03" type="Spatial"]
+
+[node name="E03" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.760581, 0, 0.649243, 0, 1, 0, -0.649243, 0, 0.760581, -19, 8.5, 3.25 )
