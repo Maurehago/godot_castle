@@ -22,3 +22,7 @@ shape = SubResource( 1 )
 [node name="LOD1" type="Spatial" parent="LOD_area" index="2"]
 
 [node name="LOD2" type="Spatial" parent="LOD_area" index="3"]
+
+material/0 = null
+material/1 = null
+material/2 = null

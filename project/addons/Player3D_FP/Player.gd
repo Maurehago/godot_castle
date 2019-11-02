@@ -89,18 +89,8 @@ func _ready():
 	$Kopf/LOD_mid/CollisionShape.shape.radius = LOD1_Size
 	$Kopf/LOD_high/CollisionShape.shape.radius = LOD0_Size
 	
-	# Sofern eine AutoLoad.my_pos gespeichert ist
-	if get_node("/root/AutoLoad").my_pos.length() > 0:
-		translation = get_node("/root/AutoLoad").my_pos
-		$Kopf.rotation = get_node("/root/AutoLoad").my_richtung
-	
 	# Bewegung starten
 	start_move()
-
-func _exit_tree():
-	# beim verlassen die Positon speichern
-	get_node("/root/AutoLoad").my_pos = translation
-	get_node("/root/AutoLoad").my_richtung = $Kopf.rotation
 
 #Interaktion prüfen
 func checkInteract():
@@ -203,6 +193,7 @@ func _input(event):
 		if event is InputEventMouseMotion:
 			# relative Mausbewegung merken
 			mouse_relative = mouse_relative.linear_interpolate(event.relative, 0.25) * mouse_sensivity
+			# mouse_relative = event.relative
 		
 		# Wenn Flugmodus umschaltbar
 		if allowChangeFlying and Input.is_action_just_pressed("change_fly"):
@@ -231,20 +222,20 @@ func _input(event):
 		var camTransform = Kamera.get_global_transform().basis
 		
 		# Wenn nach vorne 'move_forward'
-		if Input.is_action_pressed("ui_up"):
+		if Input.is_action_pressed("move_forward"):
 			direction -= camTransform.z
 			isForeward = true
 
 		# Wenn nach hinten 'move_backward'
-		if Input.is_action_pressed("ui_down"):
+		if Input.is_action_pressed("move_backward"):
 			direction += camTransform.z
 			isBackward = true
 			
 		# Wenn nach links 'move_left'
-		if Input.is_action_pressed("ui_left"):
+		if Input.is_action_pressed("move_left"):
 			direction -= camTransform.x
 		# Wenn nach rechts 'move_right'
-		if Input.is_action_pressed("ui_right"):
+		if Input.is_action_pressed("move_right"):
 			direction += camTransform.x
 		
 		# Richtung Normalisieren
@@ -263,6 +254,9 @@ func _physics_process(delta):
 		
 	# nur Wenn Bewegung erlaubt
 	if isMove:
+		# Kopf bewegen
+		move_head(delta)
+	
 		# Wenn im Flugmodus
 		if isFlying:
 			# fliegen
@@ -270,9 +264,6 @@ func _physics_process(delta):
 		else:
 			# gehen
 			walk(delta)
-
-		# Kopf bewegen
-		move_head(delta)
 
 		# Wenn gegenstand in der Hand
 		if isHolding and holdObject:
@@ -300,9 +291,10 @@ func stop_move():
 func move_head(delta):
 	# nur wenn eine MausBewegung
 	if mouse_relative.length() > 0 :
+		# Mit Maus Sensibilität multiplizieren
+		
 		# Kopf (horizontal) um die Mausbeweg (von Grad in Radians umwandeln)
-		var rotation = deg2rad(-mouse_relative.x)
-		Kopf.rotate_y(rotation)
+		Kopf.rotate_y(deg2rad(-mouse_relative.x))
 
 		# Maus (Vertical) empfindlichkeit für Kamera umkehren
 		var change = -mouse_relative.y
