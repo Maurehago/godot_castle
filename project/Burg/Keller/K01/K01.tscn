@@ -3,3 +3,6 @@
 [ext_resource path="res://asset/burg/keller/K01/K01.tscn" type="PackedScene" id=1]
 
 [node name="K01" index="0" instance=ExtResource( 1 )]
+material/0 = null
+material/1 = null
+material/2 = null
