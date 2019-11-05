@@ -1,8 +1,24 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://asset/burg/erdgeschoss/E02/E02.scn" type="PackedScene" id=1]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 7.37253, 2.10625, 4.04195 )
 
 [node name="S02" type="Spatial"]
 
 [node name="E02" parent="." instance=ExtResource( 1 )]
 transform = Transform( 0.760581, 0, 0.649243, 0, 1, 0, -0.649243, 0, 0.760581, -15, 8.5, 8.25 )
+
+[node name="LOD_area" type="Area" parent="."]
+monitoring = false
+
+[node name="CollisionShape" type="CollisionShape" parent="LOD_area"]
+transform = Transform( 0.770687, 0, 0.637213, 0, 1, 0, -0.637213, 0, 0.770687, -12.8385, 10.6333, 1.54485 )
+shape = SubResource( 1 )
+
+[node name="LOD0" type="Spatial" parent="LOD_area"]
+
+[node name="LOD1" type="Spatial" parent="LOD_area"]
+
+[node name="LOD2" type="Spatial" parent="LOD_area"]
