@@ -8,8 +8,6 @@ panorama = ExtResource( 1 )
 [resource]
 background_mode = 2
 background_sky = SubResource( 1 )
-ambient_light_sky_contribution = 0.59
 fog_depth_end = 44.0
 ssao_enabled = true
 ssao_bias = 0.001
-ssao_quality = 1
