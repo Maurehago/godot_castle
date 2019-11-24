@@ -14,11 +14,11 @@
 [ext_resource path="res://Burg/Stock/Stock.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Burg/Dach/Dach.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Burg/Bibliothek/Bibliothek.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Burg/Burg_gp_data.tres" type="GIProbeData" id=15]
-[ext_resource path="res://asset/burg/fenster_tueren/Tuer_Rahmen.scn" type="PackedScene" id=16]
-[ext_resource path="res://asset/burg/fenster_tueren/Fenster1.mesh" type="ArrayMesh" id=17]
-[ext_resource path="res://asset/burg/fenster_tueren/Fenster2.mesh" type="ArrayMesh" id=18]
-[ext_resource path="res://asset/burg/zubehoer/Zugbruecke.scn" type="PackedScene" id=19]
+[ext_resource path="res://asset/burg/fenster_tueren/Tuer_Rahmen.scn" type="PackedScene" id=15]
+[ext_resource path="res://asset/burg/fenster_tueren/Fenster1.mesh" type="ArrayMesh" id=16]
+[ext_resource path="res://asset/burg/fenster_tueren/Fenster2.mesh" type="ArrayMesh" id=17]
+[ext_resource path="res://asset/burg/zubehoer/Zugbruecke.scn" type="PackedScene" id=18]
+[ext_resource path="res://asset/burg/zubehoer/Tor1.scn" type="PackedScene" id=19]
 
 [node name="Burg" type="Spatial"]
 
@@ -54,319 +54,302 @@ editor/display_folded = true
 
 [node name="Bibliothek" parent="." instance=ExtResource( 14 )]
 
-[node name="GIProbe" type="GIProbe" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25, 10, -1 )
-extents = Vector3( 38.4835, 14.4585, 27.881 )
-data = ExtResource( 15 )
-
-[node name="OmniLight" type="OmniLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.25, 6.25 )
-omni_range = 15.3471
-
-[node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.34202, 0.939693, 0, -0.939693, 0.34202, 0, 26.25, 0 )
-shadow_enabled = true
-shadow_bias = 0.42
-
-[node name="DirectionalLight2" type="DirectionalLight" parent="."]
-transform = Transform( 0.926795, -0.375472, 0.00848501, -0.177125, -0.417061, 0.891452, -0.331177, -0.827696, -0.453035, 0, 26.25, -32.1923 )
-light_energy = 0.1
-light_indirect_energy = 5.0
-shadow_bias = 0.42
-
 [node name="Tueren_keller" type="Spatial" parent="."]
 editor/display_folded = true
 
-[node name="Tuer_Rahmen" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( 0.279173, 0, 0.919284, 0, 1, 0, -0.960241, 0, 0.267265, -3.87695, 0.25, 15.9912 )
 
-[node name="Tuer_Rahmen2" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen2" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( 0.279077, 0, 0.971477, 0, 1, 0, -0.960268, 0, 0.282334, -11.1424, 0.25, 13.9095 )
 
-[node name="Tuer_Rahmen3" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen3" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( 0.763861, 0, -0.652914, 0, 1, 0, 0.645381, 0, 0.772776, -16.3576, 0.25, 7.28355 )
 
-[node name="Tuer_Rahmen6" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen6" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( 0.655249, 0, 0.76423, 0, 1, 0, -0.755413, 0, 0.662897, -17.2226, 0.25, 0.88395 )
 
-[node name="Tuer_Rahmen11" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen11" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( 0.646216, 0, 0.772062, 0, 1, 0, -0.763154, 0, 0.653758, -23.1702, 0.25, -6.28843 )
 
-[node name="Tuer_Rahmen12" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen12" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( -0.771175, 0, 0.670433, 0, 1, 0, -0.636622, 0, -0.812132, -20.7987, 0.25, -11.0526 )
 
-[node name="Tuer_Rahmen13" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen13" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( 0.00286658, 0, 1.05311, 0, 1, 0, -0.999996, 0, 0.00301882, -11.6515, 0.25, -16.0494 )
 
-[node name="Tuer_Rahmen7" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen7" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( 0.953719, 0, 0.210723, 0, 1, 0, -0.300697, 0, 0.668349, -12.768, 0.25, -2.3171 )
 
-[node name="Tuer_Rahmen8" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen8" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( 0.883845, 0, -0.464017, 0, 1, 0, 0.467779, 0, 0.876737, -7.83464, 0.25, -1.65267 )
 
-[node name="Tuer_Rahmen9" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen9" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( 0.00275989, 0, -1.01003, 0, 1, 0, 0.999996, 0, 0.00278758, -4.65799, 0.25, -12.7234 )
 
-[node name="Tuer_Rahmen14" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen14" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( 0.00275989, 0, -1.01003, 0, 1, 0, 0.999996, 0, 0.00278758, 4.66148, 0.25, -12.7335 )
 
-[node name="Tuer_Rahmen15" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen15" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( 0.999937, 0, -0.0127159, 0, 1, 0, 0.0111882, 0, 1.13647, 7.6461, 0.25, -14.3179 )
 
-[node name="Tuer_Rahmen17" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen17" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( -0.0235712, 0, -1.07838, 0, 1, 0, 0.999722, 0, -0.0254258, 11.6405, 0.25, -16.0387 )
 
-[node name="Tuer_Rahmen21" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen21" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( -0.770085, 0, -0.688132, 0, 1, 0, 0.63794, 0, -0.830674, 20.7953, 0.25, -11.0577 )
 
-[node name="Tuer_Rahmen22" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen22" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( -0.632036, 0, 0.835909, 0, 1, 0, -0.774939, 0, -0.681763, 23.1717, 0.25, -6.27726 )
 
-[node name="Tuer_Rahmen16" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen16" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( 0.885934, 0, 0.460066, 0, 1, 0, -0.46381, 0, 0.878782, 7.82661, 0.25, -1.64443 )
 
-[node name="Tuer_Rahmen18" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen18" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( 0.76779, 0, 0.635528, 0, 1, 0, -0.6407, 0, 0.761592, 16.3487, 0.25, 7.28691 )
 
-[node name="Tuer_Rahmen25" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen25" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( -0.284192, 0, 0.990988, 0, 1, 0, -0.958767, 0, -0.293743, 11.1384, 0.25, 13.9006 )
 
-[node name="Tuer_Rahmen26" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen26" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( -0.279641, 0, 0.992371, 0, 1, 0, -0.960104, 0, -0.289039, 3.85544, 0.25, 15.971 )
 
-[node name="Tuer_Rahmen19" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen19" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( -0.650147, 0, 0.753673, 0, 1, 0, -0.759808, 0, -0.644898, 17.2066, 0.25, 0.879464 )
 
-[node name="Tuer_Rahmen23" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen23" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( -0.767462, 0, -0.635918, 0, 1, 0, 0.641094, 0, -0.761266, 21.9106, 0.25, 1.2301 )
 
-[node name="Tuer_Rahmen24" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen24" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( -0.641189, 0, 0.761187, 0, 1, 0, -0.767383, 0, -0.636012, 20.7823, 0.25, 5.03777 )
 
-[node name="Tuer_Rahmen20" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen20" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( -0.950522, 0, 0.211312, 0, 1, 0, -0.310655, 0, -0.646557, 12.7504, 0.25, -2.32461 )
 
-[node name="Tuer_Rahmen10" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen10" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( 0.999942, 0, 0.0123975, 0, 1, 0, -0.0107499, 0, 1.15319, -7.64053, 0.25, -14.3216 )
 
-[node name="Tuer_Rahmen4" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen4" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( 0.657123, 0, 0.740935, 0, 1, 0, -0.753783, 0, 0.645922, -20.7777, 0.25, 5.03846 )
 
-[node name="Tuer_Rahmen5" parent="Tueren_keller" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen5" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( 0.765613, 0, -0.612011, 0, 1, 0, 0.6433, 0, 0.728375, -21.9044, 0.25, 1.22289 )
 
 [node name="Tueren_erdgeschoss" type="Spatial" parent="."]
 editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.25, 0 )
 
-[node name="Tuer_Rahmen" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( 0.279173, 0, 0.919284, 0, 1, 0, -0.960241, 0, 0.267265, -3.87695, 0.25, 15.9912 )
 
-[node name="Tuer_Rahmen2" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen2" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( 0.279077, 0, 0.971477, 0, 1, 0, -0.960268, 0, 0.282334, -11.1424, 0.25, 13.9095 )
 
-[node name="Tuer_Rahmen3" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen3" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( 0.763861, 0, -0.652914, 0, 1, 0, 0.645381, 0, 0.772776, -16.3576, 0.25, 7.28355 )
 
-[node name="Tuer_Rahmen6" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen6" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( 0.655249, 0, 0.76423, 0, 1, 0, -0.755413, 0, 0.662897, -17.2226, 0.25, 0.88395 )
 
-[node name="Tuer_Rahmen11" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen11" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( 0.646216, 0, 0.772062, 0, 1, 0, -0.763154, 0, 0.653758, -23.1702, 0.25, -6.28843 )
 
-[node name="Tuer_Rahmen12" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen12" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( -0.771175, 0, 0.670433, 0, 1, 0, -0.636622, 0, -0.812132, -20.7987, 0.25, -11.0526 )
 
-[node name="Tuer_Rahmen13" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen13" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( 0.00286658, 0, 1.05311, 0, 1, 0, -0.999996, 0, 0.00301882, -11.6515, 0.25, -16.0494 )
 
-[node name="Tuer_Rahmen7" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen7" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( 0.953719, 0, 0.210723, 0, 1, 0, -0.300697, 0, 0.668349, -12.768, 0.25, -2.3171 )
 
-[node name="Tuer_Rahmen8" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen8" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( 0.883845, 0, -0.464017, 0, 1, 0, 0.467779, 0, 0.876737, -7.83464, 0.25, -1.65267 )
 
-[node name="Tuer_Rahmen9" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen9" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( 0.00275989, 0, -1.01003, 0, 1, 0, 0.999996, 0, 0.00278758, -4.65799, 0.25, -12.7234 )
 
-[node name="Tuer_Rahmen14" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen14" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( 0.00275989, 0, -1.01003, 0, 1, 0, 0.999996, 0, 0.00278758, 4.66148, 0.25, -12.7335 )
 
-[node name="Tuer_Rahmen15" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen15" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( 0.999937, 0, -0.0127159, 0, 1, 0, 0.0111882, 0, 1.13647, 7.6461, 0.25, -14.3179 )
 
-[node name="Tuer_Rahmen17" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen17" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( -0.0235712, 0, -1.07838, 0, 1, 0, 0.999722, 0, -0.0254258, 11.6405, 0.25, -16.0387 )
 
-[node name="Tuer_Rahmen21" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen21" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( -0.770085, 0, -0.688132, 0, 1, 0, 0.63794, 0, -0.830674, 20.7953, 0.25, -11.0577 )
 
-[node name="Tuer_Rahmen22" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen22" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( -0.632036, 0, 0.835909, 0, 1, 0, -0.774939, 0, -0.681763, 23.1717, 0.25, -6.27726 )
 
-[node name="Tuer_Rahmen16" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen16" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( 0.885934, 0, 0.460066, 0, 1, 0, -0.46381, 0, 0.878782, 7.82661, 0.25, -1.64443 )
 
-[node name="Tuer_Rahmen18" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen18" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( 0.76779, 0, 0.635528, 0, 1, 0, -0.6407, 0, 0.761592, 16.3487, 0.25, 7.28691 )
 
-[node name="Tuer_Rahmen25" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen25" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( -0.284192, 0, 0.990988, 0, 1, 0, -0.958767, 0, -0.293743, 11.1384, 0.25, 13.9006 )
 
-[node name="Tuer_Rahmen26" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen26" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( -0.279641, 0, 0.992371, 0, 1, 0, -0.960104, 0, -0.289039, 3.85544, 0.25, 15.971 )
 
-[node name="Tuer_Rahmen19" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen19" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( -0.650147, 0, 0.753673, 0, 1, 0, -0.759808, 0, -0.644898, 17.2066, 0.25, 0.879464 )
 
-[node name="Tuer_Rahmen23" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen23" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( -0.767462, 0, -0.635918, 0, 1, 0, 0.641094, 0, -0.761266, 21.9106, 0.25, 1.2301 )
 
-[node name="Tuer_Rahmen24" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen24" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( -0.641189, 0, 0.761187, 0, 1, 0, -0.767383, 0, -0.636012, 20.7823, 0.25, 5.03777 )
 
-[node name="Tuer_Rahmen20" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen20" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( -0.950522, 0, 0.211312, 0, 1, 0, -0.310655, 0, -0.646557, 12.7504, 0.25, -2.32461 )
 
-[node name="Tuer_Rahmen10" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen10" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( 0.999942, 0, 0.0123975, 0, 1, 0, -0.0107499, 0, 1.15319, -7.64053, 0.25, -14.3216 )
 
-[node name="Tuer_Rahmen4" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen4" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( 0.657123, 0, 0.740935, 0, 1, 0, -0.753783, 0, 0.645922, -20.7777, 0.25, 5.03846 )
 
-[node name="Tuer_Rahmen5" parent="Tueren_erdgeschoss" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen5" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
 transform = Transform( 0.765613, 0, -0.612011, 0, 1, 0, 0.6433, 0, 0.728375, -21.9044, 0.25, 1.22289 )
 
 [node name="Tueren_stock" type="Spatial" parent="."]
 editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.5, 0 )
 
-[node name="Tuer_Rahmen" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( 0.279173, 0, 0.659393, 0, 1, 0, -0.960241, 0, 0.191707, -3.98772, 0.25, 15.9468 )
 
-[node name="Tuer_Rahmen2" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen2" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( 0.279077, 0, 0.695547, 0, 1, 0, -0.960268, 0, 0.202143, -10.9962, 0.25, 13.9331 )
 
-[node name="Tuer_Rahmen3" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen3" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( 0.763861, 0, -0.450494, 0, 1, 0, 0.645381, 0, 0.533196, -16.2651, 0.25, 7.19036 )
 
-[node name="Tuer_Rahmen6" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen6" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( 0.655249, 0, 0.76423, 0, 1, 0, -0.755413, 0, 0.662897, -17.2226, 0.25, 0.88395 )
 
-[node name="Tuer_Rahmen11" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen11" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( 0.646216, 0, 0.772062, 0, 1, 0, -0.763154, 0, 0.653758, -23.1702, 0.25, -6.28843 )
 
-[node name="Tuer_Rahmen12" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen12" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( -0.771175, 0, 0.670433, 0, 1, 0, -0.636622, 0, -0.812132, -20.7987, 0.25, -11.0526 )
 
-[node name="Tuer_Rahmen13" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen13" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( 0.00286658, 0, 1.05311, 0, 1, 0, -0.999996, 0, 0.00301882, -11.6515, 0.25, -16.0494 )
 
-[node name="Tuer_Rahmen7" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen7" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( 0.953719, 0, 0.210723, 0, 1, 0, -0.300697, 0, 0.668349, -12.768, 0.25, -2.3171 )
 
-[node name="Tuer_Rahmen8" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen8" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( 0.883845, 0, -0.464017, 0, 1, 0, 0.467779, 0, 0.876737, -7.83464, 0.25, -1.65267 )
 
-[node name="Tuer_Rahmen9" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen9" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( 0.00275989, 0, -1.01003, 0, 1, 0, 0.999996, 0, 0.00278758, -4.65799, 0.25, -12.7234 )
 
-[node name="Tuer_Rahmen14" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen14" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( 0.00275989, 0, -1.01003, 0, 1, 0, 0.999996, 0, 0.00278758, 4.66148, 0.25, -12.7335 )
 
-[node name="Tuer_Rahmen15" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen15" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( 0.999937, 0, -0.0127159, 0, 1, 0, 0.0111882, 0, 1.13647, 7.6461, 0.25, -14.3179 )
 
-[node name="Tuer_Rahmen17" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen17" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( -0.0235712, 0, -1.07838, 0, 1, 0, 0.999722, 0, -0.0254258, 11.6405, 0.25, -16.0387 )
 
-[node name="Tuer_Rahmen21" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen21" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( -0.770085, 0, -0.688132, 0, 1, 0, 0.63794, 0, -0.830674, 20.7953, 0.25, -11.0577 )
 
-[node name="Tuer_Rahmen22" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen22" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( -0.632036, 0, 0.835909, 0, 1, 0, -0.774939, 0, -0.681763, 23.1717, 0.25, -6.27726 )
 
-[node name="Tuer_Rahmen16" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen16" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( 0.885934, 0, 0.460066, 0, 1, 0, -0.46381, 0, 0.878782, 7.82661, 0.25, -1.64443 )
 
-[node name="Tuer_Rahmen18" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen18" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( 0.76779, 0, 0.451369, 0, 1, 0, -0.6407, 0, 0.540903, 16.2618, 0.25, 7.1849 )
 
-[node name="Tuer_Rahmen25" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen25" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( -0.284192, 0, 0.673479, 0, 1, 0, -0.958767, 0, -0.199629, 11.0072, 0.25, 13.9476 )
 
-[node name="Tuer_Rahmen26" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen26" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( -0.279641, 0, 0.661915, 0, 1, 0, -0.960104, 0, -0.19279, 3.98197, 0.25, 15.9425 )
 
-[node name="Tuer_Rahmen19" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen19" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( -0.650147, 0, 0.753673, 0, 1, 0, -0.759808, 0, -0.644898, 17.2066, 0.25, 0.879464 )
 
-[node name="Tuer_Rahmen23" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen23" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( -0.767462, 0, -0.635918, 0, 1, 0, 0.641094, 0, -0.761266, 21.9106, 0.25, 1.2301 )
 
-[node name="Tuer_Rahmen24" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen24" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( -0.641189, 0, 0.528802, 0, 1, 0, -0.767383, 0, -0.441841, 20.8551, 0.25, 4.95409 )
 
-[node name="Tuer_Rahmen20" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen20" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( -0.950522, 0, 0.211312, 0, 1, 0, -0.310655, 0, -0.646557, 12.7504, 0.25, -2.32461 )
 
-[node name="Tuer_Rahmen10" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen10" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( 0.999942, 0, 0.0123975, 0, 1, 0, -0.0107499, 0, 1.15319, -7.64053, 0.25, -14.3216 )
 
-[node name="Tuer_Rahmen4" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen4" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( 0.657123, 0, 0.509065, 0, 1, 0, -0.753783, 0, 0.443785, -20.8687, 0.25, 4.95219 )
 
-[node name="Tuer_Rahmen5" parent="Tueren_stock" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen5" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( 0.765613, 0, -0.612011, 0, 1, 0, 0.6433, 0, 0.728375, -21.9044, 0.25, 1.22289 )
 
 [node name="Tueren_stock2" type="Spatial" parent="."]
 editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.75, 0 )
 
-[node name="Tuer_Rahmen11" parent="Tueren_stock2" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen11" parent="Tueren_stock2" instance=ExtResource( 15 )]
 transform = Transform( 0.646216, 0, 0.550928, 0, 1, 0, -0.763154, 0, 0.466509, -23.2797, 0.25, -6.37965 )
 
-[node name="Tuer_Rahmen12" parent="Tueren_stock2" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen12" parent="Tueren_stock2" instance=ExtResource( 15 )]
 transform = Transform( -0.771175, 0, 0.457496, 0, 1, 0, -0.636622, 0, -0.554189, -20.9001, 0.25, -10.9465 )
 
-[node name="Tuer_Rahmen13" parent="Tueren_stock2" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen13" parent="Tueren_stock2" instance=ExtResource( 15 )]
 transform = Transform( 0.00286658, 0, 0.697612, 0, 1, 0, -0.999996, 0, 0.00199977, -11.5074, 0.25, -16.0408 )
 
-[node name="Tuer_Rahmen15" parent="Tueren_stock2" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen15" parent="Tueren_stock2" instance=ExtResource( 15 )]
 transform = Transform( 0.999937, 0, -0.00791149, 0, 1, 0, 0.0111882, 0, 0.707084, 7.64106, 0.25, -14.5098 )
 
-[node name="Tuer_Rahmen17" parent="Tueren_stock2" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen17" parent="Tueren_stock2" instance=ExtResource( 15 )]
 transform = Transform( -0.0235712, 0, -0.706986, 0, 1, 0, 0.999722, 0, -0.0166692, 11.5169, 0.25, -16.0444 )
 
-[node name="Tuer_Rahmen21" parent="Tueren_stock2" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen21" parent="Tueren_stock2" instance=ExtResource( 15 )]
 transform = Transform( -0.770085, 0, -0.436207, 0, 1, 0, 0.63794, 0, -0.526564, 20.8956, 0.25, -10.9468 )
 
-[node name="Tuer_Rahmen22" parent="Tueren_stock2" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen22" parent="Tueren_stock2" instance=ExtResource( 15 )]
 transform = Transform( -0.632036, 0, 0.531799, 0, 1, 0, -0.774939, 0, -0.433732, 23.2739, 0.25, -6.37211 )
 
-[node name="Tuer_Rahmen23" parent="Tueren_stock2" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen23" parent="Tueren_stock2" instance=ExtResource( 15 )]
 transform = Transform( -0.767462, 0, -0.434154, 0, 1, 0, 0.641094, 0, -0.519731, 21.9631, 0.25, 1.31888 )
 
-[node name="Tuer_Rahmen24" parent="Tueren_stock2" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen24" parent="Tueren_stock2" instance=ExtResource( 15 )]
 transform = Transform( -0.641189, 0, 0.528802, 0, 1, 0, -0.767383, 0, -0.441841, 20.8551, 0.25, 4.95409 )
 
-[node name="Tuer_Rahmen10" parent="Tueren_stock2" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen10" parent="Tueren_stock2" instance=ExtResource( 15 )]
 transform = Transform( 0.999942, 0, 0.00738258, 0, 1, 0, -0.0107499, 0, 0.686715, -7.62275, 0.25, -14.4997 )
 
-[node name="Tuer_Rahmen4" parent="Tueren_stock2" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen4" parent="Tueren_stock2" instance=ExtResource( 15 )]
 transform = Transform( 0.657123, 0, 0.509065, 0, 1, 0, -0.753783, 0, 0.443785, -20.8687, 0.25, 4.95219 )
 
-[node name="Tuer_Rahmen5" parent="Tueren_stock2" instance=ExtResource( 16 )]
+[node name="Tuer_Rahmen5" parent="Tueren_stock2" instance=ExtResource( 15 )]
 transform = Transform( 0.765613, 0, -0.439695, 0, 1, 0, 0.6433, 0, 0.523296, -21.9563, 0.25, 1.32139 )
 
 [node name="Fenster" type="Spatial" parent="."]
+editor/display_folded = true
 
 [node name="Fenster_EG" type="MeshInstance" parent="Fenster"]
-mesh = ExtResource( 17 )
+mesh = ExtResource( 16 )
 material/0 = null
 
 [node name="Fenster_Stock" type="MeshInstance" parent="Fenster"]
-mesh = ExtResource( 18 )
+mesh = ExtResource( 17 )
 material/0 = null
 
-[node name="Zugbruecke" parent="." instance=ExtResource( 19 )]
+[node name="Zugbruecke" parent="." instance=ExtResource( 18 )]
+
+[node name="Tor" parent="." instance=ExtResource( 19 )]
