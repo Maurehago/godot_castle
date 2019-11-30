@@ -8,8 +8,8 @@ func _ready():
 
 func _process(delta):
 	var x = 0
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("move_right"):
 		x = geschw * delta
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("move_left"):
 		x = -geschw * delta
 	position.x += x
