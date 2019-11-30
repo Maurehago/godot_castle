@@ -7,7 +7,7 @@ func _ready():
 func _process(delta):
 	# Funktion wird bei jedem Frame aufgerufen
 	############### Szene zurück setzen ############
-	if Input.is_key_pressed(KEY_B):
+	if Input.is_key_pressed(KEY_R):
 		# Szene zurücksetzen
 		get_tree().reload_current_scene()
 	############### Szene in Pausemodus setzen #####
