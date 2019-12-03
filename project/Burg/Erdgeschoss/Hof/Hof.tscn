@@ -15,7 +15,7 @@ extents = Vector3( 0.397083, 0.980299, 1 )
 [sub_resource type="BoxShape" id=3]
 extents = Vector3( 0.0319211, 1, 1 )
 
-[node name="Boden_Hof" index="0" instance=ExtResource( 1 )]
+[node name="Boden_Hof" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0192852, 4.25, 0 )
 
 [node name="Brunnen" parent="." index="0" instance=ExtResource( 2 )]
