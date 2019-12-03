@@ -7,7 +7,7 @@
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 7.68174, 2.12367, 3.01665 )
 
-[node name="K07" index="0" instance=ExtResource( 1 )]
+[node name="K07" instance=ExtResource( 1 )]
 
 [node name="LOD_area" type="Area" parent="." index="1"]
 transform = Transform( 1, 0, 2.98023e-008, 0, 1, 0, -2.98023e-008, 0, 1, 0, 0, 0 )

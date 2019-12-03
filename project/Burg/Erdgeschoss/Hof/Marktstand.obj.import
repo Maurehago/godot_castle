@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Marktstand.obj-a3e65c3e7b4e810958baae75c7bccb92.mesh"
+
+[deps]
+
+files=[ "res://.import/Marktstand.obj-a3e65c3e7b4e810958baae75c7bccb92.mesh" ]
+
+source_file="res://Burg/Erdgeschoss/Hof/Marktstand.obj"
+dest_files=[ "res://.import/Marktstand.obj-a3e65c3e7b4e810958baae75c7bccb92.mesh", "res://.import/Marktstand.obj-a3e65c3e7b4e810958baae75c7bccb92.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
