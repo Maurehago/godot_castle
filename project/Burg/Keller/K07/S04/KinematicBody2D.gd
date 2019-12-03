@@ -12,9 +12,9 @@ func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
 
 func _process(delta):
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("move_right"):
 		richtung.x = gschw
-	elif Input.is_action_pressed("ui_left"):
+	elif Input.is_action_pressed("move_left"):
 		richtung.x = -gschw
 	else:
 		richtung.x = 0

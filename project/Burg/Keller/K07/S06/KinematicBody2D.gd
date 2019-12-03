@@ -9,13 +9,13 @@ var farbe = Color8(0,255,0,255)
 
 func _process(delta):
 	var schritt:float = 0 # muss nach jedem durchlauf = 0 sein
-	if Input.is_action_pressed("ui_up"):
+	if Input.is_action_pressed("move_forward"):
 		schritt = schritt_geschw * delta
-	if Input.is_action_pressed("ui_down"):
+	if Input.is_action_pressed("move_backward"):
 		schritt = -schritt_geschw * delta
-	if Input.is_action_pressed("ui_right"):
+	if Input.is_action_pressed("move_right"):
 		drehung += dreh_geschw * delta
-	if Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("move_left"):
 		drehung += -dreh_geschw * delta
 	var vec = Vector2(0,schritt).rotated(drehung)
 	move_and_collide(vec)

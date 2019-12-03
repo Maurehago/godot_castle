@@ -1,36 +1,26 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://preflab/vitrine_01/Vitrine.gd" type="Script" id=1]
-[ext_resource path="res://preflab/vitrine_01/vitrine.obj" type="ArrayMesh" id=2]
-[ext_resource path="res://mat/colors_smooth.material" type="Material" id=3]
+[ext_resource path="res://preflab/vitrine_01/StaticBody.gd" type="Script" id=2]
+[ext_resource path="res://preflab/vitrine_01/vitrine.obj" type="ArrayMesh" id=3]
+[ext_resource path="res://mat/colors_smooth.material" type="Material" id=4]
 
-[sub_resource type="ConcavePolygonShape" id=1]
-data = PoolVector3Array( -0.1641, 2, 1, -0.1641, 0, 1, -0.1641, 2, -1, -0.1641, 2, -1, -0.1641, 0, 1, -0.1641, 0, -1, 1, 0.8787, 1, 1, 0, 1, 0.1512, 2, 1, 0.1512, 2, 1, 1, 0, 1, -0.1641, 2, 1, -0.1641, 2, 1, 1, 0, 1, -0.1641, 0, 1, -0.1641, 2, -1, -0.1641, 0, -1, 0.1512, 2, -1, 0.1512, 2, -1, -0.1641, 0, -1, 1, 0.8787, -1, 1, 0.8787, -1, -0.1641, 0, -1, 1, 0, -1, 1, 0, -1, -0.1641, 0, -1, 1, 0, 1, 1, 0, 1, -0.1641, 0, -1, -0.1641, 0, 1, 1, 0.8787, -1, 1, 0, -1, 1, 0.8787, 1, 1, 0.8787, 1, 1, 0, -1, 1, 0, 1, 0.2345, 1.89, -0.862, 0.9167, 0.9887, -0.862, 0.1408, 1.819, -0.862, 0.1408, 1.819, -0.862, 0.9167, 0.9887, -0.862, 0.823, 0.9178, -0.862, -0.1641, 2, -1, 0.1512, 2, -1, -0.1641, 2, 1, -0.1641, 2, 1, 0.1512, 2, -1, 0.1512, 2, 1, 0.9167, 0.9887, -0.862, 0.2345, 1.89, -0.862, 1, 0.8787, -1, 1, 0.8787, -1, 0.2345, 1.89, -0.862, 0.1512, 2, -1, 0.2345, 1.89, -0.862, 0.2345, 1.89, 0.862, 0.1512, 2, -1, 0.1512, 2, -1, 0.2345, 1.89, 0.862, 0.1512, 2, 1, 0.2345, 1.89, 0.862, 0.9167, 0.9887, 0.862, 0.1512, 2, 1, 0.1512, 2, 1, 0.9167, 0.9887, 0.862, 1, 0.8787, 1, 0.9167, 0.9887, 0.862, 0.9167, 0.9887, -0.862, 1, 0.8787, 1, 1, 0.8787, 1, 0.9167, 0.9887, -0.862, 1, 0.8787, -1, 0.1408, 1.819, 0.862, 0.1408, 1.819, -0.862, 0.823, 0.9178, 0.862, 0.823, 0.9178, 0.862, 0.1408, 1.819, -0.862, 0.823, 0.9178, -0.862, 0.9167, 0.9887, -0.862, 0.9167, 0.9887, 0.862, 0.823, 0.9178, -0.862, 0.823, 0.9178, -0.862, 0.9167, 0.9887, 0.862, 0.823, 0.9178, 0.862, 0.2345, 1.89, 0.862, 0.2345, 1.89, -0.862, 0.1408, 1.819, 0.862, 0.1408, 1.819, 0.862, 0.2345, 1.89, -0.862, 0.1408, 1.819, -0.862, 0.9167, 0.9887, 0.862, 0.2345, 1.89, 0.862, 0.823, 0.9178, 0.862, 0.823, 0.9178, 0.862, 0.2345, 1.89, 0.862, 0.1408, 1.819, 0.862 )
-
-[sub_resource type="CylinderShape" id=2]
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 0.572651, 1.45503, 1 )
 
 [node name="Vitrine" type="Spatial"]
 script = ExtResource( 1 )
-Bild = "res://Burg/Keller/K01/Vitrine_abm.png"
 
-[node name="vitrine" type="MeshInstance" parent="."]
-mesh = ExtResource( 2 )
-material/0 = ExtResource( 3 )
+[node name="StaticBody" type="StaticBody" parent="."]
+script = ExtResource( 2 )
 
-[node name="StaticBody" type="StaticBody" parent="vitrine"]
-editor/display_folded = true
-
-[node name="CollisionShape" type="CollisionShape" parent="vitrine/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.420762, 1.44615, 0 )
 shape = SubResource( 1 )
 
-[node name="Area" type="Area" parent="vitrine"]
-transform = Transform( 0.0402946, 0, 0, 0, 0.0402946, 0, 0, 0, 0.0402946, 1.325, 0, 0 )
+[node name="vitrine" type="MeshInstance" parent="StaticBody"]
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 4 )
 
-[node name="CollisionShape" type="CollisionShape" parent="vitrine/Area"]
-transform = Transform( 11.0935, 0, 0, 0, 2.74091, 0, 0, 0, 19.9205, 0, 13.5439, 0 )
-shape = SubResource( 2 )
-
-[node name="Sprite3D" type="Sprite3D" parent="vitrine"]
+[node name="Sprite3D" type="Sprite3D" parent="StaticBody/vitrine"]
 transform = Transform( -4.37114e-008, -0.604738, 0.796425, 0, 0.796425, 0.604738, -1, 2.64339e-008, -3.48128e-008, 0.532254, 1.40245, 0.010865 )
-[connection signal="body_entered" from="vitrine/Area" to="." method="_on_Area_body_entered"]
-[connection signal="body_exited" from="vitrine/Area" to="." method="_on_Area_body_exited"]
