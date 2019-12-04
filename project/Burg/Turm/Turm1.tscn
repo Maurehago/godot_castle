@@ -58,15 +58,19 @@ transform = Transform( 0.960308, 0, -0.27894, 0, 1, 0, 0.27894, 0, 0.960308, -4.
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.95749, 2.93902, 16.5069 )
 light_energy = 0.35
+shadow_enabled = true
 
 [node name="OmniLight2" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.95749, 7.02963, 15.2164 )
 light_energy = 0.6
+shadow_enabled = true
 
 [node name="OmniLight3" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7.48411, 10.096, 14.8689 )
 light_energy = 0.6
+shadow_enabled = true
 
 [node name="OmniLight4" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34267, 12.4646, 18.883 )
 light_energy = 0.6
+shadow_enabled = true
