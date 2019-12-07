@@ -14,6 +14,7 @@ environment = ExtResource( 2 )
 
 [node name="GIProbe" type="GIProbe" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10.6532, 0.172767 )
+visible = false
 extents = Vector3( 35.2684, 16.291, 26.1154 )
 data = SubResource( 1 )
 
@@ -24,6 +25,7 @@ light_indirect_energy = 2.0
 light_specular = 0.2
 
 [node name="Lichter" type="Spatial" parent="."]
+editor/display_folded = true
 
 [node name="OmniLight" type="OmniLight" parent="Lichter"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.23582, 6.34687, 5.25 )
@@ -31,5 +33,20 @@ shadow_enabled = true
 omni_range = 3.16667
 
 [node name="OmniLight2" type="OmniLight" parent="Lichter"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.107635, 13.0431, -7.50351 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.107635, 13.0431, -7.15137 )
+light_energy = 2.0
+light_indirect_energy = 2.5
 omni_range = 8.09866
+
+[node name="OmniLight3" type="OmniLight" parent="Lichter"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.107635, 11.3899, -4.04227 )
+visible = false
+shadow_enabled = true
+omni_range = 8.09866
+
+[node name="OmniLight_backstube" type="OmniLight" parent="Lichter"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.99317, 7.35031, 0.076874 )
+light_energy = 0.5
+light_indirect_energy = 4.72
+shadow_enabled = true
+shadow_bias = 0.06

@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://asset/season/Weihnachtsbaum.scn" type="PackedScene" id=1]
+[ext_resource path="res://asset/season/sarbot1/Sphere.scn" type="PackedScene" id=2]
+[ext_resource path="res://asset/season/josch1/Head_Cube.scn" type="PackedScene" id=3]
+[ext_resource path="res://asset/season/AiYori/AiYori2.png" type="Texture" id=4]
+
+[node name="Weihnachtsbaum" instance=ExtResource( 1 )]
+transform = Transform( 0.799927, 0, 0.28447, 0, 0.91972, 0, -0.308165, 0, 0.866556, 0, 5.10949, -7.55754 )
+
+[node name="Schmuck" type="Spatial" parent="." index="1"]
+
+[node name="Sphere" parent="Schmuck" index="0" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.775556, 3.33459, 1.49149 )
+
+[node name="Head_Cube" parent="Schmuck" index="1" instance=ExtResource( 3 )]
+transform = Transform( -0.436486, -0.899711, 3.93276e-008, 0, -4.37114e-008, -1, 0.89971, -0.436486, 1.90794e-008, -1.32986, 3.23601, 1.40821 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Schmuck" index="2"]
+transform = Transform( 0.285306, 0, -0.187983, 0, 0.32791, 0, 0.166064, 0, 0.267459, -0.919374, 2.69096, 1.74825 )
+use_in_baked_light = true
+texture = ExtResource( 4 )
