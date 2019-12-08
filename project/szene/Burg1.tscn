@@ -25,7 +25,6 @@ light_indirect_energy = 2.0
 light_specular = 0.2
 
 [node name="Lichter" type="Spatial" parent="."]
-editor/display_folded = true
 
 [node name="OmniLight" type="OmniLight" parent="Lichter"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.23582, 6.34687, 5.25 )
