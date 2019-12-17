@@ -19,10 +19,10 @@ shape = SubResource( 1 )
 
 [node name="LOD0" type="Spatial" parent="LOD_area" index="1"]
 
+[node name="OmniLight" type="OmniLight" parent="LOD_area/LOD0" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0511115, 2.94983, -1.22402 )
+shadow_enabled = true
+
 [node name="LOD1" type="Spatial" parent="LOD_area" index="2"]
 
 [node name="LOD2" type="Spatial" parent="LOD_area" index="3"]
-
-[node name="OmniLight" type="OmniLight" parent="." index="2"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0511115, 1.21762, -1.22402 )
-shadow_enabled = true

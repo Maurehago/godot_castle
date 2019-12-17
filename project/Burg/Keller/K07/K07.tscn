@@ -51,6 +51,14 @@ Szene_3 = "res://Burg/Keller/K07/S12/Szene.tscn"
 Bild = "res://Burg/Keller/K07/vitrine4.png"
 Skalierungsfaktor = 0.25
 
+[node name="OmniLight" type="OmniLight" parent="LOD_area/LOD0" index="4"]
+transform = Transform( 1, 0, 2.98023e-008, 0, 1, 0, -2.98023e-008, 0, 1, 4.10756, 3.05121, -2.76132 )
+light_energy = 1.5
+
+[node name="OmniLight2" type="OmniLight" parent="LOD_area/LOD0" index="5"]
+transform = Transform( 1, 0, 2.98023e-008, 0, 1, 0, -2.98023e-008, 0, 1, 10.1771, 3.05121, -2.76132 )
+light_energy = 1.5
+
 [node name="LOD1" type="Spatial" parent="LOD_area" index="2"]
 
 [node name="LOD2" type="Spatial" parent="LOD_area" index="3"]
