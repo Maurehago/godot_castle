@@ -1,0 +1,110 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://asset/radial_gradient.png" type="Texture" id=1]
+
+[sub_resource type="GDScript" id=1]
+script/source = "extends Spatial
+
+export(NodePath) var projectile
+export(float) var height = 10
+export(float) var spread = 10
+
+var rng = RandomNumberGenerator.new()
+func _ready() -> void:
+  rng.randomize()
+
+func _on_Timer_timeout() -> void:
+  var instance: RigidBody = get_node(projectile).duplicate()
+
+  var direction = Vector3(rng.randf_range(-spread, spread), height, rng.randf_range(-spread, spread))
+  instance.add_to_group(\"projectiles\")
+  instance.translation = translation
+  instance.apply_central_impulse(direction * 10)
+  instance.visible = true
+
+  instance.ignite(1 + rng.randf())
+
+  add_child(instance)
+
+  yield(instance, \"done\")
+
+  instance.queue_free()"
+
+[sub_resource type="GDScript" id=2]
+script/source = "extends RigidBody
+
+signal done
+
+func ignite(delay):
+  print(\"Ignite projectile\", delay)
+  $ExplosionTimer.wait_time = delay
+  $ExplosionTimer.start()
+
+func _on_ExplosionTimer_timeout() -> void:
+  print(\"Boom\")
+  $Sphere.visible = false
+  $ExplosionParticles.emitting = true
+  yield(get_tree().create_timer(5), \"timeout\")
+  print(\"Done\")
+  emit_signal(\"done\")"
+
+[sub_resource type="SphereShape" id=3]
+
+[sub_resource type="SpatialMaterial" id=4]
+flags_unshaded = true
+params_specular_mode = 4
+params_blend_mode = 1
+params_cull_mode = 2
+params_billboard_mode = 3
+params_billboard_keep_scale = true
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+albedo_texture = ExtResource( 1 )
+
+[sub_resource type="PlaneMesh" id=5]
+material = SubResource( 4 )
+
+[sub_resource type="Curve" id=6]
+_data = [ Vector2( 0, 0.3328 ), 0.0, 3.74674, 0, 0, Vector2( 0.506052, 1 ), -0.0379665, -0.0379665, 0, 0, Vector2( 1, 0 ), -5.85028, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=7]
+offsets = PoolRealArray( 0, 0.681416, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 0, 0, 1, 0, 0, 0, 1 )
+
+[node name="Feuerwerk" type="Spatial"]
+script = SubResource( 1 )
+projectile = NodePath("Projectile")
+
+[node name="FireTimer" type="Timer" parent="."]
+wait_time = 1.5
+autostart = true
+
+[node name="Projectile" type="RigidBody" parent="."]
+collision_mask = 0
+script = SubResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Projectile"]
+shape = SubResource( 3 )
+
+[node name="Sphere" type="CSGSphere" parent="Projectile"]
+
+[node name="ExplosionTimer" type="Timer" parent="Projectile"]
+one_shot = true
+
+[node name="ExplosionParticles" type="CPUParticles" parent="Projectile"]
+emitting = false
+amount = 100
+one_shot = true
+explosiveness = 1.0
+local_coords = false
+mesh = SubResource( 5 )
+spread = 180.0
+gravity = Vector3( 0, -10, 0 )
+initial_velocity = 10.0
+angular_velocity = 1.0
+linear_accel = 1.0
+scale_amount_curve = SubResource( 6 )
+color_ramp = SubResource( 7 )
+[connection signal="timeout" from="FireTimer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Projectile/ExplosionTimer" to="Projectile" method="_on_ExplosionTimer_timeout"]
