@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://asset/burg/turm/Turm8.scn" type="PackedScene" id=1]
 [ext_resource path="res://preflab/burg/Turm_Dach.tscn" type="PackedScene" id=2]
@@ -6,6 +6,9 @@
 [ext_resource path="res://asset/burg/turm/Turm_Boden_ausschnitt.scn" type="PackedScene" id=4]
 [ext_resource path="res://asset/burg/turm/Turm_Decke_ausschnitt.scn" type="PackedScene" id=5]
 [ext_resource path="res://asset/burg/treppen/Treppe1.scn" type="PackedScene" id=6]
+
+[sub_resource type="BoxShape" id=1]
+extents = Vector3( 1.14582, 2.14328, 0.54064 )
 
 [node name="Turm8" type="Spatial"]
 
@@ -55,3 +58,24 @@ transform = Transform( 0.959016, 0, 0.283353, 0, 1, 0, -0.283353, 0, 0.959016, 1
 
 [node name="Treppe3" parent="Treppe" instance=ExtResource( 6 )]
 transform = Transform( 0.959016, 0, 0.283353, 0, 1, 0, -0.283353, 0, 0.959016, 11.2902, 8.75, 15.8139 )
+
+[node name="LOD_area" type="Area" parent="."]
+monitoring = false
+
+[node name="CollisionShape" type="CollisionShape" parent="LOD_area"]
+transform = Transform( 3.54357, 1.3103e-009, 2.22109, -1.25685e-009, 3.69874, -7.76178e-010, -1.06009, -5.30982e-012, 7.4245, 7.91259, 7.87004, 16.3956 )
+shape = SubResource( 1 )
+
+[node name="LOD0" type="Spatial" parent="LOD_area"]
+
+[node name="OmniLight" type="OmniLight" parent="LOD_area/LOD0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9168, 2.8456, 16.5494 )
+light_energy = 2.0
+
+[node name="OmniLight2" type="OmniLight" parent="LOD_area/LOD0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.9168, 7.6382, 16.5494 )
+light_energy = 2.0
+
+[node name="LOD1" type="Spatial" parent="LOD_area"]
+
+[node name="LOD2" type="Spatial" parent="LOD_area"]

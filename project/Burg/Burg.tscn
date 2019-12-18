@@ -30,7 +30,6 @@ transform = Transform( 0.990283, 0, 0.139071, 0, 1, 0, -0.139071, 0, 0.990283, 0
 allowChangeFlying = true
 
 [node name="Tuerme" type="Spatial" parent="."]
-editor/display_folded = true
 
 [node name="Turm1" parent="Tuerme" instance=ExtResource( 3 )]
 

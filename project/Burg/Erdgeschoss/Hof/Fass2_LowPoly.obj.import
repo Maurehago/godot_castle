@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Fass2_LowPoly.obj-264de6a6d4f226de16abdbcde488dbde.mesh"
+
+[deps]
+
+files=[ "res://.import/Fass2_LowPoly.obj-264de6a6d4f226de16abdbcde488dbde.mesh" ]
+
+source_file="res://Burg/Erdgeschoss/Hof/Fass2_LowPoly.obj"
+dest_files=[ "res://.import/Fass2_LowPoly.obj-264de6a6d4f226de16abdbcde488dbde.mesh", "res://.import/Fass2_LowPoly.obj-264de6a6d4f226de16abdbcde488dbde.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
