@@ -35,3 +35,5 @@ Eine weitere möglichkeit besteht darin, wenn ihr ein wenig kreativ seid, das ih
 
 Noch besser ist, wenn ihr selber ganze Räume ausstatten möchtet.
 Eine genau Beschreibung wie ihr das machen könnt, folgt noch.
+
+Weitere Informationen im [Wiki](https://github.com/Maurehago/godot_castle/wiki "Wiki Startseite")
