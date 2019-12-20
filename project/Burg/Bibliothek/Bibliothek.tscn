@@ -1,11 +1,14 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://asset/burg/bibliothek/Bibliothek.scn" type="PackedScene" id=1]
 [ext_resource path="res://asset/burg/bibliothek/Ebene2.scn" type="PackedScene" id=2]
-[ext_resource path="res://preflab/Season/Weihnachtsbaum.tscn" type="PackedScene" id=3]
-[ext_resource path="res://preflab/Season/Lichterkette.tscn" type="PackedScene" id=4]
-[ext_resource path="res://asset/burg/bibliothek/Bibliothek_Fenster.scn" type="PackedScene" id=5]
-[ext_resource path="res://asset/burg/bibliothek/Bibliothek_Tuerrahmen.scn" type="PackedScene" id=6]
+[ext_resource path="res://asset/burg/bibliothek/Saulen.scn" type="PackedScene" id=3]
+[ext_resource path="res://asset/burg/bibliothek/Bogen.scn" type="PackedScene" id=4]
+[ext_resource path="res://preflab/Season/Weihnachtsbaum.tscn" type="PackedScene" id=5]
+[ext_resource path="res://preflab/Season/Lichterkette.tscn" type="PackedScene" id=6]
+[ext_resource path="res://asset/burg/bibliothek/Bibliothek_Fenster.scn" type="PackedScene" id=7]
+[ext_resource path="res://asset/burg/bibliothek/Bibliothek_Tuerrahmen.scn" type="PackedScene" id=8]
+[ext_resource path="res://asset/burg/bibliothek/Bibliothek_Tuer.scn" type="PackedScene" id=9]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 4.12177, 5.91907, 8.71099 )
@@ -18,7 +21,6 @@ extents = Vector3( 4.12177, 5.91907, 8.71099 )
 material/0 = null
 
 [node name="Area_LOD" type="Area" parent="."]
-editor/display_folded = true
 monitoring = false
 
 [node name="CollisionShape" type="CollisionShape" parent="Area_LOD"]
@@ -27,36 +29,128 @@ shape = SubResource( 1 )
 
 [node name="LOD0" type="Spatial" parent="Area_LOD"]
 
-[node name="Weihnacht" type="Spatial" parent="Area_LOD/LOD0"]
+[node name="Saulen" parent="Area_LOD/LOD0" instance=ExtResource( 3 )]
 editor/display_folded = true
 
-[node name="Weihnachtsbaum" parent="Area_LOD/LOD0/Weihnacht" instance=ExtResource( 3 )]
+[node name="Bogen_1" type="Spatial" parent="Area_LOD/LOD0/Saulen"]
+editor/display_folded = true
 
-[node name="Lichterkette" parent="Area_LOD/LOD0/Weihnacht" instance=ExtResource( 4 )]
-transform = Transform( -0.0680541, 0, 0.845835, 0, 1, 0, -0.997682, 0, -0.0576963, 0.0468676, 8.35753, -4.01173 )
+[node name="Bogen" parent="Area_LOD/LOD0/Saulen/Bogen_1" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13087, 4.10801, 3.81383 )
 
-[node name="Lichterkette4" parent="Area_LOD/LOD0/Weihnacht" instance=ExtResource( 4 )]
-transform = Transform( 0.0680541, 0, -0.845835, 0, 1, 0, 0.997682, 0, 0.0576964, 0.0468674, 12.4507, -10.1087 )
+[node name="Bogen5" parent="Area_LOD/LOD0/Saulen/Bogen_1" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.38496, -4.13087, 4.10801, 6.94352 )
 
-[node name="Lichterkette2" parent="Area_LOD/LOD0/Weihnacht" instance=ExtResource( 4 )]
-transform = Transform( -0.0369765, 0, -0.847221, 0, 1, 0, 0.999316, 0, -0.0313487, 0.0468676, 8.35753, -10.1087 )
+[node name="Bogen2" parent="Area_LOD/LOD0/Saulen/Bogen_1" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13087, 4.10801, 1.19111 )
 
-[node name="Lichterkette5" parent="Area_LOD/LOD0/Weihnacht" instance=ExtResource( 4 )]
-transform = Transform( 0.0369764, 0, 0.847221, 0, 1, 0, -0.999316, 0, 0.0313486, 0.0468678, 11.7653, -4.9055 )
+[node name="Bogen3" parent="Area_LOD/LOD0/Saulen/Bogen_1" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13087, 4.10801, -1.44686 )
 
-[node name="Lichterkette3" parent="Area_LOD/LOD0/Weihnacht" instance=ExtResource( 4 )]
-transform = Transform( -0.0369765, 0, -0.847221, 0, 1, 0, 0.999316, 0, -0.0313487, 0.0468676, 8.35753, -0.14753 )
+[node name="Bogen4" parent="Area_LOD/LOD0/Saulen/Bogen_1" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13087, 4.10801, -4.07291 )
+
+[node name="Bogen_4" type="Spatial" parent="Area_LOD/LOD0/Saulen"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.41311, 0 )
+
+[node name="Bogen" parent="Area_LOD/LOD0/Saulen/Bogen_4" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13087, 4.10801, 3.81383 )
+
+[node name="Bogen5" parent="Area_LOD/LOD0/Saulen/Bogen_4" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.38496, -4.13087, 4.10801, 6.94352 )
+
+[node name="Bogen2" parent="Area_LOD/LOD0/Saulen/Bogen_4" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13087, 4.10801, 1.19111 )
+
+[node name="Bogen3" parent="Area_LOD/LOD0/Saulen/Bogen_4" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13087, 4.10801, -1.44686 )
+
+[node name="Bogen4" parent="Area_LOD/LOD0/Saulen/Bogen_4" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13087, 4.10801, -4.07291 )
+
+[node name="Bogen_2" type="Spatial" parent="Area_LOD/LOD0/Saulen"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.26463, 0, 0 )
+
+[node name="Bogen" parent="Area_LOD/LOD0/Saulen/Bogen_2" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13087, 4.10801, 3.81383 )
+
+[node name="Bogen5" parent="Area_LOD/LOD0/Saulen/Bogen_2" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.38496, -4.13087, 4.10801, 6.94352 )
+
+[node name="Bogen2" parent="Area_LOD/LOD0/Saulen/Bogen_2" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13087, 4.10801, 1.19111 )
+
+[node name="Bogen3" parent="Area_LOD/LOD0/Saulen/Bogen_2" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13087, 4.10801, -1.44686 )
+
+[node name="Bogen4" parent="Area_LOD/LOD0/Saulen/Bogen_2" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13087, 4.10801, -4.07291 )
+
+[node name="Bogen_3" type="Spatial" parent="Area_LOD/LOD0/Saulen"]
+editor/display_folded = true
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.26463, 3.38898, 0 )
+
+[node name="Bogen" parent="Area_LOD/LOD0/Saulen/Bogen_3" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13087, 4.10801, 3.81383 )
+
+[node name="Bogen5" parent="Area_LOD/LOD0/Saulen/Bogen_3" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1.38496, -4.13087, 4.10801, 6.94352 )
+
+[node name="Bogen2" parent="Area_LOD/LOD0/Saulen/Bogen_3" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13087, 4.10801, 1.19111 )
+
+[node name="Bogen3" parent="Area_LOD/LOD0/Saulen/Bogen_3" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13087, 4.10801, -1.44686 )
+
+[node name="Bogen4" parent="Area_LOD/LOD0/Saulen/Bogen_3" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.13087, 4.10801, -4.07291 )
+
+[node name="Weihnacht" type="Spatial" parent="Area_LOD/LOD0"]
+
+[node name="Weihnachtsbaum" parent="Area_LOD/LOD0/Weihnacht" instance=ExtResource( 5 )]
+
+[node name="OmniLight" type="OmniLight" parent="Area_LOD/LOD0/Weihnacht"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00109382, 11.7315, -7.55955 )
+light_color = Color( 0.870588, 0.415686, 0.415686, 1 )
+light_indirect_energy = 10.0
+shadow_enabled = true
+
+[node name="Lichterkette" parent="Area_LOD/LOD0/Weihnacht" instance=ExtResource( 6 )]
+transform = Transform( 0.0026843, 0, 0.847797, 0, 1, 0, -0.999997, 0, 0.00227572, 0.0468676, 8.97603, -4.55194 )
+
+[node name="Lichterkette4" parent="Area_LOD/LOD0/Weihnacht" instance=ExtResource( 6 )]
+transform = Transform( -0.00633023, 0, -0.847783, 0, 1, 0, 0.99998, 0, -0.00536665, 0.0468674, 12.5983, -8.49476 )
+
+[node name="Lichterkette2" parent="Area_LOD/LOD0/Weihnacht" instance=ExtResource( 6 )]
+transform = Transform( -0.0369765, 0, -0.847221, 0, 1, 0, 0.999316, 0, -0.0313487, 0.0468676, 8.35753, -10.5428 )
+
+[node name="Lichterkette3" parent="Area_LOD/LOD0/Weihnacht" instance=ExtResource( 6 )]
+transform = Transform( 0.0186047, 0, -0.847654, 0, 1, 0, 0.999827, 0, 0.0157731, 0.0468676, 8.9562, -0.576403 )
 
 [node name="LOD1" type="Spatial" parent="Area_LOD"]
 
 [node name="LOD2" type="Spatial" parent="Area_LOD"]
 
-[node name="Bibliothek_Fenster" parent="." instance=ExtResource( 5 )]
+[node name="Bibliothek_Fenster" parent="." instance=ExtResource( 7 )]
 
-[node name="Bibliothek_Fenster2" parent="." instance=ExtResource( 5 )]
+[node name="Bibliothek_Fenster2" parent="." instance=ExtResource( 7 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.25, -14.303 )
 
-[node name="Bibliothek_Tuerrahmen" parent="." instance=ExtResource( 6 )]
+[node name="Bibliothek_Tuerrahmen" parent="." instance=ExtResource( 8 )]
 
-[node name="Bibliothek_Tuerrahmen2" parent="." instance=ExtResource( 6 )]
+[node name="Bibliothek_Tuer3" parent="Bibliothek_Tuerrahmen" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98575, 0.101936, -0.135547 )
+
+[node name="Bibliothek_Tuer4" parent="Bibliothek_Tuerrahmen" instance=ExtResource( 9 )]
+transform = Transform( -0.483288, 0, 0.875462, 0, 1, 0, -0.875462, 0, -0.483288, -0.0214949, 0.101936, -0.135547 )
+
+[node name="Bibliothek_Tuerrahmen2" parent="." instance=ExtResource( 8 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, -14.303 )
+
+[node name="Bibliothek_Tuer" parent="Bibliothek_Tuerrahmen2" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98575, 0.101936, -0.0439892 )
+
+[node name="Bibliothek_Tuer2" parent="Bibliothek_Tuerrahmen2" instance=ExtResource( 9 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00696, 0.101936, -0.0439892 )

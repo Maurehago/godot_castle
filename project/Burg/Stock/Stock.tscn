@@ -1,16 +1,14 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Burg/Stock/S00/S00.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Burg/Stock/S01/S01.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Burg/Stock/S02/S02.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Burg/Stock/S03/S03.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Burg/Stock/S05/S05.tscn" type="PackedScene" id=5]
-[ext_resource path="res://Burg/Stock/S06/S06.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Burg/Stock/S07/S07.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Burg/Stock/S08/S08.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Burg/Stock/S09/S09.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Burg/Stock/S11/S11.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Burg/Stock/S12/S12.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Burg/Stock/S06/S06.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Burg/Stock/S07/S07.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Burg/Stock/S08/S08.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Burg/Stock/S09/S09.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Burg/Stock/S12/S12.tscn" type="PackedScene" id=9]
 
 [node name="Stock" type="Spatial"]
 
@@ -22,16 +20,12 @@
 
 [node name="S03" parent="." instance=ExtResource( 4 )]
 
-[node name="S05" parent="." instance=ExtResource( 5 )]
+[node name="S06" parent="." instance=ExtResource( 5 )]
 
-[node name="S06" parent="." instance=ExtResource( 6 )]
+[node name="S07" parent="." instance=ExtResource( 6 )]
 
-[node name="S07" parent="." instance=ExtResource( 7 )]
+[node name="S08" parent="." instance=ExtResource( 7 )]
 
-[node name="S08" parent="." instance=ExtResource( 8 )]
+[node name="S09" parent="." instance=ExtResource( 8 )]
 
-[node name="S09" parent="." instance=ExtResource( 9 )]
-
-[node name="S11" parent="." instance=ExtResource( 10 )]
-
-[node name="S12" parent="." instance=ExtResource( 11 )]
+[node name="S12" parent="." instance=ExtResource( 9 )]
