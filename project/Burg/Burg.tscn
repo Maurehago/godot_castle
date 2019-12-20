@@ -30,6 +30,7 @@ transform = Transform( 0.990283, 0, 0.139071, 0, 1, 0, -0.139071, 0, 0.990283, 0
 allowChangeFlying = true
 
 [node name="Tuerme" type="Spatial" parent="."]
+editor/display_folded = true
 
 [node name="Turm1" parent="Tuerme" instance=ExtResource( 3 )]
 
@@ -219,7 +220,6 @@ transform = Transform( 0.657123, 0, 0.740935, 0, 1, 0, -0.753783, 0, 0.645922, -
 transform = Transform( 0.765613, 0, -0.612011, 0, 1, 0, 0.6433, 0, 0.728375, -21.9044, 0.25, 1.22289 )
 
 [node name="Tueren_stock" type="Spatial" parent="."]
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.5, 0 )
 
 [node name="Tuer_Rahmen" parent="Tueren_stock" instance=ExtResource( 15 )]
@@ -248,12 +248,6 @@ transform = Transform( 0.953719, 0, 0.210723, 0, 1, 0, -0.300697, 0, 0.668349, -
 
 [node name="Tuer_Rahmen8" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( 0.883845, 0, -0.464017, 0, 1, 0, 0.467779, 0, 0.876737, -7.83464, 0.25, -1.65267 )
-
-[node name="Tuer_Rahmen9" parent="Tueren_stock" instance=ExtResource( 15 )]
-transform = Transform( 0.00275989, 0, -1.01003, 0, 1, 0, 0.999996, 0, 0.00278758, -4.65799, 0.25, -12.7234 )
-
-[node name="Tuer_Rahmen14" parent="Tueren_stock" instance=ExtResource( 15 )]
-transform = Transform( 0.00275989, 0, -1.01003, 0, 1, 0, 0.999996, 0, 0.00278758, 4.66148, 0.25, -12.7335 )
 
 [node name="Tuer_Rahmen15" parent="Tueren_stock" instance=ExtResource( 15 )]
 transform = Transform( 0.999937, 0, -0.0127159, 0, 1, 0, 0.0111882, 0, 1.13647, 7.6461, 0.25, -14.3179 )
