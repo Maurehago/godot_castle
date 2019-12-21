@@ -362,3 +362,6 @@ omni_range = 14.1151
 [node name="Weihnacht" type="Spatial" parent="."]
 
 [node name="Lichterkette" parent="Weihnacht" instance=ExtResource( 20 )]
+
+[node name="Lichterkette2" parent="Weihnacht" instance=ExtResource( 20 )]
+transform = Transform( 0.955095, 0, -0.296301, 0, 1, 0, 0.296301, 0, 0.955095, -5.68211, 8, 8 )

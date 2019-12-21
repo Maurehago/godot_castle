@@ -32,7 +32,7 @@ height = 0.82215
 radius = 0.564808
 height = 2.31054
 
-[node name="Boden_Hof" index="0" instance=ExtResource( 1 )]
+[node name="Boden_Hof" instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0192852, 4.25, 0 )
 
 [node name="Brunnen" parent="." index="1" instance=ExtResource( 2 )]
@@ -164,7 +164,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00401688, 0.398724, 0.00401
 shape = SubResource( 4 )
 
 [node name="snowman" type="MeshInstance" parent="." index="6"]
-editor/display_folded = true
 transform = Transform( 0.57455, 0, 0.81847, 0, 1, 0, -0.81847, 0, 0.57455, -5.86891, 0.429881, 2.65276 )
 mesh = ExtResource( 12 )
 material/0 = ExtResource( 13 )
@@ -174,6 +173,3 @@ material/0 = ExtResource( 13 )
 [node name="CollisionShape" type="CollisionShape" parent="snowman/StaticBody" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.40941, 0.945485, 1.68548 )
 shape = SubResource( 5 )
-
-[node name="OmniLight" type="OmniLight" parent="snowman" index="1"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.350777, 2.7003, -0.190147 )

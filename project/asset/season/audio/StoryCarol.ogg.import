@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/StoryCarol.ogg-94fc1dd898e7cea28bc3ab5593d2e162.oggstr"
+
+[deps]
+
+source_file="res://asset/season/audio/StoryCarol.ogg"
+dest_files=[ "res://.import/StoryCarol.ogg-94fc1dd898e7cea28bc3ab5593d2e162.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
