@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Kerzen.obj-e134ae109fb556f627ebe9ff5b65624e.mesh"
+
+[deps]
+
+files=[ "res://.import/Kerzen.obj-e134ae109fb556f627ebe9ff5b65624e.mesh" ]
+
+source_file="res://Burg/Erdgeschoss/Hof/Kerzen.obj"
+dest_files=[ "res://.import/Kerzen.obj-e134ae109fb556f627ebe9ff5b65624e.mesh", "res://.import/Kerzen.obj-e134ae109fb556f627ebe9ff5b65624e.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true

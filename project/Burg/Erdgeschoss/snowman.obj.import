@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/snowman.obj-a5cdaa59005901b2939730fc974f3654.mesh"
+
+[deps]
+
+files=[ "res://.import/snowman.obj-a5cdaa59005901b2939730fc974f3654.mesh" ]
+
+source_file="res://Burg/Erdgeschoss/snowman.obj"
+dest_files=[ "res://.import/snowman.obj-a5cdaa59005901b2939730fc974f3654.mesh", "res://.import/snowman.obj-a5cdaa59005901b2939730fc974f3654.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
