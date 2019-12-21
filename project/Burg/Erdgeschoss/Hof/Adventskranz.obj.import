@@ -1,0 +1,18 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/Adventskranz.obj-a21645d5bc92ed740067b38719371f96.mesh"
+
+[deps]
+
+files=[ "res://.import/Adventskranz.obj-a21645d5bc92ed740067b38719371f96.mesh" ]
+
+source_file="res://Burg/Erdgeschoss/Hof/Adventskranz.obj"
+dest_files=[ "res://.import/Adventskranz.obj-a21645d5bc92ed740067b38719371f96.mesh", "res://.import/Adventskranz.obj-a21645d5bc92ed740067b38719371f96.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+optimize_mesh=true
