@@ -1,28 +1,29 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://asset/season/Weihnachtsbaum.scn" type="PackedScene" id=1]
 [ext_resource path="res://asset/season/sarbot1/Sphere.scn" type="PackedScene" id=2]
 [ext_resource path="res://asset/season/josch1/Head_Cube.scn" type="PackedScene" id=3]
 [ext_resource path="res://asset/season/AiYori/AiYori2.png" type="Texture" id=4]
-[ext_resource path="res://asset/season/Topicranger/Kugel.scn" type="PackedScene" id=5]
-[ext_resource path="res://asset/season/Topicranger/Stern.scn" type="PackedScene" id=6]
-[ext_resource path="res://asset/season/Aron_Enton/Herz.scn" type="PackedScene" id=7]
-[ext_resource path="res://asset/season/Aron_Enton/Muetze.scn" type="PackedScene" id=8]
-[ext_resource path="res://asset/season/Aron_Enton/Spitze.scn" type="PackedScene" id=9]
-[ext_resource path="res://mat/colors_emission.material" type="Material" id=10]
-[ext_resource path="res://asset/season/Maurehago/Kugel000.scn" type="PackedScene" id=11]
-[ext_resource path="res://asset/season/Maurehago/Kugel001.scn" type="PackedScene" id=12]
-[ext_resource path="res://asset/season/Maurehago/Kugel002.scn" type="PackedScene" id=13]
-[ext_resource path="res://asset/season/Maurehago/Kugel003.scn" type="PackedScene" id=14]
-[ext_resource path="res://asset/season/Maurehago/Kugel004.scn" type="PackedScene" id=15]
-[ext_resource path="res://asset/season/Maurehago/Kugel005.scn" type="PackedScene" id=16]
-[ext_resource path="res://asset/season/Maurehago/Kugel006.scn" type="PackedScene" id=17]
-[ext_resource path="res://asset/season/Mr_Brainless/Nussknacker.scn" type="PackedScene" id=18]
-[ext_resource path="res://asset/season/Neo/BaumSchlitten.scn" type="PackedScene" id=19]
-[ext_resource path="res://asset/season/Windy/Christbaumkugel.scn" type="PackedScene" id=20]
-[ext_resource path="res://asset/season/Windy/Stern.scn" type="PackedScene" id=21]
-[ext_resource path="res://asset/season/Windy/Stern2.scn" type="PackedScene" id=22]
-[ext_resource path="res://asset/season/Windy/Stern3.scn" type="PackedScene" id=23]
+[ext_resource path="res://asset/season/CimaereJade/winterstar.png" type="Texture" id=5]
+[ext_resource path="res://asset/season/Topicranger/Kugel.scn" type="PackedScene" id=6]
+[ext_resource path="res://asset/season/Topicranger/Stern.scn" type="PackedScene" id=7]
+[ext_resource path="res://asset/season/Aron_Enton/Herz.scn" type="PackedScene" id=8]
+[ext_resource path="res://asset/season/Aron_Enton/Muetze.scn" type="PackedScene" id=9]
+[ext_resource path="res://asset/season/Aron_Enton/Spitze.scn" type="PackedScene" id=10]
+[ext_resource path="res://mat/colors_emission.material" type="Material" id=11]
+[ext_resource path="res://asset/season/Maurehago/Kugel000.scn" type="PackedScene" id=12]
+[ext_resource path="res://asset/season/Maurehago/Kugel001.scn" type="PackedScene" id=13]
+[ext_resource path="res://asset/season/Maurehago/Kugel002.scn" type="PackedScene" id=14]
+[ext_resource path="res://asset/season/Maurehago/Kugel003.scn" type="PackedScene" id=15]
+[ext_resource path="res://asset/season/Maurehago/Kugel004.scn" type="PackedScene" id=16]
+[ext_resource path="res://asset/season/Maurehago/Kugel005.scn" type="PackedScene" id=17]
+[ext_resource path="res://asset/season/Maurehago/Kugel006.scn" type="PackedScene" id=18]
+[ext_resource path="res://asset/season/Mr_Brainless/Nussknacker.scn" type="PackedScene" id=19]
+[ext_resource path="res://asset/season/Neo/BaumSchlitten.scn" type="PackedScene" id=20]
+[ext_resource path="res://asset/season/Windy/Christbaumkugel.scn" type="PackedScene" id=21]
+[ext_resource path="res://asset/season/Windy/Stern.scn" type="PackedScene" id=22]
+[ext_resource path="res://asset/season/Windy/Stern2.scn" type="PackedScene" id=23]
+[ext_resource path="res://asset/season/Windy/Stern3.scn" type="PackedScene" id=24]
 
 [node name="Weihnachtsbaum" instance=ExtResource( 1 )]
 transform = Transform( 0.652941, 0, 0.232199, 0, 0.750723, 0, -0.25154, 0, 0.707327, 0, 5.10949, -7.55754 )
@@ -35,65 +36,153 @@ editor/display_folded = true
 [node name="Sphere" parent="Schmuck" index="0" instance=ExtResource( 2 )]
 transform = Transform( 1.64069, 0, -5.96046e-008, 0, 1.64069, 0, -5.96046e-008, 0, 1.64069, -0.775555, 3.28003, 1.49149 )
 
-[node name="Head_Cube" parent="Schmuck" index="1" instance=ExtResource( 3 )]
+[node name="Sphere2" parent="Schmuck" index="1" instance=ExtResource( 2 )]
+transform = Transform( -0.408012, 0, 1.71284, 0, 1.64069, 0, -1.51312, 0, -0.245398, -1.86726, 2.1217, 0.638739 )
+
+[node name="Head_Cube" parent="Schmuck" index="2" instance=ExtResource( 3 )]
 transform = Transform( -0.546222, -1.12591, 4.92149e-008, 0, -5.47008e-008, -1.25141, 1.1259, -0.546222, 2.38761e-008, -1.32986, 3.17197, 1.40821 )
 
-[node name="Sprite3D" type="Sprite3D" parent="Schmuck" index="2"]
+[node name="Head_Cube2" parent="Schmuck" index="3" instance=ExtResource( 3 )]
+transform = Transform( 1.31648, 0.224953, -9.8329e-009, 0, -5.47009e-008, -1.25141, -0.187446, 1.15752, -5.05966e-008, 1.94585, 2.05336, 0.380037 )
+
+[node name="Sprite3D" type="Sprite3D" parent="Schmuck" index="4"]
 transform = Transform( 0.445701, 0, -0.0750161, 0, 0.447712, 0, 0.066269, 0, 0.438578, 0.119848, 3.22778, 1.7009 )
 use_in_baked_light = true
 texture = ExtResource( 4 )
 
-[node name="Kugel" parent="Schmuck" index="3" instance=ExtResource( 5 )]
+[node name="Sprite3D2" type="Sprite3D" parent="Schmuck" index="5"]
+transform = Transform( 0.611143, 0, -1.42052, 0, 1.44003, 0, 1.25489, 0, 0.476279, -1.70173, 3.24534, 0.0185795 )
+use_in_baked_light = true
+texture = ExtResource( 5 )
+
+[node name="Sprite3D3" type="Sprite3D" parent="Schmuck" index="6"]
+transform = Transform( 1.2759, 0, 0.645088, 0, 1.44003, 0, -0.569873, 0, 1.33714, 1.71895, 0.658172, 1.87076 )
+use_in_baked_light = true
+texture = ExtResource( 5 )
+
+[node name="Kugel" parent="Schmuck" index="7" instance=ExtResource( 6 )]
 transform = Transform( -0.159419, 0, -1.63598, 0, 1.55387, 0, 1.44522, 0, -0.314735, -3.50475e-005, 2.1283, 2.3863 )
 
-[node name="Stern_Cube" parent="Schmuck" index="4" instance=ExtResource( 6 )]
+[node name="Stern_Cube" parent="Schmuck" index="8" instance=ExtResource( 7 )]
 transform = Transform( 0.665173, -0.352069, 4.197e-008, 0, -8.6763e-008, -0.727821, 0.311018, 0.631748, -7.53102e-008, -1.22145, 2.01874, 1.64037 )
 
-[node name="Herz" parent="Schmuck" index="5" instance=ExtResource( 7 )]
+[node name="Stern_Cube2" parent="Schmuck" index="9" instance=ExtResource( 7 )]
+transform = Transform( 0.587729, -0.489423, 5.83439e-008, 0, -8.67632e-008, -0.727823, 0.432357, 0.541264, -6.45236e-008, -0.614549, 5.82213, 0.696501 )
+
+[node name="Herz" parent="Schmuck" index="10" instance=ExtResource( 8 )]
 transform = Transform( 1.36849, 0, -1.78814e-007, 0, 1.36849, 0, 0, 0, 1.36849, -0.611678, 2.13652, 1.76187 )
 
-[node name="Muetze" parent="Schmuck" index="6" instance=ExtResource( 8 )]
+[node name="Herz2" parent="Schmuck" index="11" instance=ExtResource( 8 )]
+transform = Transform( 1.36849, 0, -1.78814e-007, 0, 1.36849, 0, 6.55651e-007, 0, 1.36849, 0.705581, 2.14774, -1.82922 )
+
+[node name="Herz3" parent="Schmuck" index="12" instance=ExtResource( 8 )]
+transform = Transform( 1.0313, 0, 0.903265, 0, 1.36849, 0, -0.797944, 0, 1.11705, 0.45075, 4.68577, 1.03427 )
+
+[node name="Muetze" parent="Schmuck" index="13" instance=ExtResource( 9 )]
 transform = Transform( 1.24994, 0, -2.38419e-007, 0, 1.24994, 0, 0, 0, 1.24994, 0.882932, 1.96752, 1.73017 )
 
-[node name="Spitze" parent="Schmuck" index="7" instance=ExtResource( 9 )]
-transform = Transform( 3.32519, 0, -8.34465e-007, 0, 3.32519, 0, -5.96046e-007, 0, 3.32519, 0, 7.57383, 0 )
-material/0 = ExtResource( 10 )
+[node name="Muetze2" parent="Schmuck" index="14" instance=ExtResource( 9 )]
+transform = Transform( 1.18996, 0, 0.348057, 0, 1.24994, 0, -0.307473, 0, 1.22301, -0.0524993, 3.18642, -1.81061 )
 
-[node name="Kugel000" parent="Schmuck" index="8" instance=ExtResource( 11 )]
+[node name="Spitze" parent="Schmuck" index="15" instance=ExtResource( 10 )]
+transform = Transform( 3.32519, 0, -8.34465e-007, 0, 3.32519, 0, -5.96046e-007, 0, 3.32519, 0, 7.57383, 0 )
+material/0 = ExtResource( 11 )
+
+[node name="Kugel000" parent="Schmuck" index="16" instance=ExtResource( 12 )]
 transform = Transform( 0.113338, 0, -5.96046e-008, 0, 0.113338, 0, -3.72529e-009, 0, 0.113338, -0.661071, 1.34708, 1.98264 )
 
-[node name="Kugel001" parent="Schmuck" index="9" instance=ExtResource( 12 )]
+[node name="Kugel012" parent="Schmuck" index="17" instance=ExtResource( 12 )]
+transform = Transform( 0.113338, 0, -6.33299e-008, 0, 0.113338, 0, 3.72529e-009, 0, 0.113338, 0.802607, 1.34708, -2.13321 )
+
+[node name="Kugel001" parent="Schmuck" index="18" instance=ExtResource( 13 )]
 transform = Transform( 0.113338, 0, -1.49012e-008, 0, 0.113338, 0, -3.72529e-009, 0, 0.113338, -1.5891, 1.75129, 1.43324 )
 
-[node name="Kugel002" parent="Schmuck" index="10" instance=ExtResource( 13 )]
+[node name="Kugel013" parent="Schmuck" index="19" instance=ExtResource( 13 )]
+transform = Transform( 0.113338, 0, -2.6077e-008, 0, 0.113338, 0, 3.72529e-009, 0, 0.113338, -0.425138, 1.75129, -1.83981 )
+
+[node name="Kugel002" parent="Schmuck" index="20" instance=ExtResource( 14 )]
 transform = Transform( 0.113338, 0, -7.45058e-009, 0, 0.113338, 0, -3.72529e-009, 0, 0.113338, -1.87779, 2.56324, 0.403225 )
 
-[node name="Kugel003" parent="Schmuck" index="11" instance=ExtResource( 14 )]
+[node name="Kugel014" parent="Schmuck" index="21" instance=ExtResource( 14 )]
+transform = Transform( 0.113338, 0, -1.11759e-008, 0, 0.113338, 0, 3.72529e-009, 0, 0.113338, 1.6658, 2.56324, -1.12473 )
+
+[node name="Kugel007" parent="Schmuck" index="22" instance=ExtResource( 14 )]
+transform = Transform( 0.113338, 0, -1.11759e-008, 0, 0.113338, 0, 3.72529e-009, 0, 0.113338, 0.825296, 5.25975, 0.920952 )
+
+[node name="Kugel010" parent="Schmuck" index="23" instance=ExtResource( 14 )]
+transform = Transform( 0.113338, 0, -1.11759e-008, 0, 0.113338, 0, 3.72529e-009, 0, 0.113338, 1.19388, 5.25975, -0.11551 )
+
+[node name="Kugel018" parent="Schmuck" index="24" instance=ExtResource( 14 )]
+transform = Transform( 0.113338, 0, -1.11759e-008, 0, 0.113338, 0, 3.72529e-009, 0, 0.113338, 0.421921, 6.86737, 0.193061 )
+
+[node name="Kugel003" parent="Schmuck" index="25" instance=ExtResource( 15 )]
 transform = Transform( 0.113338, 0, -7.45058e-009, 0, 0.113338, 0, -3.72529e-009, 0, 0.113338, 0.292215, 2.73668, 1.85013 )
 
-[node name="Kugel004" parent="Schmuck" index="12" instance=ExtResource( 15 )]
-transform = Transform( 0.113338, 0, -7.45058e-009, 0, 0.113338, 0, -3.72529e-009, 0, 0.113338, 0.576377, 1.20392, 2.08873 )
+[node name="Kugel008" parent="Schmuck" index="26" instance=ExtResource( 15 )]
+transform = Transform( 0.113338, 0, -1.11759e-008, 0, 0.113338, 0, 3.72529e-009, 0, 0.113338, -1.25771, 5.09558, 0.199658 )
 
-[node name="Kugel005" parent="Schmuck" index="13" instance=ExtResource( 16 )]
+[node name="Kugel016" parent="Schmuck" index="27" instance=ExtResource( 15 )]
+transform = Transform( 0.113338, 0, -1.11759e-008, 0, 0.113338, 0, 3.72529e-009, 0, 0.113338, -0.467615, 5.09558, -1.09522 )
+
+[node name="Kugel004" parent="Schmuck" index="28" instance=ExtResource( 16 )]
+transform = Transform( 0.113338, 0, -1.11759e-008, 0, 0.113338, 0, 3.72529e-009, 0, 0.113338, 0.615727, 1.20392, 2.10911 )
+
+[node name="Kugel009" parent="Schmuck" index="29" instance=ExtResource( 16 )]
+transform = Transform( 0.113338, 0, -1.11759e-008, 0, 0.113338, 0, 3.72529e-009, 0, 0.113338, 1.86145, 1.20392, -1.39384 )
+
+[node name="Kugel005" parent="Schmuck" index="30" instance=ExtResource( 17 )]
 transform = Transform( 0.113338, 0, -7.45058e-009, 0, 0.113338, 0, -3.72529e-009, 0, 0.113338, 0.26826, 4.21138, 1.24781 )
 
-[node name="Kugel006" parent="Schmuck" index="14" instance=ExtResource( 17 )]
+[node name="Kugel011" parent="Schmuck" index="31" instance=ExtResource( 17 )]
+transform = Transform( 0.113338, 0, -1.11759e-008, 0, 0.113338, 0, 3.72529e-009, 0, 0.113338, 1.01444, 4.21138, -0.85045 )
+
+[node name="Kugel017" parent="Schmuck" index="32" instance=ExtResource( 17 )]
+transform = Transform( 0.113338, 0, -1.11759e-008, 0, 0.113338, 0, 3.72529e-009, 0, 0.113338, -0.0891476, 5.8696, -0.889373 )
+
+[node name="Kugel006" parent="Schmuck" index="33" instance=ExtResource( 18 )]
 transform = Transform( 0.113338, 0, -7.45058e-009, 0, 0.113338, 0, -3.72529e-009, 0, 0.113338, -1.34727, 3.99517, 0.387107 )
 
-[node name="Nussknacker" parent="Schmuck" index="15" instance=ExtResource( 18 )]
+[node name="Kugel019" parent="Schmuck" index="34" instance=ExtResource( 18 )]
+transform = Transform( 0.113338, 0, -1.11759e-008, 0, 0.113338, 0, 3.72529e-009, 0, 0.113338, -0.532647, 6.77531, -0.151415 )
+
+[node name="Kugel015" parent="Schmuck" index="35" instance=ExtResource( 18 )]
+transform = Transform( 0.113338, 0, -1.11759e-008, 0, 0.113338, 0, 3.72529e-009, 0, 0.113338, -0.786565, 3.99517, -1.18959 )
+
+[node name="Nussknacker" parent="Schmuck" index="36" instance=ExtResource( 19 )]
 transform = Transform( -0.821695, 0, -1.63479, 0, 1.77866, 0, 1.44418, 0, -0.976899, -0.924613, 4.18567, 1.02638 )
 
-[node name="Cube" parent="Schmuck" index="16" instance=ExtResource( 19 )]
+[node name="Nussknacker2" parent="Schmuck" index="37" instance=ExtResource( 19 )]
+transform = Transform( -1.77892, 0, 0.185619, 0, 1.77866, 0, -0.163973, 0, -1.76129, -1.59467, 1.65795, -1.60241 )
+
+[node name="Cube" parent="Schmuck" index="38" instance=ExtResource( 20 )]
 transform = Transform( 0.0205043, 0, -0.0638094, 0, 0.0623947, 0, 0.0563691, 0, 0.0144463, 0.00146365, 0.480139, 2.67075 )
 
-[node name="Icosphere" parent="Schmuck" index="17" instance=ExtResource( 20 )]
+[node name="Cube2" parent="Schmuck" index="39" instance=ExtResource( 20 )]
+transform = Transform( 0.0624053, 0, -0.00647305, 0, 0.0623949, 0, 0.00571826, 0, 0.0617908, 1.00137, 5.76218, 0.036478 )
+
+[node name="Icosphere" parent="Schmuck" index="40" instance=ExtResource( 21 )]
 transform = Transform( 1.58964, 0, -1.19209e-007, 0, 1.58964, 0, -5.96046e-008, 0, 1.58964, -0.520909, 4.00094, 1.46479 )
 
-[node name="Stern" parent="Schmuck" index="18" instance=ExtResource( 21 )]
+[node name="Icosphere3" parent="Schmuck" index="41" instance=ExtResource( 21 )]
+transform = Transform( 1.58964, 0, -1.78814e-007, 0, 1.58964, 0, -5.96046e-008, 0, 1.58964, 0.475716, 4.00094, -1.33771 )
+
+[node name="Icosphere2" parent="Schmuck" index="42" instance=ExtResource( 21 )]
+transform = Transform( -0.0277899, 0, -1.68955, 0, 1.58964, 0, 1.49255, 0, -0.188193, -1.80011, 1.55996, -0.801572 )
+
+[node name="Stern" parent="Schmuck" index="43" instance=ExtResource( 22 )]
 transform = Transform( 1, 0, -2.98023e-008, 0, 1, 0, 0, 0, 1, -2.19559, 2.09419, 0.0668297 )
 
-[node name="Stern2" parent="Schmuck" index="19" instance=ExtResource( 22 )]
+[node name="Stern5" parent="Schmuck" index="44" instance=ExtResource( 22 )]
+transform = Transform( 1, 0, -2.98023e-008, 0, 1, 0, 0, 0, 1, -1.13409, 3.1836, -1.29153 )
+
+[node name="Stern6" parent="Schmuck" index="45" instance=ExtResource( 22 )]
+transform = Transform( 1, 0, -2.98023e-008, 0, 1, 0, 0, 0, 1, 1.05557, 4.61251, -0.512836 )
+
+[node name="Stern2" parent="Schmuck" index="46" instance=ExtResource( 23 )]
 transform = Transform( 0.636478, 0, 0.787131, 0, 1, 0, -0.695351, 0, 0.711208, 1.05097, 4.68958, 0.978415 )
 
-[node name="Stern3" parent="Schmuck" index="20" instance=ExtResource( 23 )]
+[node name="Stern3" parent="Schmuck" index="47" instance=ExtResource( 24 )]
 transform = Transform( 0.705027, 0, -0.793368, 0, 1, 0, 0.700861, 0, 0.629706, -1.88759, 0.794147, 1.89093 )
+
+[node name="Stern4" parent="Schmuck" index="48" instance=ExtResource( 24 )]
+transform = Transform( 0.789369, 0, 0.61214, 0, 1, 0, -0.540764, 0, 0.847484, 1.32892, 3.32179, 0.759604 )

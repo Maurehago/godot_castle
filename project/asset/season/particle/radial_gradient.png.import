@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/winterstar.png-3619a5c22930f5d41f6bce4024377ad2.s3tc.stex"
-path.etc2="res://.import/winterstar.png-3619a5c22930f5d41f6bce4024377ad2.etc2.stex"
+path.s3tc="res://.import/radial_gradient.png-ad3e87fccd890b93834fd7eee44e4667.s3tc.stex"
+path.etc2="res://.import/radial_gradient.png-ad3e87fccd890b93834fd7eee44e4667.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://asset/season/CimaereJade/winterstar.png"
-dest_files=[ "res://.import/winterstar.png-3619a5c22930f5d41f6bce4024377ad2.s3tc.stex", "res://.import/winterstar.png-3619a5c22930f5d41f6bce4024377ad2.etc2.stex" ]
+source_file="res://asset/season/particle/radial_gradient.png"
+dest_files=[ "res://.import/radial_gradient.png-ad3e87fccd890b93834fd7eee44e4667.s3tc.stex", "res://.import/radial_gradient.png-ad3e87fccd890b93834fd7eee44e4667.etc2.stex" ]
 
 [params]
 
