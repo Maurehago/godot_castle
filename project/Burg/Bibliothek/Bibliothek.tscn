@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://asset/burg/bibliothek/Bibliothek.scn" type="PackedScene" id=1]
 [ext_resource path="res://asset/burg/bibliothek/Ebene2.scn" type="PackedScene" id=2]
@@ -6,9 +6,15 @@
 [ext_resource path="res://asset/burg/bibliothek/Bogen.scn" type="PackedScene" id=4]
 [ext_resource path="res://preflab/Season/Weihnachtsbaum.tscn" type="PackedScene" id=5]
 [ext_resource path="res://preflab/Season/Lichterkette.tscn" type="PackedScene" id=6]
-[ext_resource path="res://asset/burg/bibliothek/Bibliothek_Fenster.scn" type="PackedScene" id=7]
-[ext_resource path="res://asset/burg/bibliothek/Bibliothek_Tuerrahmen.scn" type="PackedScene" id=8]
-[ext_resource path="res://asset/burg/bibliothek/Bibliothek_Tuer.scn" type="PackedScene" id=9]
+[ext_resource path="res://asset/season/Aron_Enton/Zug.scn" type="PackedScene" id=7]
+[ext_resource path="res://mat/colors_rough.material" type="Material" id=8]
+[ext_resource path="res://asset/season/Linux_User/Ski.scn" type="PackedScene" id=9]
+[ext_resource path="res://asset/season/Mr_Brainless/Nussknacker.scn" type="PackedScene" id=10]
+[ext_resource path="res://asset/season/Aron_Enton/Schlitten.scn" type="PackedScene" id=11]
+[ext_resource path="res://asset/season/Neo/BaumSchlitten.scn" type="PackedScene" id=12]
+[ext_resource path="res://asset/burg/bibliothek/Bibliothek_Fenster.scn" type="PackedScene" id=13]
+[ext_resource path="res://asset/burg/bibliothek/Bibliothek_Tuerrahmen.scn" type="PackedScene" id=14]
+[ext_resource path="res://asset/burg/bibliothek/Bibliothek_Tuer.scn" type="PackedScene" id=15]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 4.12177, 5.91907, 8.71099 )
@@ -129,28 +135,46 @@ transform = Transform( -0.0369765, 0, -0.847221, 0, 1, 0, 0.999316, 0, -0.031348
 [node name="Lichterkette3" parent="Area_LOD/LOD0/Weihnacht" instance=ExtResource( 6 )]
 transform = Transform( 0.0186047, 0, -0.847654, 0, 1, 0, 0.999827, 0, 0.0157731, 0.0468676, 8.9562, -0.576403 )
 
+[node name="Tools" type="Spatial" parent="Area_LOD/LOD0/Weihnacht"]
+
+[node name="Zug" parent="Area_LOD/LOD0/Weihnacht/Tools" instance=ExtResource( 7 )]
+transform = Transform( 0.529992, 0, -1.4197, 0, 1.5154, 0, 1.4197, 0, 0.529992, -1.77559, 5.11451, -5.89225 )
+material/0 = ExtResource( 8 )
+
+[node name="Plane" parent="Area_LOD/LOD0/Weihnacht/Tools" instance=ExtResource( 9 )]
+transform = Transform( 0.71871, 0, -0.69531, 0, 1, 0, 0.69531, 0, 0.71871, 1.46947, 5.09471, -6.26409 )
+
+[node name="Nussknacker" parent="Area_LOD/LOD0/Weihnacht/Tools" instance=ExtResource( 10 )]
+transform = Transform( 2.59148, 0, -0.90173, 0, 2.74388, 0, 0.90173, 0, 2.59148, -3.55919, 5.09927, -5.05021 )
+
+[node name="Schlitten" parent="Area_LOD/LOD0/Weihnacht/Tools" instance=ExtResource( 11 )]
+transform = Transform( 0.583518, 0, 0.105828, 0, 0.593037, 0, -0.105828, 0, 0.583518, -1.38379, 5.10254, -7.26657 )
+
+[node name="Schlitten2" parent="Area_LOD/LOD0/Weihnacht/Tools" instance=ExtResource( 12 )]
+transform = Transform( -0.086711, 0, -0.100064, 0, 0.132407, 0, 0.100064, 0, -0.086711, 3.37208, 5.09941, -5.10675 )
+
 [node name="LOD1" type="Spatial" parent="Area_LOD"]
 
 [node name="LOD2" type="Spatial" parent="Area_LOD"]
 
-[node name="Bibliothek_Fenster" parent="." instance=ExtResource( 7 )]
+[node name="Bibliothek_Fenster" parent="." instance=ExtResource( 13 )]
 
-[node name="Bibliothek_Fenster2" parent="." instance=ExtResource( 7 )]
+[node name="Bibliothek_Fenster2" parent="." instance=ExtResource( 13 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.25, -14.303 )
 
-[node name="Bibliothek_Tuerrahmen" parent="." instance=ExtResource( 8 )]
+[node name="Bibliothek_Tuerrahmen" parent="." instance=ExtResource( 14 )]
 
-[node name="Bibliothek_Tuer3" parent="Bibliothek_Tuerrahmen" instance=ExtResource( 9 )]
+[node name="Bibliothek_Tuer3" parent="Bibliothek_Tuerrahmen" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98575, 0.101936, -0.135547 )
 
-[node name="Bibliothek_Tuer4" parent="Bibliothek_Tuerrahmen" instance=ExtResource( 9 )]
+[node name="Bibliothek_Tuer4" parent="Bibliothek_Tuerrahmen" instance=ExtResource( 15 )]
 transform = Transform( -0.483288, 0, 0.875462, 0, 1, 0, -0.875462, 0, -0.483288, -0.0214949, 0.101936, -0.135547 )
 
-[node name="Bibliothek_Tuerrahmen2" parent="." instance=ExtResource( 8 )]
+[node name="Bibliothek_Tuerrahmen2" parent="." instance=ExtResource( 14 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 5, -14.303 )
 
-[node name="Bibliothek_Tuer" parent="Bibliothek_Tuerrahmen2" instance=ExtResource( 9 )]
+[node name="Bibliothek_Tuer" parent="Bibliothek_Tuerrahmen2" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.98575, 0.101936, -0.0439892 )
 
-[node name="Bibliothek_Tuer2" parent="Bibliothek_Tuerrahmen2" instance=ExtResource( 9 )]
+[node name="Bibliothek_Tuer2" parent="Bibliothek_Tuerrahmen2" instance=ExtResource( 15 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.00696, 0.101936, -0.0439892 )

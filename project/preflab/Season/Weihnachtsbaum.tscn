@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://asset/season/Weihnachtsbaum.scn" type="PackedScene" id=1]
 [ext_resource path="res://asset/season/sarbot1/Sphere.scn" type="PackedScene" id=2]
@@ -20,6 +20,9 @@
 [ext_resource path="res://asset/season/Mr_Brainless/Nussknacker.scn" type="PackedScene" id=18]
 [ext_resource path="res://asset/season/Neo/BaumSchlitten.scn" type="PackedScene" id=19]
 [ext_resource path="res://asset/season/Windy/Christbaumkugel.scn" type="PackedScene" id=20]
+[ext_resource path="res://asset/season/Windy/Stern.scn" type="PackedScene" id=21]
+[ext_resource path="res://asset/season/Windy/Stern2.scn" type="PackedScene" id=22]
+[ext_resource path="res://asset/season/Windy/Stern3.scn" type="PackedScene" id=23]
 
 [node name="Weihnachtsbaum" instance=ExtResource( 1 )]
 transform = Transform( 0.652941, 0, 0.232199, 0, 0.750723, 0, -0.25154, 0, 0.707327, 0, 5.10949, -7.55754 )
@@ -85,3 +88,12 @@ transform = Transform( 0.0205043, 0, -0.0638094, 0, 0.0623947, 0, 0.0563691, 0, 
 
 [node name="Icosphere" parent="Schmuck" index="17" instance=ExtResource( 20 )]
 transform = Transform( 1.58964, 0, -1.19209e-007, 0, 1.58964, 0, -5.96046e-008, 0, 1.58964, -0.520909, 4.00094, 1.46479 )
+
+[node name="Stern" parent="Schmuck" index="18" instance=ExtResource( 21 )]
+transform = Transform( 1, 0, -2.98023e-008, 0, 1, 0, 0, 0, 1, -2.19559, 2.09419, 0.0668297 )
+
+[node name="Stern2" parent="Schmuck" index="19" instance=ExtResource( 22 )]
+transform = Transform( 0.636478, 0, 0.787131, 0, 1, 0, -0.695351, 0, 0.711208, 1.05097, 4.68958, 0.978415 )
+
+[node name="Stern3" parent="Schmuck" index="20" instance=ExtResource( 23 )]
+transform = Transform( 0.705027, 0, -0.793368, 0, 1, 0, 0.700861, 0, 0.629706, -1.88759, 0.794147, 1.89093 )
