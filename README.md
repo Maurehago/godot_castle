@@ -33,6 +33,8 @@ Das sollte wenn möglich, mit dem Thema Godot-Engine zu tun haben.
 
 Eine weitere möglichkeit besteht darin, wenn ihr ein wenig kreativ seid, das ihr Modelle, Skripte, Materialien, Texturen usw... beisteuert.
 
+Das könnt ihr auch über den Discord Kanal machen.
+
 Noch besser ist, wenn ihr selber ganze Räume ausstatten möchtet.
 Eine genau Beschreibung wie ihr das machen könnt, folgt noch.
 
