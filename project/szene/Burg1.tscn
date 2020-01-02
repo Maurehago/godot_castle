@@ -81,3 +81,4 @@ omni_attenuation = 0.535887
 [node name="Schnee" parent="Season" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21.9929, 7.36515 )
 emission_box_extents = Vector3( 11, 10, 4 )
+angular_velocity = 1.12104e-044
