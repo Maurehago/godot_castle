@@ -220,6 +220,7 @@ transform = Transform( 0.657123, 0, 0.740935, 0, 1, 0, -0.753783, 0, 0.645922, -
 transform = Transform( 0.765613, 0, -0.612011, 0, 1, 0, 0.6433, 0, 0.728375, -21.9044, 0.25, 1.22289 )
 
 [node name="Tueren_stock" type="Spatial" parent="."]
+editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.5, 0 )
 
 [node name="Tuer_Rahmen" parent="Tueren_stock" instance=ExtResource( 15 )]
@@ -350,7 +351,6 @@ material/0 = null
 [node name="Tor" parent="." instance=ExtResource( 19 )]
 
 [node name="Lichter" type="Spatial" parent="."]
-editor/display_folded = true
 
 [node name="OmniLight" type="OmniLight" parent="Lichter"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.7458, 8.03847 )
@@ -360,6 +360,7 @@ shadow_enabled = true
 omni_range = 14.1151
 
 [node name="Weihnacht" type="Spatial" parent="."]
+visible = false
 
 [node name="Lichterkette" parent="Weihnacht" instance=ExtResource( 20 )]
 
