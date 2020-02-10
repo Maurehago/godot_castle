@@ -28,9 +28,10 @@
 [node name="Player" parent="." instance=ExtResource( 2 )]
 transform = Transform( 0.990283, 0, 0.139071, 0, 1, 0, -0.139071, 0, 0.990283, 0, 4.63941, 16.5 )
 allowChangeFlying = true
+LOD0_Size = 6.0
+LOD1_Size = 26.0
 
 [node name="Tuerme" type="Spatial" parent="."]
-editor/display_folded = true
 
 [node name="Turm1" parent="Tuerme" instance=ExtResource( 3 )]
 
@@ -57,7 +58,6 @@ editor/display_folded = true
 [node name="Bibliothek" parent="." instance=ExtResource( 14 )]
 
 [node name="Tueren_keller" type="Spatial" parent="."]
-editor/display_folded = true
 
 [node name="Tuer_Rahmen" parent="Tueren_keller" instance=ExtResource( 15 )]
 transform = Transform( 0.279173, 0, 0.919284, 0, 1, 0, -0.960241, 0, 0.267265, -3.87695, 0.25, 15.9912 )
@@ -138,7 +138,6 @@ transform = Transform( 0.657123, 0, 0.740935, 0, 1, 0, -0.753783, 0, 0.645922, -
 transform = Transform( 0.765613, 0, -0.612011, 0, 1, 0, 0.6433, 0, 0.728375, -21.9044, 0.25, 1.22289 )
 
 [node name="Tueren_erdgeschoss" type="Spatial" parent="."]
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.25, 0 )
 
 [node name="Tuer_Rahmen" parent="Tueren_erdgeschoss" instance=ExtResource( 15 )]
@@ -220,7 +219,6 @@ transform = Transform( 0.657123, 0, 0.740935, 0, 1, 0, -0.753783, 0, 0.645922, -
 transform = Transform( 0.765613, 0, -0.612011, 0, 1, 0, 0.6433, 0, 0.728375, -21.9044, 0.25, 1.22289 )
 
 [node name="Tueren_stock" type="Spatial" parent="."]
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 8.5, 0 )
 
 [node name="Tuer_Rahmen" parent="Tueren_stock" instance=ExtResource( 15 )]
@@ -296,7 +294,6 @@ transform = Transform( 0.657123, 0, 0.509065, 0, 1, 0, -0.753783, 0, 0.443785, -
 transform = Transform( 0.765613, 0, -0.612011, 0, 1, 0, 0.6433, 0, 0.728375, -21.9044, 0.25, 1.22289 )
 
 [node name="Tueren_stock2" type="Spatial" parent="."]
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.75, 0 )
 
 [node name="Tuer_Rahmen11" parent="Tueren_stock2" instance=ExtResource( 15 )]
@@ -336,7 +333,6 @@ transform = Transform( 0.657123, 0, 0.509065, 0, 1, 0, -0.753783, 0, 0.443785, -
 transform = Transform( 0.765613, 0, -0.439695, 0, 1, 0, 0.6433, 0, 0.523296, -21.9563, 0.25, 1.32139 )
 
 [node name="Fenster" type="Spatial" parent="."]
-editor/display_folded = true
 
 [node name="Fenster_EG" type="MeshInstance" parent="Fenster"]
 mesh = ExtResource( 16 )

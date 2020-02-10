@@ -21,6 +21,7 @@ data = SubResource( 1 )
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.69596, -5.95845 )
+update_mode = 1
 extents = Vector3( 4.34407, 1.88032, 8.70394 )
 origin_offset = Vector3( 0.373047, -0.605469, 1.36328 )
 box_projection = true
@@ -28,7 +29,7 @@ enable_shadows = true
 interior_enable = true
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-transform = Transform( 0.965926, -2.26056e-008, 0.258819, -0.224144, 0.5, 0.836516, -0.12941, -0.866025, 0.482963, 0, 34, 0 )
+transform = Transform( 0.965926, -2.26056e-08, 0.258819, -0.224144, 0.5, 0.836516, -0.12941, -0.866025, 0.482963, 0, 34, 0 )
 visible = false
 light_indirect_energy = 2.0
 light_specular = 0.2
@@ -38,4 +39,4 @@ light_specular = 0.2
 [node name="Schnee" parent="Season" instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 21.9929, 7.36515 )
 emission_box_extents = Vector3( 11, 10, 4 )
-angular_velocity = 1.12104e-044
+angular_velocity = 1.12104e-44
