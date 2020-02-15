@@ -9,3 +9,5 @@ script = ExtResource( 3 )
 [node name="World" type="Spatial" parent="."]
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
+max_stair_height = 0.407
+allowChangeFlying = true

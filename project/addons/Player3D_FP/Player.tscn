@@ -10,7 +10,7 @@ height = 1.2
 radius = 30.0
 
 [sub_resource type="SphereShape" id=3]
-radius = 15.0
+radius = 2.30816
 
 [sub_resource type="CapsuleMesh" id=4]
 radius = 0.22
@@ -32,6 +32,7 @@ albedo_color = Color( 0, 1, 0, 1 )
 
 [node name="Player" type="KinematicBody"]
 script = ExtResource( 1 )
+LOD0_Size = 2.0
 
 [node name="Capsule" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.85, 0 )

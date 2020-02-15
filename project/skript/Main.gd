@@ -12,7 +12,8 @@ var Files = {
 # bei tausche_node 	-> ["Pfade_zu_Nodes,...", "neue_Szenen,..."]
 var Game = {
 	"start": ["Burg", "Pos1"],
-	"showBibliothek": ["Bibliothek", "BibliothekVoll"]
+	"showBibliothek": ["Bibliothek", "BibliothekVoll"],
+	"hideBibliothek": ["Bibliothek", "BibliothekLeer"]
 }
 
 # Behälter für alle Geladenen Szene-Instanzen
