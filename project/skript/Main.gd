@@ -1,19 +1,34 @@
 extends Spatial
 
-# Enthält alle Szene- Namen und Pfade zum Laden
-var Files = {
+# Pfade
+var Paths = {
 	"Burg": "res://Burg/Burg.tscn",
 	"BibliothekVoll": "res://Burg/Bibliothek/Bibliothek.tscn",
-	"BibliothekLeer": "res://preflab/burg/Bibliothek/Bibliothek.tscn"
+	"Bibliothek": "Burg/Bibliothek"
 }
 
-# Bestimmt bei welcher TriggerId welche Szenen angezeigt werden sollen
-# bei wechsle_szene -> ["neue_Szene", "neue_Spielerposition"]
-# bei tausche_node 	-> ["Pfade_zu_Nodes,...", "neue_Szenen,..."]
+# Alle Zwischengespeicherten Nodes
+var Nodes = {}
+
+# Bestimmt bei welcher TriggerId was ausgeführt werden soll
+#setNode,setPlayer,load,unload,save,add,remove,show,hide
 var Game = {
-	"start": ["Burg", "Pos1"],
-	"showBibliothek": ["Bibliothek", "BibliothekVoll"],
-	"hideBibliothek": ["Bibliothek", "BibliothekLeer"]
+	"start": [
+		"load=res://Burg/Burg.tscn,Burg",
+		"load=res://Burg/Bibliothek/Bibliothek.tscn,BibliothekVoll",
+		"add=Burg,World",
+		"setNode=Burg/Bibliothek,BibliothekLeer",
+		"setPlayer=Burg/Pos1"
+	],
+	
+	"showBibliothek": [
+		"hide=BibliothekLeer",
+		"add=BibliothekVoll,Burg"
+	],
+	"hideBibliothek": [
+		"remove=BibliothekVoll,Burg",
+		"show=BibliothekLeer,Burg"
+	]
 }
 
 # Behälter für alle Geladenen Szene-Instanzen
@@ -31,65 +46,178 @@ func _ready():
 	World = $World
 	Player = $Player
 
-	lade_szenen()
-	start_szene()
+	# World unter Szenen merken
+	Nodes["World"] = World
 
-func lade_szenen():
-	# lade alle Szenen
-	for n in Files:
-		Scenes[n] = load(Files[n]).instance()
+	# Start Trigger ausführen
+	run_trigger("start")
 
-func start_szene():
-	# Szenenwechsel mit start aufrufen
-	wechsle_szene("start")
+# Merkt sich eine Node unter einem bestimmten Namen
+func set_node(sourceName:String, targetName:String) -> void:
+	var sourceNode : Node
 	
-# Funktion zum wechseln der Szene
-func wechsle_szene(triggerId):
-	if currentScene:
-		World.remove_child(currentScene)
-	
-	# neue Namen lesen
-	if Game[triggerId]:
-		currentSceneName = Game[triggerId][0]
-		currentPosName = Game[triggerId][1]
+	# Source Lesen
+	if sourceName.find("/") >= 0:
+		# ist Pfad
+		sourceNode = World.get_node(sourceName)
 	else:
+		# ist bestehende Node
+		if Nodes.has(sourceName):
+			sourceNode = Nodes[sourceName]
+
+	# Wenn Vorhanden
+	if sourceNode:
+		# Node merken
+		Nodes[targetName] = sourceNode
+	else:
+		Nodes[targetName] = null
+
+# Läd eine Szene und merkt sich diese als Node
+func load_scene(sourcePath:String, targetName:String) -> void:
+	var sourceNode : Node
+	
+	# Source Lesen
+	if sourcePath.begins_with("res://"):
+		# ist Pfad
+		sourceNode = load(sourcePath).instance()
+	else:
+		# Kein Pfad
 		return
 	
-	# neue Objekte ermitteln
-	if Scenes[currentSceneName]:
-		currentScene = Scenes[currentSceneName]
-		currentPos = currentScene.get_node(currentPosName)
+	# Wenn Vorhanden
+	if sourceNode:
+		# Node merken
+		Nodes[targetName] = sourceNode
 	else:
-		return
-	
-	# neue Szene hinzufügen
-	World.add_child(currentScene)
+		Nodes[targetName] = null
 
-	# Player Position setzen
-	Player.global_transform = currentPos.global_transform
-
-# Funktion um eine SzeneNode zu Tauschen
-func tausche_node(triggerId):
-	var oldNodePath : PoolStringArray
-	var newSzeneName : PoolStringArray
+# Entfernt eine Node komplett aus dem Speicher
+func unload_scene(sceneName:String) -> void:
+	var sourceNode : Node
 	
-	# neue Namen lesen
-	if Game[triggerId]:
-		oldNodePath = Game[triggerId][0].split(",")
-		newSzeneName = Game[triggerId][1].split(",")
+	# Source Lesen
+	if sceneName.find("/") >= 0:
+		# ist Pfad
+		sourceNode = World.get_node(sceneName)
 	else:
-		return
+		# ist bestehende Node
+		if Nodes.has(sceneName):
+			sourceNode = Nodes[sceneName]
+			Nodes[sceneName] = null
 	
-	var size = oldNodePath.size()
+	# Freigeben
+	if sourceNode:
+		sourceNode.queue_free()
+
+# Speichert eine Szene
+func save_scene(sourceName:String, targetPath:String):
+	# todo: muss noch ausgetüftelt werden
+	pass
+
+# type= "add" -> fügt eine Node der Szene hinzu
+# type= "remove" -> entfernt eine Node
+# type= "show" -> zeigt eine Node an
+# type= "hide" -> blendet eine Node aus
+func change(sourceName:String, targetName:String, type:String) -> void:
+	var sourceNode : Node
+	var targetNode : Node
 	
-	for i in range(size):
-		# Node und Szene lesen
-		var oldNode = currentScene.get_node(oldNodePath[i])
-		var newSzene = Scenes[newSzeneName[i]]
+	# Source Lesen
+	if sourceName.find("/") >= 0:
+		# ist Pfad
+		sourceNode = World.get_node(sourceName)
+	else:
+		# ist bestehende Node
+		if Nodes.has(sourceName):
+			sourceNode = Nodes[sourceName]
+
+	# Target Lesen
+	if targetName.find("/") >= 0:
+		# ist Pfad
+		targetNode = get_node(targetName)
+	else:
+		# ist bestehende Node
+		if Nodes.has(targetName):
+			targetNode = Nodes[targetName]
+
+	# Wenn keine TargetNode
+	if !targetNode:
+		targetNode = World
+
+	# Wenn Nodes vorhanden
+	if sourceNode and targetNode:
+		if type == "add":
+			# Node hinzufügen
+			targetNode.add_child(sourceNode)
+		elif type == "remove":
+			# Node entfernen
+			if sourceNode.find_parent(targetNode.name):
+				targetNode.remove_child(sourceNode)
+		elif type == "show":
+			# Node anzeigen
+			if sourceNode.has_method("show"):
+				sourceNode.show()
+		elif type == "hide":
+			# Node entfernen
+			if sourceNode.has_method("hide"):
+				sourceNode.hide()
+
+# Setzt den 3D-Player auf eine neue Position
+func player_to_position(positionName) -> void:
+	var posNode : Node
+	
+	# Source Lesen
+	if positionName.find("/") >= 0:
+		# ist Pfad
+		posNode = World.get_node(positionName)
+	else:
+		# ist bestehende Node
+		if Nodes.has(positionName):
+			posNode = Nodes[positionName]
+
+	# wenn PositionsNode Vorhanden
+	if posNode:
+		# Player Position setzen
+		Player.global_transform = posNode.global_transform
+
+# Fürt den angegebenen Trigger, mit den Daten aus "Game", aus
+func run_trigger(triggerId:String) -> void:
+	var triggerList = Game[triggerId]
+
+	# Alle Trigger Befehle durchgehen
+	for t in triggerList:
+		var cmd: String
+		var cmdList: Array
+		var paramList: Array
+		var param1: String
+		var param2: String
 		
-		# Tauschen
-		if oldNode and newSzene:
-			currentScene.remove_child(oldNode)
-			currentScene.add_child(newSzene)
+		if !t is String:
+			return
+		
+		cmdList = t.split("=")
+		if !cmdList[1]:
+			return
+		
+		cmd = cmdList[0].strip_edges()
+		paramList = cmdList[1].split(",")
 
-
+		if paramList.size() > 0:
+			param1 = paramList[0].strip_edges()
+		if paramList.size() > 1:
+			param2 = paramList[1].strip_edges()
+		
+		# Je nach Befehl ausführen
+		#setNode,setPlayer,load,unload,save,add,remove,show,hide
+		if cmd == "setNode":
+			set_node(param1, param2)
+		elif cmd == "setPlayer":
+			player_to_position(param1)
+		elif cmd == "load":
+			load_scene(param1, param2)
+		elif cmd == "unload":
+			unload_scene(param1)
+		elif cmd == "save":
+			save_scene(param1, param2)
+		else:
+			change(param1, param2, cmd)

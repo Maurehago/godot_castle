@@ -474,7 +474,7 @@ func has_inv(group, objName):
 func _on_area_entered_high(area):
 	# Wenn Trigger zum auslösen
 	if area and area.has_method("trigger"):
-		area.trigger()
+		area.trigger(self)
 		
 	if area and area.has_node("LOD0"):
 		area.get_node("LOD0").visible = true

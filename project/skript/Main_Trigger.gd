@@ -10,5 +10,6 @@ func _ready() -> void:
 
 # Trigger Funktion wird vom Player aus angestoßen
 func trigger(Player:Node) -> void:
+	var player = Player
 	if Main and Main.has_method("run_trigger"):
 		Main.run_trigger(triggerId)
