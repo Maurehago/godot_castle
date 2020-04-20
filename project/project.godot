@@ -16,16 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Godot Castle"
-run/main_scene="res://szene/Burg1.tscn"
+run/main_scene="res://szene/Main.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 AutoLoad="*res://AutoLoad.gd"
-
-[debug]
-
-settings/stdout/print_fps=true
 
 [display]
 
@@ -1076,20 +1072,20 @@ scene={
 "animation/optimizer/max_linear_error": 0.05,
 "animation/optimizer/remove_unused_tracks": true,
 "animation/storage": false,
-"external_files/store_in_subdir": true,
-"materials/keep_on_reimport": true,
-"materials/location": 1,
-"materials/storage": 1,
+"external_files/store_in_subdir": false,
+"materials/keep_on_reimport": false,
+"materials/location": 0,
+"materials/storage": 0,
 "meshes/compress": true,
 "meshes/ensure_tangents": true,
 "meshes/light_baking": 1,
 "meshes/lightmap_texel_size": 0.1,
-"meshes/storage": 1,
+"meshes/storage": 0,
 "nodes/custom_script": "",
 "nodes/root_name": "Scene Root",
 "nodes/root_scale": 1.0,
 "nodes/root_type": "Spatial",
-"nodes/storage": 1
+"nodes/storage": 0
 }
 
 [input]
@@ -1166,7 +1162,6 @@ ui_nr_3={
 quality/driver/driver_name="GLES2"
 quality/driver/fallback_to_gles2=true
 threads/thread_model=2
-quality/shadows/filter_mode=2
 quality/reflections/atlas_size=4096
 quality/filters/msaa=2
 environment/default_environment="res://default_env.tres"

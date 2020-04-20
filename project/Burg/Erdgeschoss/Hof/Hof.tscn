@@ -36,17 +36,15 @@ height = 2.31054
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0192852, 4.25, 0 )
 
 [node name="Brunnen" parent="." index="1" instance=ExtResource( 2 )]
-editor/display_folded = true
 transform = Transform( -0.721195, 0, -0.692733, 0, 1, 0, 0.692733, 0, -0.721195, -7.43832, 0.249232, 5.19066 )
 
 [node name="StaticBody" type="StaticBody" parent="Brunnen" index="0"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Brunnen/StaticBody" index="0"]
-transform = Transform( 1, 0, 2.98023e-008, 0, 1, 0, -2.98023e-008, 0, 1, 0, 1.35778, 0 )
+transform = Transform( 1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 1.35778, 0 )
 shape = SubResource( 1 )
 
 [node name="MarktstandAdventskranz" type="MeshInstance" parent="." index="2"]
-editor/display_folded = true
 transform = Transform( 0.928562, 0, 0.371177, 0, 1, 0, -0.371177, 0, 0.928562, 8.36742, 0.253497, 7.78348 )
 mesh = ExtResource( 3 )
 material/0 = ExtResource( 4 )
@@ -69,7 +67,7 @@ material/0 = ExtResource( 6 )
 material/1 = ExtResource( 7 )
 
 [node name="Adventskranz2" type="MeshInstance" parent="MarktstandAdventskranz" index="2"]
-transform = Transform( 0.999959, -0.0090411, 0, 0.0090411, 0.999959, 0, 0, -9.31323e-010, 1, -0.00644588, -0.00941181, 1.0595 )
+transform = Transform( 0.999959, -0.0090411, 0, 0.0090411, 0.999959, 0, 0, -9.31323e-10, 1, -0.00644588, -0.00941181, 1.0595 )
 mesh = ExtResource( 5 )
 material/0 = ExtResource( 6 )
 material/1 = ExtResource( 7 )
@@ -78,8 +76,7 @@ material/1 = ExtResource( 7 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7168, 0 )
 
 [node name="MarktstandKerzen" type="MeshInstance" parent="." index="3"]
-editor/display_folded = true
-transform = Transform( -0.94936, 2.50468e-009, 0.314189, -2.50668e-008, 1, -8.37145e-008, -0.314189, -8.7351e-008, -0.94936, -9.13245, 0.253497, 7.86457 )
+transform = Transform( -0.94936, 2.50468e-09, 0.314189, -2.50668e-08, 1, -8.37145e-08, -0.314189, -8.7351e-08, -0.94936, -9.13245, 0.253497, 7.86457 )
 mesh = ExtResource( 3 )
 material/0 = ExtResource( 4 )
 
@@ -95,10 +92,10 @@ transform = Transform( 0.962757, 0, -0.270369, 0, 1, 0, 0.270369, 0, 0.962757, 0
 shape = SubResource( 3 )
 
 [node name="OmniLight" type="OmniLight" parent="MarktstandKerzen" index="1"]
-transform = Transform( 1, -8.88178e-015, -1.19209e-007, 8.88178e-015, 1, -1.42109e-014, 8.9407e-008, 7.10543e-015, 1, -0.620535, 1.7168, 0.246652 )
+transform = Transform( 1, -8.88178e-15, -1.19209e-07, 8.88178e-15, 1, -1.42109e-14, 8.9407e-08, 7.10543e-15, 1, -0.620535, 1.7168, 0.246652 )
 
 [node name="Kerzen" type="MeshInstance" parent="MarktstandKerzen" index="2"]
-transform = Transform( -0.983779, -2.50669e-008, 0.179391, -3.96779e-008, 1, -7.78598e-008, -0.179391, -8.37146e-008, -0.983779, -0.1921, -2.38419e-006, 0.0778847 )
+transform = Transform( -0.983779, -2.50669e-08, 0.179391, -3.96779e-08, 1, -7.78598e-08, -0.179391, -8.37146e-08, -0.983779, -0.1921, -2.38419e-06, 0.0778847 )
 mesh = ExtResource( 8 )
 material/0 = ExtResource( 7 )
 material/1 = ExtResource( 7 )
@@ -110,7 +107,6 @@ material/6 = ExtResource( 7 )
 material/7 = ExtResource( 7 )
 
 [node name="MarktstandGluewein" type="MeshInstance" parent="." index="4"]
-editor/display_folded = true
 transform = Transform( 0.790347, 0, 0.61266, 0, 1, 0, -0.61266, 0, 0.790347, 6.51883, 0.230904, 5.16773 )
 mesh = ExtResource( 3 )
 material/0 = ExtResource( 4 )
@@ -119,7 +115,7 @@ material/0 = ExtResource( 4 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.196795, 0 )
 
 [node name="Stand" type="CollisionShape" parent="MarktstandGluewein/StaticBody" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00251436, 1.00083, -9.53674e-007 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00251436, 1.00083, -9.53674e-07 )
 shape = SubResource( 2 )
 
 [node name="Rückwand" type="CollisionShape" parent="MarktstandGluewein/StaticBody" index="1"]
@@ -152,7 +148,6 @@ mesh = ExtResource( 11 )
 material/0 = ExtResource( 4 )
 
 [node name="Fass2_LowPoly" type="MeshInstance" parent="." index="5"]
-editor/display_folded = true
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.21195, 0.250612, 6.37829 )
 mesh = ExtResource( 11 )
 material/0 = ExtResource( 4 )

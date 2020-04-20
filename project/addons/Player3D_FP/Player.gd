@@ -472,6 +472,10 @@ func has_inv(group, objName):
 
 # Enter high
 func _on_area_entered_high(area):
+	# Wenn Trigger zum auslösen
+	if area and area.has_method("trigger"):
+		area.trigger(self)
+		
 	if area and area.has_node("LOD0"):
 		area.get_node("LOD0").visible = true
 		if area.has_node("LOD1"):
@@ -481,6 +485,10 @@ func _on_area_entered_high(area):
 
 # Enter mid
 func _on_area_entered_mid(area):
+	# Wenn Trigger zum auslösen
+	#if area and area.has_method("trigger"):
+	#	area.trigger(self)
+
 	if area and area.has_node("LOD1"):
 		area.get_node("LOD1").visible = true
 		if area.has_node("LOD0"):
