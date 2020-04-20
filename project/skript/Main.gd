@@ -15,14 +15,14 @@ var Nodes = {}
 var Game = {
 	"start": [
 		"load=res://Burg/Burg.tscn,Burg",
+		"load=res://preflab/burg/Bibliothek/Bibliothek.tscn,BibliothekLeer",
 		"load=res://Burg/Bibliothek/Bibliothek.tscn,BibliothekVoll",
 		"add=Burg,World",
-		"setNode=Burg/Bibliothek,BibliothekLeer",
 		"setPlayer=Burg/Pos1"
 	],
 	
 	"showBibliothek": [
-		"hide=BibliothekLeer",
+		"remove=BibliothekLeer,Burg",
 		"add=BibliothekVoll,Burg"
 	],
 	"hideBibliothek": [
@@ -40,6 +40,7 @@ var currentScene : Node
 var currentSceneName : String
 var currentPos : Node
 var currentPosName : String
+var lastTriggerId : String = ""
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -146,8 +147,12 @@ func change(sourceName:String, targetName:String, type:String) -> void:
 
 	# Wenn Nodes vorhanden
 	if sourceNode and targetNode:
+		#print("source: " + sourceNode.get_path())
+		#print("target: " + targetNode.get_path())
 		if type == "add":
 			# Node hinzufügen
+			if sourceNode.get_parent():
+				sourceNode.get_parent().remove_child(sourceNode)
 			targetNode.add_child(sourceNode)
 		elif type == "remove":
 			# Node entfernen
@@ -182,6 +187,9 @@ func player_to_position(positionName) -> void:
 
 # Fürt den angegebenen Trigger, mit den Daten aus "Game", aus
 func run_trigger(triggerId:String) -> void:
+	if triggerId == lastTriggerId:
+		return
+	
 	var triggerList = Game[triggerId]
 
 	# Alle Trigger Befehle durchgehen

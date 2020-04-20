@@ -58,7 +58,6 @@ energy = 1.45
 shadow_enabled = true
 
 [node name="Säule" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 922.387, 719.939 )
 texture = ExtResource( 4 )
 __meta__ = {
@@ -69,7 +68,6 @@ __meta__ = {
 occluder = SubResource( 1 )
 
 [node name="Säule2" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 813.584, 455.288 )
 scale = Vector2( 0.728251, 0.668016 )
 texture = ExtResource( 4 )
@@ -81,7 +79,6 @@ __meta__ = {
 occluder = SubResource( 1 )
 
 [node name="Säule4" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 277.879, 227.37 )
 scale = Vector2( 0.728251, 0.668016 )
 texture = ExtResource( 4 )
@@ -94,7 +91,6 @@ __meta__ = {
 occluder = SubResource( 1 )
 
 [node name="Säule3" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 1289.43, 637.917 )
 texture = ExtResource( 4 )
 __meta__ = {
@@ -103,3 +99,7 @@ __meta__ = {
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Säule3"]
 occluder = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 812.082, 447.784 )
+current = true
