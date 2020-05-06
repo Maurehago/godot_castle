@@ -1,0 +1,2438 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://GDACH/burg/mesh/W256.mesh" type="ArrayMesh" id=1]
+[ext_resource path="res://GDACH/burg/mesh/T256.mesh" type="ArrayMesh" id=2]
+[ext_resource path="res://GDACH/burg/mesh/A064_128.mesh" type="ArrayMesh" id=3]
+[ext_resource path="res://GDACH/burg/mesh/B128.mesh" type="ArrayMesh" id=4]
+[ext_resource path="res://GDACH/burg/mesh/B256.mesh" type="ArrayMesh" id=5]
+[ext_resource path="res://GDACH/burg/mesh/A064_256.mesh" type="ArrayMesh" id=6]
+[ext_resource path="res://GDACH/burg/mesh/Z128.mesh" type="ArrayMesh" id=7]
+[ext_resource path="res://GDACH/burg/mesh/W256_128.mesh" type="ArrayMesh" id=8]
+[ext_resource path="res://GDACH/burg/mesh/ZA064.mesh" type="ArrayMesh" id=9]
+[ext_resource path="res://GDACH/burg/mesh/B256_128.mesh" type="ArrayMesh" id=10]
+[ext_resource path="res://GDACH/burg/mesh/B128_256.mesh" type="ArrayMesh" id=11]
+[ext_resource path="res://GDACH/burg/mesh/Door.mesh" type="ArrayMesh" id=12]
+[ext_resource path="res://GDACH/burg/mesh/AS064.mesh" type="ArrayMesh" id=13]
+[ext_resource path="res://GDACH/burg/mesh/TS256.mesh" type="ArrayMesh" id=14]
+[ext_resource path="res://GDACH/burg/mesh/S256.mesh" type="ArrayMesh" id=15]
+[ext_resource path="res://GDACH/burg/mesh/Window.mesh" type="ArrayMesh" id=16]
+[ext_resource path="res://GDACH/burg/mesh/W064_128.mesh" type="ArrayMesh" id=17]
+[ext_resource path="res://GDACH/burg/mesh/F256.mesh" type="ArrayMesh" id=18]
+[ext_resource path="res://GDACH/burg/mesh/IS064.mesh" type="ArrayMesh" id=19]
+[ext_resource path="res://GDACH/burg/mesh/I064_128.mesh" type="ArrayMesh" id=20]
+[ext_resource path="res://GDACH/burg/mesh/I064_256.mesh" type="ArrayMesh" id=21]
+[ext_resource path="res://GDACH/burg/mesh/W064_256.mesh" type="ArrayMesh" id=22]
+[ext_resource path="res://GDACH/burg/mesh/ZI064.mesh" type="ArrayMesh" id=23]
+[ext_resource path="res://GDACH/burg/mesh/Z064_R.mesh" type="ArrayMesh" id=24]
+[ext_resource path="res://GDACH/burg/mesh/S064.mesh" type="ArrayMesh" id=25]
+
+[sub_resource type="ProceduralSky" id=1]
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+fog_depth_begin = 1.0
+fog_depth_end = 30.0
+
+[node name="Burg" type="Spatial"]
+
+[node name="Turm1" type="Spatial" parent="."]
+
+[node name="Ebene1" type="Spatial" parent="Turm1"]
+
+[node name="T256" type="MeshInstance" parent="Turm1/Ebene1"]
+use_in_baked_light = true
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="A064_256" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.56, 0, 0 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_257" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -5.76 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_258" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.56, 0, -6.4 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_256_1" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.2, 0, -0.64 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="W256" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.56, 0, 8.9407e-08 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W257" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -3.2 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_2" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -0.64 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W260" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.49012e-07, 0, -6.4 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_3" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.56, 0, -6.4 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W262" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 0, -3.2 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_4" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 0, -5.76 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="A064_128_0" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.56, 2.56, 0 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_1" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 2.56, -5.76 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_2" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.56, 2.56, -6.4 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_3" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 2.56, -0.64 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="W256_128_1" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.56, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_2" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_5" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 2.56, -0.64 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_4" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 2.56, -3.2 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_8" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.56, 2.56, -6.4 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_7" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.76837e-07, 2.56, -6.4 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_11" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 2.56, -5.76 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_10" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 2.56, -3.2 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="Door" type="MeshInstance" parent="Turm1/Ebene1"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.92, 0, 0.16 )
+mesh = ExtResource( 12 )
+material/0 = null
+
+[node name="Ebene2" type="Spatial" parent="Turm1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.84, 0 )
+
+[node name="A064_256" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.56, 0, 0 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_257" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -5.76 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_258" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.56, 0, -6.4 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_256_1" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.2, 0, -0.64 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="W256" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.56, 0, 8.9407e-08 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_5" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.9407e-08 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W257" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -3.2 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_2" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -0.64 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W260" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.49012e-07, 0, -6.4 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_3" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.56, 0, -6.4 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W262" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 0, -3.2 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_4" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 0, -5.76 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="A064_128" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.56, 2.56, 0 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_1" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 2.56, -5.76 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_2" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.56, 2.56, -6.4 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_3" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 2.56, -0.64 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="W256_128_1" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.56, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_2" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_5" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 2.56, -0.64 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_4" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 2.56, -3.2 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_8" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.56, 2.56, -6.4 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_7" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.76837e-07, 2.56, -6.4 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_11" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 2.56, -5.76 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_10" type="MeshInstance" parent="Turm1/Ebene2"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 2.56, -3.2 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="Ebene3" type="Spatial" parent="Turm1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.68, 0 )
+
+[node name="A064_256" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.56, 0, 0 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_257" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -5.76 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_258" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.56, 0, -6.4 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_256_1" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.2, 0, -0.64 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="W256" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.56, 0, 8.9407e-08 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_5" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 8.9407e-08 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W257" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -3.2 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_2" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -0.64 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W260" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.49012e-07, 0, -6.4 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_3" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.56, 0, -6.4 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W262" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 0, -3.2 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_4" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 0, -5.76 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="A064_128" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.56, 2.56, 0 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_1" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 2.56, -5.76 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_2" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.56, 2.56, -6.4 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_3" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 2.56, -0.64 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="W256_128_1" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.56, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_2" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_5" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 2.56, -0.64 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_4" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 2.56, -3.2 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_8" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.56, 2.56, -6.4 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_7" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.76837e-07, 2.56, -6.4 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_11" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 2.56, -5.76 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_10" type="MeshInstance" parent="Turm1/Ebene3"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 2.56, -3.2 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="Ebene4" type="Spatial" parent="Turm1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.52, 0 )
+
+[node name="B256_0" type="MeshInstance" parent="Turm1/Ebene4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.92, -0.32, 0 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="B256_1" type="MeshInstance" parent="Turm1/Ebene4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.64, -0.32, 0 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="B128_256_0" type="MeshInstance" parent="Turm1/Ebene4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, -0.32, 0 )
+mesh = ExtResource( 11 )
+material/0 = null
+
+[node name="B256_3" type="MeshInstance" parent="Turm1/Ebene4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.92, -0.32, -2.56 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="B256_2" type="MeshInstance" parent="Turm1/Ebene4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.64, -0.32, -2.56 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="B128_256_1" type="MeshInstance" parent="Turm1/Ebene4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, -0.32, -2.56 )
+mesh = ExtResource( 11 )
+material/0 = null
+
+[node name="B256_128_0" type="MeshInstance" parent="Turm1/Ebene4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.64, -0.32, -5.12 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="B256_128_1" type="MeshInstance" parent="Turm1/Ebene4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.92, -0.32, -5.12 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="B128_0" type="MeshInstance" parent="Turm1/Ebene4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, -0.32, -5.12 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="Zinnen2" type="Spatial" parent="Turm1/Ebene4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.56 )
+
+[node name="ZA064_0" type="MeshInstance" parent="Turm1/Ebene4/Zinnen2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.56, 0, -2.56 )
+mesh = ExtResource( 9 )
+material/0 = null
+
+[node name="ZA064_1" type="MeshInstance" parent="Turm1/Ebene4/Zinnen2"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.2, 0, -3.2 )
+mesh = ExtResource( 9 )
+material/0 = null
+
+[node name="ZA064_2" type="MeshInstance" parent="Turm1/Ebene4/Zinnen2"]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -2.56, 0, -8.96 )
+mesh = ExtResource( 9 )
+material/0 = null
+
+[node name="ZA064_3" type="MeshInstance" parent="Turm1/Ebene4/Zinnen2"]
+transform = Transform( 1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 3.2, 0, -8.32 )
+mesh = ExtResource( 9 )
+material/0 = null
+
+[node name="Z128_0" type="MeshInstance" parent="Turm1/Ebene4/Zinnen2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28, 0, -2.56 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_1" type="MeshInstance" parent="Turm1/Ebene4/Zinnen2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.56 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_2" type="MeshInstance" parent="Turm1/Ebene4/Zinnen2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.28, 0, -2.56 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_12" type="MeshInstance" parent="Turm1/Ebene4/Zinnen2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.56, 0, -2.56 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_5" type="MeshInstance" parent="Turm1/Ebene4/Zinnen2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -5.76 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_14" type="MeshInstance" parent="Turm1/Ebene4/Zinnen2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -7.04 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_4" type="MeshInstance" parent="Turm1/Ebene4/Zinnen2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -4.48 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_3" type="MeshInstance" parent="Turm1/Ebene4/Zinnen2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -3.2 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_8" type="MeshInstance" parent="Turm1/Ebene4/Zinnen2"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.2, 0, -5.76 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_13" type="MeshInstance" parent="Turm1/Ebene4/Zinnen2"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.2, 0, -4.48 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_7" type="MeshInstance" parent="Turm1/Ebene4/Zinnen2"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.2, 0, -7.04 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_6" type="MeshInstance" parent="Turm1/Ebene4/Zinnen2"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.2, 0, -8.32 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_11" type="MeshInstance" parent="Turm1/Ebene4/Zinnen2"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -8.96 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_15" type="MeshInstance" parent="Turm1/Ebene4/Zinnen2"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.28, 0, -8.96 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_10" type="MeshInstance" parent="Turm1/Ebene4/Zinnen2"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.28, 0, -8.96 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_9" type="MeshInstance" parent="Turm1/Ebene4/Zinnen2"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.56, 0, -8.96 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Turm3" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15.36 )
+
+[node name="Ebene1" type="Spatial" parent="Turm3"]
+
+[node name="T256" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -9.28 )
+use_in_baked_light = true
+mesh = ExtResource( 2 )
+material/0 = null
+
+[node name="Door" type="MeshInstance" parent="Turm3/Ebene1/T256"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.92, 0, 0.16 )
+mesh = ExtResource( 12 )
+material/0 = null
+
+[node name="A064_256" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.56, 0, -2.56 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_257" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -8.32 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_258" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.56, 0, -8.96 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_256_1" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.2, 0, -3.2 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="W256" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.56, 0, -2.56 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W257" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -5.76 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_2" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -3.2 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W260" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.49012e-07, 0, -8.96 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_3" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.56, 0, -2.24 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W262" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 0, -5.76 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_4" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 0, -8.32 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="A064_128_0" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.56, 2.56, -2.56 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_1" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 2.56, -8.32 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_2" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.56, 2.56, -8.96 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_3" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 2.56, -3.2 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="W256_128_1" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.56, 2.56, -2.56 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_2" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, -2.56 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_5" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 2.56, -3.2 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_4" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 2.56, -5.76 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_8" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.56, 2.56, -8.96 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_7" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.76837e-07, 2.56, -8.96 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_11" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 2.56, -8.32 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_10" type="MeshInstance" parent="Turm3/Ebene1"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 2.56, -5.76 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="Ebene2" type="Spatial" parent="Turm3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.84, 0 )
+
+[node name="A064_256" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.56, 0, -2.56 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_257" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -8.32 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_258" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.56, 0, -8.96 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_256_1" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.2, 0, -3.2 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="W256" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.56, 0, -2.56 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_5" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.56 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W257" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -5.76 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_2" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -3.2 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W260" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.49012e-07, 0, -8.96 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_3" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.56, 0, -8.96 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W262" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 0, -5.76 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_4" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 0, -8.32 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="A064_128" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.56, 2.56, -2.56 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_1" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 2.56, -8.32 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_2" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.56, 2.56, -8.96 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_3" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 2.56, -3.2 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="W256_128_1" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.56, 2.56, -2.56 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_2" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, -2.56 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_5" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 2.56, -3.2 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_4" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 2.56, -5.76 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_8" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.56, 2.56, -8.96 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_7" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.76837e-07, 2.56, -8.96 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_11" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 2.56, -8.32 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_10" type="MeshInstance" parent="Turm3/Ebene2"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 2.56, -5.76 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="Ebene3" type="Spatial" parent="Turm3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.68, 0 )
+
+[node name="A064_256" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.56, 0, -2.56 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_257" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -8.32 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_258" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.56, 0, -8.96 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_256_1" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.2, 0, -3.2 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="W256" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.56, 0, -2.56 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_5" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.56 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W257" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -5.76 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_2" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -3.2 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W260" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.49012e-07, 0, -8.96 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_3" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.56, 0, -8.96 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W262" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 0, -5.76 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_4" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 0, -8.32 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="A064_128" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.56, 2.56, -2.56 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_1" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 2.56, -8.32 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_2" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -2.56, 2.56, -8.96 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_3" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 2.56, -3.2 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="W256_128_1" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.56, 2.56, -2.56 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_2" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, -2.56 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_5" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 2.56, -3.2 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_4" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 2.56, -5.76 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_8" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.56, 2.56, -8.96 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_7" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4.76837e-07, 2.56, -8.96 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_11" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 2.56, -8.32 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_10" type="MeshInstance" parent="Turm3/Ebene3"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -3.2, 2.56, -5.76 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="Ebene4" type="Spatial" parent="Turm3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 11.52, 0 )
+
+[node name="B256_0" type="MeshInstance" parent="Turm3/Ebene4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.92, -0.32, -2.56 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="B256_1" type="MeshInstance" parent="Turm3/Ebene4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.64, -0.32, -2.56 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="B128_256_0" type="MeshInstance" parent="Turm3/Ebene4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, -0.32, -2.56 )
+mesh = ExtResource( 11 )
+material/0 = null
+
+[node name="B256_3" type="MeshInstance" parent="Turm3/Ebene4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.92, -0.32, -5.12 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="B256_2" type="MeshInstance" parent="Turm3/Ebene4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.64, -0.32, -5.12 )
+mesh = ExtResource( 5 )
+material/0 = null
+
+[node name="B128_256_1" type="MeshInstance" parent="Turm3/Ebene4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, -0.32, -5.12 )
+mesh = ExtResource( 11 )
+material/0 = null
+
+[node name="B256_128_0" type="MeshInstance" parent="Turm3/Ebene4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.64, -0.32, -7.68 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="B256_128_1" type="MeshInstance" parent="Turm3/Ebene4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.92, -0.32, -7.68 )
+mesh = ExtResource( 10 )
+material/0 = null
+
+[node name="B128_0" type="MeshInstance" parent="Turm3/Ebene4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, -0.32, -7.68 )
+mesh = ExtResource( 4 )
+material/0 = null
+
+[node name="Zinnen" type="Spatial" parent="Turm3/Ebene4"]
+
+[node name="ZA064_0" type="MeshInstance" parent="Turm3/Ebene4/Zinnen"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.56, 0, -2.56 )
+mesh = ExtResource( 9 )
+material/0 = null
+
+[node name="ZA064_1" type="MeshInstance" parent="Turm3/Ebene4/Zinnen"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.2, 0, -3.2 )
+mesh = ExtResource( 9 )
+material/0 = null
+
+[node name="ZA064_2" type="MeshInstance" parent="Turm3/Ebene4/Zinnen"]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -2.56, 0, -8.96 )
+mesh = ExtResource( 9 )
+material/0 = null
+
+[node name="ZA064_3" type="MeshInstance" parent="Turm3/Ebene4/Zinnen"]
+transform = Transform( 1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, 3.2, 0, -8.32 )
+mesh = ExtResource( 9 )
+material/0 = null
+
+[node name="Z128_0" type="MeshInstance" parent="Turm3/Ebene4/Zinnen"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28, 0, -2.56 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_1" type="MeshInstance" parent="Turm3/Ebene4/Zinnen"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.56 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_2" type="MeshInstance" parent="Turm3/Ebene4/Zinnen"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.28, 0, -2.56 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_12" type="MeshInstance" parent="Turm3/Ebene4/Zinnen"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.56, 0, -2.56 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_5" type="MeshInstance" parent="Turm3/Ebene4/Zinnen"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -5.76 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_14" type="MeshInstance" parent="Turm3/Ebene4/Zinnen"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -7.04 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_4" type="MeshInstance" parent="Turm3/Ebene4/Zinnen"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -4.48 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_3" type="MeshInstance" parent="Turm3/Ebene4/Zinnen"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -3.2 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_8" type="MeshInstance" parent="Turm3/Ebene4/Zinnen"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.2, 0, -5.76 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_13" type="MeshInstance" parent="Turm3/Ebene4/Zinnen"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.2, 0, -4.48 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_7" type="MeshInstance" parent="Turm3/Ebene4/Zinnen"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.2, 0, -7.04 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_6" type="MeshInstance" parent="Turm3/Ebene4/Zinnen"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.2, 0, -8.32 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_11" type="MeshInstance" parent="Turm3/Ebene4/Zinnen"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, -8.96 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_15" type="MeshInstance" parent="Turm3/Ebene4/Zinnen"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.28, 0, -8.96 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_10" type="MeshInstance" parent="Turm3/Ebene4/Zinnen"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 1.28, 0, -8.96 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_9" type="MeshInstance" parent="Turm3/Ebene4/Zinnen"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 2.56, 0, -8.96 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Raum01" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.52, 0, -6.4 )
+
+[node name="Ebene1" type="Spatial" parent="Raum01"]
+
+[node name="A064_256_0" type="MeshInstance" parent="Raum01/Ebene1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88, 0, 0 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="W256_128_1" type="MeshInstance" parent="Raum01/Ebene1"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.52, 2.56, -0.64 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_2" type="MeshInstance" parent="Raum01/Ebene1"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.52, 2.56, -3.2 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_3" type="MeshInstance" parent="Raum01/Ebene1"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.52, 2.56, -5.76 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="A064_128_4" type="MeshInstance" parent="Raum01/Ebene1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.88, 2.56, 0 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="Ebene2" type="Spatial" parent="Raum01"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.84, 0 )
+
+[node name="Z128_0" type="MeshInstance" parent="Raum01/Ebene2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.52, 0, -0.64 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_1" type="MeshInstance" parent="Raum01/Ebene2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.52, 0, -1.92 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_3" type="MeshInstance" parent="Raum01/Ebene2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.52, 0, -3.2 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_2" type="MeshInstance" parent="Raum01/Ebene2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.52, 0, -4.48 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_7" type="MeshInstance" parent="Raum01/Ebene2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.52, 0, -5.76 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_8" type="MeshInstance" parent="Raum01/Ebene2"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1.25, 0, -5.46392e-08, 3.52, 0, -7.04 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 0.965926, 0.12941, 0.224144, -0.129409, -0.508518, 0.851271, 0.224144, -0.851271, -0.474444, 0, 18.56, 0 )
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="Sockel" type="Spatial" parent="."]
+
+[node name="S256_0" type="MeshInstance" parent="Sockel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.56, 0, 0 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_37" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.04, 0, 6.08 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_38" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.04, 0, 2.88 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S064_0" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.04, 0, 3.52 )
+mesh = ExtResource( 25 )
+material/0 = null
+
+[node name="S256_35" type="MeshInstance" parent="Sockel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -2.56, 0, 6.08 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_7" type="MeshInstance" parent="Sockel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84, 0, -6.4 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_28" type="MeshInstance" parent="Sockel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84, 0, 12.48 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_1" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -0.64 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_34" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, 12.16 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_3" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 0, -7.04 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_27" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 0, 21.12 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_6" type="MeshInstance" parent="Sockel"]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 7.68, 0, -15.36 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_32" type="MeshInstance" parent="Sockel"]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 7.68, 0, 21.44 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_8" type="MeshInstance" parent="Sockel"]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 10.24, 0, -15.36 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_31" type="MeshInstance" parent="Sockel"]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 10.24, 0, 21.44 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_9" type="MeshInstance" parent="Sockel"]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 12.8, 0, -15.36 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_30" type="MeshInstance" parent="Sockel"]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 12.8, 0, 21.44 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_10" type="MeshInstance" parent="Sockel"]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 15.36, 0, -15.36 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_29" type="MeshInstance" parent="Sockel"]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 15.36, 0, 21.44 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_11" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.56, 0, -14.72 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_12" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.56, 0, -12.16 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_24" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.56, 0, 16 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_23" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.56, 0, 18.56 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_13" type="MeshInstance" parent="Sockel"]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 19.2, 0, -8.96 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_22" type="MeshInstance" parent="Sockel"]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 19.2, 0, 15.04 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_14" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 0, -8.32 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_15" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 0, -5.76 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_16" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 0, -3.2 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_17" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 0, -0.64 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_36" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 0, 1.92 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_21" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 0, 4.48 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_20" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 0, 7.04 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_19" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 0, 9.6 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_18" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 0, 12.16 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_4" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 0, -9.6 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_5" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 0, -12.16 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_26" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 0, 18.56 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_25" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 0, 16 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_2" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -3.2 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="S256_33" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, 9.6 )
+mesh = ExtResource( 15 )
+material/0 = null
+
+[node name="TS256_0" type="MeshInstance" parent="Sockel"]
+mesh = ExtResource( 14 )
+material/0 = null
+
+[node name="AS064_0" type="MeshInstance" parent="Sockel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.56, 0, 0 )
+mesh = ExtResource( 13 )
+material/0 = null
+
+[node name="AS064_2" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -3.2, 0, -0.64 )
+mesh = ExtResource( 13 )
+material/0 = null
+
+[node name="TS256_1" type="MeshInstance" parent="Sockel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6.08 )
+mesh = ExtResource( 14 )
+material/0 = null
+
+[node name="AS064_7" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, 7.04 )
+mesh = ExtResource( 13 )
+material/0 = null
+
+[node name="AS064_6" type="MeshInstance" parent="Sockel"]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, -2.56, 0, 6.4 )
+mesh = ExtResource( 13 )
+material/0 = null
+
+[node name="AS064_1" type="MeshInstance" parent="Sockel"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4, 0, -6.4 )
+mesh = ExtResource( 13 )
+material/0 = null
+
+[node name="AS064_5" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 0, 13.44 )
+mesh = ExtResource( 13 )
+material/0 = null
+
+[node name="AS064_3" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.56, 0, -9.6 )
+mesh = ExtResource( 13 )
+material/0 = null
+
+[node name="AS064_4" type="MeshInstance" parent="Sockel"]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 19.2, 0, 15.36 )
+mesh = ExtResource( 13 )
+material/0 = null
+
+[node name="IS064_0" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 3.2, 0, -5.76 )
+mesh = ExtResource( 19 )
+material/0 = null
+
+[node name="IS064_7" type="MeshInstance" parent="Sockel"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 3.84, 0, 12.8 )
+mesh = ExtResource( 19 )
+material/0 = null
+
+[node name="IS064_3" type="MeshInstance" parent="Sockel"]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 21.76, 0, -8.96 )
+mesh = ExtResource( 19 )
+material/0 = null
+
+[node name="IS064_4" type="MeshInstance" parent="Sockel"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 22.4, 0, 14.72 )
+mesh = ExtResource( 19 )
+material/0 = null
+
+[node name="IS064_1" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 0, -14.72 )
+mesh = ExtResource( 19 )
+material/0 = null
+
+[node name="IS064_2" type="MeshInstance" parent="Sockel"]
+transform = Transform( 1, 0, 1.06581e-14, 0, 1, 0, -1.06581e-14, 0, 1, 17.92, 0, -15.36 )
+mesh = ExtResource( 19 )
+material/0 = null
+
+[node name="IS064_5" type="MeshInstance" parent="Sockel"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.56, 0, 21.12 )
+mesh = ExtResource( 19 )
+material/0 = null
+
+[node name="IS064_6" type="MeshInstance" parent="Sockel"]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 7.68, 0, 21.76 )
+mesh = ExtResource( 19 )
+material/0 = null
+
+[node name="Basis_Mauer" type="Spatial" parent="."]
+
+[node name="W256_0" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84, 0, -6.4 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="Z128_0" type="MeshInstance" parent="Basis_Mauer/W256_0/W256_128_0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.28, 1.28, 4.76837e-07 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_1" type="MeshInstance" parent="Basis_Mauer/W256_0/W256_128_0"]
+transform = Transform( 1.25, 0, 0, 0, 1, 0, 0, 0, 1, -0.32, 1.28, 4.76837e-07 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_2" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 6.4, 3.84, 12.8 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_4" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 3.84, 14.72 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_34" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -2.72, 2.56, 4.8 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_35" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -2.72, 2.56, 3.52 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_37" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -2.72, 2.56, 2.24 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_36" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, -2.72, 2.56, 0.959998 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z064_R" type="MeshInstance" parent="Basis_Mauer/Z128_36"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.639998, 0, -1.43051e-06 )
+mesh = ExtResource( 24 )
+material/0 = null
+
+[node name="Z128_5" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 3.84, 16 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_10" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 10.24, 7.68, 21.76 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_14" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 8.96, 7.68, 21.76 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_11" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 11.52, 7.68, 21.76 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_13" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 12.8, 7.68, 21.76 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_12" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 14.08, 7.68, 21.76 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_17" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 15.36, 7.68, 21.76 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_16" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 16.64, 7.68, 21.76 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_15" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 17.92, 7.68, 21.76 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_29" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 15.36, 7.68, -15.36 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_28" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 16.64, 7.68, -15.36 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_27" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 14.08, 7.68, -15.36 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_26" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 12.8, 7.68, -15.36 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_33" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 18.56, 7.68, -12.16 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_32" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 18.56, 7.68, -10.88 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_31" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 18.56, 7.68, -13.44 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_30" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 18.56, 7.68, -14.72 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_25" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 11.52, 7.68, -15.36 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_24" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 10.24, 7.68, -15.36 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_23" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 8.96, 7.68, -15.36 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_22" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 7.68, 7.68, -15.36 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_21" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 18.56, 7.68, 19.84 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_20" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 18.56, 7.68, 18.56 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_19" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 18.56, 7.68, 17.28 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_18" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 18.56, 7.68, 16 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_6" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 3.84, 17.28 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_7" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 3.84, 18.56 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_8" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 3.84, 19.84 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_9" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1.25, 0, -5.46392e-08, 7.04, 3.84, 21.44 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="Z128_3" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -1.25, 0, -1.09278e-07, 0, 1, 0, 8.74228e-08, 0, -1, 5.12, 3.84, 12.8 )
+mesh = ExtResource( 7 )
+material/0 = null
+
+[node name="W256_1" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.68, 0, -15.36 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_10" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.56, 0, -14.72 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_12" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.56, 0, -12.16 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_12"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_16" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 0, -8.32 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_16"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_15" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 0, -5.76 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_15"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_20" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 0, -3.2 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_20"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_19" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 0, -0.64 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_19"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_24" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 0, 1.92 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_24"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_28" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 0, 4.48 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_28"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_18" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 3.84, -8.32 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_18"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_17" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 3.84, -5.76 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_17"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_22" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 3.84, -3.2 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_22"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_21" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 3.84, -0.64 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_21"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_38" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 3.84, 1.92 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_38"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_34" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 3.84, 4.48 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_34"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_27" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 0, 7.04 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_27"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_33" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 3.84, 7.04 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_33"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_32" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 0, 9.6 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_32"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_53" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 3.84, 9.6 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_53"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_31" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 0, 12.16 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_31"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_54" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.4, 3.84, 12.16 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_54"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_36" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.56, 0, 16 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_36"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_37" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.56, 3.84, 16 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_37"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_52" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.56, 3.84, 18.56 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_52"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_35" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.56, 0, 18.56 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_35"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_2" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.24, 0, -15.36 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_3" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8, 0, -15.36 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_4" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.36, 0, -15.36 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_4"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_13" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.2, 0, -8.96 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_13"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_14" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.2, 3.84, -8.96 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_14"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_40" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.2, 0, 15.04 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_40"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_39" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.2, 3.84, 15.04 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_39"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_42" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.36, 0, 21.44 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_42"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_43" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8, 0, 21.44 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_43"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_44" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.24, 0, 21.44 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_44"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_1" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.36, 2.56, 18.56 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_2" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.36, 2.56, 16 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_128_3" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 7.36, 2.56, 13.44 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_45" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.68, 0, 21.44 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_45"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_51" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.84, 0, 12.48 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_51"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_48" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8, 3.84, 21.44 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_48"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_47" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.24, 3.84, 21.44 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_47"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_46" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.68, 3.84, 21.44 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_46"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_41" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.36, 3.84, 21.44 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_41"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_8" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 7.68, 3.84, -15.36 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_8"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_9" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.56, 3.84, -14.72 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_11" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.56, 3.84, -12.16 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_11"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_7" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10.24, 3.84, -15.36 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_7"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_6" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8, 3.84, -15.36 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="W256_5" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.36, 3.84, -15.36 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_128_0" type="MeshInstance" parent="Basis_Mauer/W256_5"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 8 )
+material/0 = null
+
+[node name="F256_0" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 0, -7.04 )
+mesh = ExtResource( 18 )
+material/0 = null
+
+[node name="Window_0" type="MeshInstance" parent="Basis_Mauer/F256_0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 1.12, 0.159999 )
+mesh = ExtResource( 16 )
+material/0 = null
+
+[node name="F256_1" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 0, -12.16 )
+mesh = ExtResource( 18 )
+material/0 = null
+
+[node name="Window_0" type="MeshInstance" parent="Basis_Mauer/F256_1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 1.12, 0.159999 )
+mesh = ExtResource( 16 )
+material/0 = null
+
+[node name="W256_49" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 0, -9.6 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_55" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.04, 0, 6.08 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W256_56" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3.04, 0, 2.88 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="W064_256" type="MeshInstance" parent="Basis_Mauer/W256_56"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.640001, 0, 4.76837e-07 )
+mesh = ExtResource( 22 )
+material/0 = null
+
+[node name="F256_3" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 0, 21.12 )
+mesh = ExtResource( 18 )
+material/0 = null
+
+[node name="Window_0" type="MeshInstance" parent="Basis_Mauer/F256_3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.799999, 1.12, 0.159999 )
+mesh = ExtResource( 16 )
+material/0 = null
+
+[node name="F256_2" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 0, 16 )
+mesh = ExtResource( 18 )
+material/0 = null
+
+[node name="Window_0" type="MeshInstance" parent="Basis_Mauer/F256_2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8, 1.12, 0.159999 )
+mesh = ExtResource( 16 )
+material/0 = null
+
+[node name="W256_50" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 0, 18.56 )
+mesh = ExtResource( 1 )
+material/0 = null
+
+[node name="ZA064_0" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.4, 3.84, -6.4 )
+mesh = ExtResource( 9 )
+material/0 = null
+
+[node name="ZA064_1" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 3.84, 13.44 )
+mesh = ExtResource( 9 )
+material/0 = null
+
+[node name="ZA064_2" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.68, 7.68, 21.76 )
+mesh = ExtResource( 9 )
+material/0 = null
+
+[node name="ZA064_4" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 7.04, 7.68, -16 )
+mesh = ExtResource( 9 )
+material/0 = null
+
+[node name="ZA064_5" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 18.56, 7.68, -9.6 )
+mesh = ExtResource( 9 )
+material/0 = null
+
+[node name="ZA064_3" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 19.2, 7.68, 15.36 )
+mesh = ExtResource( 9 )
+material/0 = null
+
+[node name="A064_256" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 0, 13.44 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_262" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.68, 3.84, 21.76 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_257" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 19.2, 0, 15.36 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_258" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 19.2, 3.84, 15.36 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_260" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 18.56, 0, -9.6 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_259" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 18.56, 3.84, -9.6 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_261" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 7.04, 3.84, -16 )
+mesh = ExtResource( 6 )
+material/0 = null
+
+[node name="A064_128_0" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7.04, 2.56, 13.44 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_6" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.68, 6.4, 21.76 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_1" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 19.2, 2.56, 15.36 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_2" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 19.2, 6.4, 15.36 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_4" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 18.56, 2.56, -9.6 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_3" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 18.56, 6.4, -9.6 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="A064_128_5" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 7.04, 6.4, -16 )
+mesh = ExtResource( 3 )
+material/0 = null
+
+[node name="I064_128_o" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.68, 2.56, 21.76 )
+mesh = ExtResource( 20 )
+material/0 = null
+
+[node name="I064_256_0" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 7.68, -2.08616e-07, 21.76 )
+mesh = ExtResource( 21 )
+material/0 = null
+
+[node name="I064_128_o2" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 18.56, 2.56, 21.12 )
+mesh = ExtResource( 20 )
+material/0 = null
+
+[node name="I064_256_1" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 18.56, -2.08616e-07, 21.12 )
+mesh = ExtResource( 21 )
+material/0 = null
+
+[node name="I064_128_o3" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 18.56, 6.4, 21.12 )
+mesh = ExtResource( 20 )
+material/0 = null
+
+[node name="I064_256_2" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 18.56, 3.84, 21.12 )
+mesh = ExtResource( 21 )
+material/0 = null
+
+[node name="I064_128_o9" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 22.4, 2.56, 14.72 )
+mesh = ExtResource( 20 )
+material/0 = null
+
+[node name="I064_256_8" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 22.4, -2.08616e-07, 14.72 )
+mesh = ExtResource( 21 )
+material/0 = null
+
+[node name="I064_128_o8" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 22.4, 6.4, 14.72 )
+mesh = ExtResource( 20 )
+material/0 = null
+
+[node name="I064_256_7" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 22.4, 3.84, 14.72 )
+mesh = ExtResource( 21 )
+material/0 = null
+
+[node name="I064_128_o5" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 21.76, 2.56, -8.96 )
+mesh = ExtResource( 20 )
+material/0 = null
+
+[node name="I064_256_4" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 21.76, -2.08616e-07, -8.96 )
+mesh = ExtResource( 21 )
+material/0 = null
+
+[node name="I064_128_o4" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 21.76, 6.4, -8.96 )
+mesh = ExtResource( 20 )
+material/0 = null
+
+[node name="I064_256_3" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 21.76, 3.84, -8.96 )
+mesh = ExtResource( 21 )
+material/0 = null
+
+[node name="I064_128_o7" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 17.92, 2.56, -15.36 )
+mesh = ExtResource( 20 )
+material/0 = null
+
+[node name="I064_256_6" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 17.92, -2.08616e-07, -15.36 )
+mesh = ExtResource( 21 )
+material/0 = null
+
+[node name="I064_128_o10" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 7.04, 2.56, -14.72 )
+mesh = ExtResource( 20 )
+material/0 = null
+
+[node name="I064_256_9" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, 7.04, -2.08616e-07, -14.72 )
+mesh = ExtResource( 21 )
+material/0 = null
+
+[node name="I064_128_o6" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 17.92, 6.4, -15.36 )
+mesh = ExtResource( 20 )
+material/0 = null
+
+[node name="I064_256_5" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 17.92, 3.84, -15.36 )
+mesh = ExtResource( 21 )
+material/0 = null
+
+[node name="W064_256_0" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, 2.98023e-08, -6.4 )
+mesh = ExtResource( 22 )
+material/0 = null
+
+[node name="W064_128" type="MeshInstance" parent="Basis_Mauer/W064_256_0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.56, 0 )
+mesh = ExtResource( 17 )
+material/0 = null
+
+[node name="ZI064_0" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( -4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 18.56, 7.68, 21.12 )
+mesh = ExtResource( 23 )
+material/0 = null
+
+[node name="ZI064_1" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 17.92, 7.68, -15.36 )
+mesh = ExtResource( 23 )
+material/0 = null
+
+[node name="W064_256" type="MeshInstance" parent="Basis_Mauer"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2, 0, 12.48 )
+mesh = ExtResource( 22 )
+material/0 = null
+
+[node name="W064_128" type="MeshInstance" parent="Basis_Mauer/W064_256"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38419e-07, 2.56, 0 )
+mesh = ExtResource( 17 )
+material/0 = null
