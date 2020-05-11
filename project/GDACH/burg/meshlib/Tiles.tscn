@@ -1,0 +1,257 @@
+[gd_scene load_steps=44 format=2]
+
+[ext_resource path="res://GDACH/burg/mat/burg001.material" type="Material" id=1]
+[ext_resource path="res://GDACH/burg/mesh/aa_01_b1_3L.mesh" type="ArrayMesh" id=2]
+[ext_resource path="res://GDACH/burg/mesh/a_01_z1_1L.mesh" type="ArrayMesh" id=3]
+[ext_resource path="res://GDACH/burg/mesh/aa_01_w1.mesh" type="ArrayMesh" id=4]
+[ext_resource path="res://GDACH/burg/mesh/aa_02_b1.mesh" type="ArrayMesh" id=5]
+[ext_resource path="res://GDACH/burg/mesh/aa_01_b1_1R.mesh" type="ArrayMesh" id=6]
+[ext_resource path="res://GDACH/burg/mesh/a_01_z1_3L.mesh" type="ArrayMesh" id=7]
+[ext_resource path="res://GDACH/burg/mesh/aa_01_w1_3L.mesh" type="ArrayMesh" id=8]
+[ext_resource path="res://GDACH/burg/mesh/aa_01_o1.mesh" type="ArrayMesh" id=9]
+[ext_resource path="res://GDACH/burg/mesh/a_01_s1.mesh" type="ArrayMesh" id=10]
+[ext_resource path="res://GDACH/burg/mesh/aa_02_b1_3L.mesh" type="ArrayMesh" id=11]
+[ext_resource path="res://GDACH/burg/mesh/aa_01_w1_3R.mesh" type="ArrayMesh" id=12]
+[ext_resource path="res://GDACH/burg/mesh/aa_01_e1_L.mesh" type="ArrayMesh" id=13]
+[ext_resource path="res://GDACH/burg/mesh/a_01_z1.mesh" type="ArrayMesh" id=14]
+[ext_resource path="res://GDACH/burg/mesh/aa_01_b1_1L.mesh" type="ArrayMesh" id=15]
+[ext_resource path="res://GDACH/burg/mesh/aa_02_b1_3R.mesh" type="ArrayMesh" id=16]
+[ext_resource path="res://GDACH/burg/mesh/aa_01_b1_3R.mesh" type="ArrayMesh" id=17]
+[ext_resource path="res://GDACH/burg/mesh/a_01_z1_3R.mesh" type="ArrayMesh" id=18]
+[ext_resource path="res://GDACH/burg/mesh/aa_01_w1_1L.mesh" type="ArrayMesh" id=19]
+[ext_resource path="res://GDACH/burg/mesh/aa_02_b1_1L.mesh" type="ArrayMesh" id=20]
+[ext_resource path="res://GDACH/burg/mesh/aa_01_e1_R.mesh" type="ArrayMesh" id=21]
+[ext_resource path="res://GDACH/burg/mesh/aa_01_b1.mesh" type="ArrayMesh" id=22]
+[ext_resource path="res://GDACH/burg/mesh/aa_01_w1_1R.mesh" type="ArrayMesh" id=23]
+[ext_resource path="res://GDACH/burg/mesh/aa_02_b1_1R.mesh" type="ArrayMesh" id=24]
+[ext_resource path="res://GDACH/burg/mesh/a_01_z1_1R.mesh" type="ArrayMesh" id=25]
+[ext_resource path="res://GDACH/burg/mesh/b_01_s2.mesh" type="ArrayMesh" id=26]
+[ext_resource path="res://GDACH/burg/mesh/bb_01_w1.mesh" type="ArrayMesh" id=27]
+[ext_resource path="res://GDACH/burg/mesh/bc_01_f2.mesh" type="ArrayMesh" id=28]
+[ext_resource path="res://GDACH/burg/mesh/bc_01_t1.mesh" type="ArrayMesh" id=29]
+[ext_resource path="res://GDACH/burg/mesh/bc_01_f1.mesh" type="ArrayMesh" id=30]
+[ext_resource path="res://GDACH/burg/mesh/bb_01_t1.mesh" type="ArrayMesh" id=31]
+[ext_resource path="res://GDACH/burg/mesh/bb_01_f1.mesh" type="ArrayMesh" id=32]
+[ext_resource path="res://GDACH/burg/mesh/b_01_s1.mesh" type="ArrayMesh" id=33]
+[ext_resource path="res://GDACH/burg/mesh/bc_01_w1.mesh" type="ArrayMesh" id=34]
+[ext_resource path="res://GDACH/burg/mesh/ab_01_f1.mesh" type="ArrayMesh" id=35]
+[ext_resource path="res://GDACH/burg/mesh/ac_01_e1_L.mesh" type="ArrayMesh" id=36]
+[ext_resource path="res://GDACH/burg/mesh/ab_01_w1.mesh" type="ArrayMesh" id=37]
+[ext_resource path="res://GDACH/burg/mesh/ab_01_e1_R.mesh" type="ArrayMesh" id=38]
+[ext_resource path="res://GDACH/burg/mesh/ab_01_e1_L.mesh" type="ArrayMesh" id=39]
+[ext_resource path="res://GDACH/burg/mesh/ac_01_e1_R.mesh" type="ArrayMesh" id=40]
+[ext_resource path="res://GDACH/burg/mesh/ac_01_f1.mesh" type="ArrayMesh" id=41]
+[ext_resource path="res://GDACH/burg/mesh/ac_01_f2.mesh" type="ArrayMesh" id=42]
+[ext_resource path="res://GDACH/burg/mesh/ac_01_w1.mesh" type="ArrayMesh" id=43]
+
+[node name="Tiles" type="Spatial"]
+
+[node name="aa_01_b1" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 22 )
+material/0 = ExtResource( 1 )
+
+[node name="aa_01_b1_1L" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 15 )
+material/0 = ExtResource( 1 )
+
+[node name="aa_01_b1_1R" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 6 )
+material/0 = ExtResource( 1 )
+
+[node name="aa_01_b1_3L" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 2 )
+material/0 = ExtResource( 1 )
+
+[node name="aa_01_b1_3R" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 17 )
+material/0 = ExtResource( 1 )
+
+[node name="aa_01_e1_L" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 13 )
+material/0 = ExtResource( 1 )
+
+[node name="aa_01_e1_R" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 21 )
+material/0 = ExtResource( 1 )
+
+[node name="aa_01_o1" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 9 )
+material/0 = ExtResource( 1 )
+
+[node name="aa_01_w1" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 4 )
+material/0 = ExtResource( 1 )
+
+[node name="aa_01_w1_1L" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 19 )
+material/0 = ExtResource( 1 )
+
+[node name="aa_01_w1_1R" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 23 )
+material/0 = ExtResource( 1 )
+
+[node name="aa_01_w1_3L" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 8 )
+material/0 = ExtResource( 1 )
+
+[node name="aa_01_w1_3R" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 12 )
+material/0 = ExtResource( 1 )
+
+[node name="aa_02_b1" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 5 )
+material/0 = ExtResource( 1 )
+
+[node name="aa_02_b1_1L" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 20 )
+material/0 = ExtResource( 1 )
+
+[node name="aa_02_b1_1R" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 24 )
+material/0 = ExtResource( 1 )
+
+[node name="aa_02_b1_3L" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 11 )
+material/0 = ExtResource( 1 )
+
+[node name="aa_02_b1_3R" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 16 )
+material/0 = ExtResource( 1 )
+
+[node name="ab_01_e1_L" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 39 )
+material/0 = ExtResource( 1 )
+
+[node name="ab_01_e1_R" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 38 )
+material/0 = ExtResource( 1 )
+
+[node name="ab_01_f1" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 35 )
+material/0 = ExtResource( 1 )
+
+[node name="ab_01_w1" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 37 )
+material/0 = ExtResource( 1 )
+
+[node name="ac_01_e1_L" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 36 )
+material/0 = ExtResource( 1 )
+
+[node name="ac_01_e1_R" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 40 )
+material/0 = null
+
+[node name="ac_01_f1" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 41 )
+material/0 = ExtResource( 1 )
+
+[node name="ac_01_f2" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 42 )
+material/0 = ExtResource( 1 )
+
+[node name="ac_01_w1" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 43 )
+material/0 = ExtResource( 1 )
+
+[node name="a_01_s1" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 10 )
+material/0 = ExtResource( 1 )
+
+[node name="a_01_z1" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 14 )
+material/0 = ExtResource( 1 )
+
+[node name="a_01_z1_1L" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 3 )
+material/0 = ExtResource( 1 )
+
+[node name="a_01_z1_1R" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 25 )
+material/0 = ExtResource( 1 )
+
+[node name="a_01_z1_3L" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 7 )
+material/0 = ExtResource( 1 )
+
+[node name="a_01_z1_3R" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 18 )
+material/0 = ExtResource( 1 )
+
+[node name="bb_01_f1" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 32 )
+material/0 = ExtResource( 1 )
+
+[node name="bb_01_t1" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 31 )
+material/0 = ExtResource( 1 )
+
+[node name="bb_01_w1" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 27 )
+material/0 = ExtResource( 1 )
+
+[node name="bc_01_f1" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 30 )
+material/0 = ExtResource( 1 )
+
+[node name="bc_01_f2" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 28 )
+material/0 = ExtResource( 1 )
+
+[node name="bc_01_t1" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 29 )
+material/0 = ExtResource( 1 )
+
+[node name="bc_01_w1" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 34 )
+material/0 = ExtResource( 1 )
+
+[node name="b_01_s1" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 33 )
+material/0 = ExtResource( 1 )
+
+[node name="b_01_s2" type="MeshInstance" parent="."]
+use_in_baked_light = true
+mesh = ExtResource( 26 )
+material/0 = ExtResource( 1 )
